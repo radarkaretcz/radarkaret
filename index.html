@@ -6,572 +6,1534 @@
 
 <title>RadarKaret.cz – Aktuální svět sběratelských karet</title>
 
-<meta name="description"
-content="Aktuální novinky ze světa Pokémon, One Piece, Disney Lorcana a dalších sběratelských karetních her.">
+<meta
+  name="description"
+  content="Český informační portál o Pokémon TCG, One Piece Card Game, Disney Lorcana, Magic a dalších sběratelských karetních hrách."
+>
 
 <style>
+
+/* =========================================================
+   ZÁKLAD
+========================================================= */
+
 :root{
-  --bg:#080b11;
-  --panel:#101620;
-  --panel2:#151d29;
-  --line:#253041;
-  --text:#f5f7fb;
-  --muted:#8e9aab;
-  --gold:#f7c843;
-  --green:#42d392;
-  --blue:#5796ff;
-  --red:#ee5863;
-  --purple:#8b6ee9;
-  --orange:#ed8a50;
+  --bg:#070a0f;
+  --bg2:#0b1017;
+
+  --panel:#0e151f;
+  --panel2:#121b27;
+  --panel3:#091018;
+
+  --line:#222d3d;
+  --line2:#304056;
+
+  --text:#f3f6fb;
+  --muted:#8c99ab;
+  --muted2:#657286;
+
+  --gold:#f6c843;
+  --green:#43d391;
+  --blue:#5895ff;
+  --red:#ec5964;
+  --purple:#856be3;
+  --orange:#e98b52;
+
+  --radius:20px;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
   background:
-    radial-gradient(circle at 15% 0%,rgba(70,105,190,.15),transparent 30%),
-    #080b11;
+    radial-gradient(
+      circle at 14% 0%,
+      rgba(72,105,190,.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(115,65,175,.09),
+      transparent 26%
+    ),
+    var(--bg);
+
   color:var(--text);
-  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 }
 
-a{text-decoration:none;color:inherit}
-button,input{font:inherit}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
 
 .container{
-  width:min(1400px,calc(100% - 48px));
+  width:min(
+    1400px,
+    calc(100% - 48px)
+  );
+
   margin:auto;
 }
 
-/* TOP */
+
+/* =========================================================
+   LIVE BAR
+========================================================= */
 
 .livebar{
-  border-bottom:1px solid #19212d;
   background:#05070a;
+
+  border-bottom:
+    1px solid #171f2a;
 }
 
 .live-inner{
   min-height:38px;
+
   display:flex;
+
   align-items:center;
+
   gap:20px;
+
+  overflow:hidden;
+}
+
+.live-status{
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  flex:0 0 auto;
+
+  font-size:11px;
+
+  font-weight:950;
+
+  letter-spacing:1.1px;
+}
+
+.live-dot{
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:var(--green);
+
+  box-shadow:
+    0 0 11px rgba(67,211,145,.85);
+}
+
+.live-message{
+  min-width:0;
+
+  overflow:hidden;
+
+  white-space:nowrap;
+
+  text-overflow:ellipsis;
+
+  color:#8b97a8;
+
   font-size:12px;
 }
 
-.live{
-  font-weight:900;
-  white-space:nowrap;
-}
 
-.dot{
-  display:inline-block;
-  width:8px;
-  height:8px;
-  background:var(--green);
-  border-radius:50%;
-  margin-right:8px;
-  box-shadow:0 0 10px var(--green);
-}
-
-.live-text{
-  color:#8995a6;
-}
-
-/* HEADER */
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
   position:sticky;
+
   top:0;
-  z-index:50;
-  border-bottom:1px solid rgba(255,255,255,.06);
-  background:rgba(8,11,17,.91);
-  backdrop-filter:blur(18px);
+
+  z-index:100;
+
+  background:
+    rgba(7,10,15,.91);
+
+  backdrop-filter:
+    blur(18px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
 }
 
-.header{
+.header-inner{
   min-height:78px;
+
   display:flex;
+
   align-items:center;
+
   gap:34px;
 }
 
 .logo{
   display:flex;
+
   align-items:center;
+
   gap:12px;
-  font-weight:950;
-  font-size:23px;
+
+  flex:0 0 auto;
 }
 
-.logo-icon{
-  width:43px;
-  height:43px;
-  border-radius:13px;
+.logo-symbol{
+  width:44px;
+  height:44px;
+
   display:grid;
+
   place-items:center;
-  background:var(--gold);
+
+  border-radius:13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffdd63,
+      #e8b926
+    );
+
   color:#111;
+
+  font-weight:950;
 }
 
-.logo span{color:var(--gold)}
+.logo-text{
+  font-size:23px;
+
+  font-weight:950;
+
+  letter-spacing:-1px;
+}
+
+.logo-text span{
+  color:var(--gold);
+}
 
 nav{
   display:flex;
-  gap:25px;
+
+  gap:24px;
+
+  align-items:center;
 }
 
 nav a{
-  color:#9aa5b5;
+  color:#98a4b5;
+
   font-size:13px;
+
   font-weight:800;
+
+  transition:.2s;
 }
 
-nav a:hover{color:#fff}
+nav a:hover{
+  color:#fff;
+}
+
+.header-actions{
+  margin-left:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+}
 
 .search{
-  margin-left:auto;
-  width:260px;
+  width:270px;
   height:43px;
-  border-radius:12px;
-  border:1px solid #273243;
-  background:#0d131c;
-  color:#fff;
+
   padding:0 15px;
+
+  border-radius:12px;
+
+  border:
+    1px solid #273244;
+
   outline:none;
+
+  color:#fff;
+
+  background:#0c121a;
 }
 
-/* HERO */
+.search:focus{
+  border-color:#536985;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
-  padding:58px 0 35px;
+  padding:
+    58px 0 36px;
+
   display:grid;
-  grid-template-columns:1.4fr .6fr;
+
+  grid-template-columns:
+    minmax(0,1.4fr)
+    minmax(330px,.6fr);
+
   gap:35px;
+
+  align-items:stretch;
 }
 
 .eyebrow{
-  color:#8b97a8;
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  color:#8d99aa;
+
+  font-size:10px;
+
+  font-weight:950;
+
+  letter-spacing:1.6px;
+
   text-transform:uppercase;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:1.5px;
+}
+
+.eyebrow::before{
+  content:"";
+
+  width:38px;
+  height:2px;
+
+  background:var(--gold);
 }
 
 .hero h1{
-  margin:17px 0 0;
-  max-width:850px;
-  font-size:clamp(48px,5.5vw,78px);
+  margin:
+    18px 0 0;
+
+  max-width:900px;
+
+  font-size:
+    clamp(
+      48px,
+      5.5vw,
+      78px
+    );
+
   line-height:.98;
+
   letter-spacing:-4px;
 }
 
-.hero h1 span{color:var(--gold)}
+.hero h1 span{
+  color:var(--gold);
+}
 
-.hero p{
-  max-width:770px;
-  color:#9ba7b8;
-  font-size:18px;
-  line-height:1.7;
+.hero-text{
+  max-width:780px;
+
   margin-top:25px;
+
+  color:#9ba7b7;
+
+  font-size:18px;
+
+  line-height:1.7;
 }
 
 .hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
   margin-top:28px;
+
+  display:flex;
+
+  gap:10px;
+
+  flex-wrap:wrap;
 }
 
-.btn{
+.button{
   min-height:47px;
-  padding:0 18px;
-  display:flex;
+
+  padding:0 19px;
+
+  display:inline-flex;
+
   align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+
   border-radius:13px;
-  border:1px solid #2b3747;
-  background:#101720;
+
+  border:
+    1px solid #293647;
+
   color:#fff;
+
+  background:#101720;
+
+  font-size:13px;
+
   font-weight:900;
 }
 
-.btn.primary{
-  border:0;
-  background:var(--gold);
+.button.primary{
   color:#111;
+
+  border:0;
+
+  background:var(--gold);
 }
 
-/* RADAR */
 
-.radar{
+/* =========================================================
+   RADAR STATISTIKY
+========================================================= */
+
+.radar-panel{
+  position:relative;
+
+  overflow:hidden;
+
   padding:27px;
-  border:1px solid #293648;
+
   border-radius:24px;
-  background:linear-gradient(145deg,#172134,#0c121b);
+
+  border:
+    1px solid #2a3648;
+
+  background:
+    linear-gradient(
+      145deg,
+      #172033,
+      #0b1119
+    );
 }
 
-.radar h2{
-  margin:8px 0 22px;
+.radar-panel::after{
+  content:"";
+
+  position:absolute;
+
+  width:260px;
+  height:260px;
+
+  right:-120px;
+  top:-140px;
+
+  border-radius:50%;
+
+  background:
+    rgba(72,125,230,.17);
+}
+
+.radar-label{
+  position:relative;
+
+  z-index:2;
+
+  color:#78869a;
+
+  font-size:10px;
+
+  font-weight:950;
+
+  letter-spacing:1.4px;
+}
+
+.radar-panel h2{
+  position:relative;
+
+  z-index:2;
+
+  margin:
+    8px 0 22px;
+
+  font-size:27px;
 }
 
 .radar-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:10px;
 }
 
 .stat{
+  position:relative;
+
+  z-index:2;
+
   padding:17px;
+
+  background:#091018;
+
+  border:
+    1px solid #273344;
+
   border-radius:15px;
-  background:#0a1017;
-  border:1px solid #273243;
 }
 
 .stat strong{
   display:block;
+
   font-size:30px;
 }
 
-.stat:first-child strong{color:var(--gold)}
+.stat.hot strong{
+  color:var(--gold);
+}
 
-.stat small{color:#7f8b9d}
+.stat small{
+  color:#7d899b;
+}
 
-.updated{
+.last-update{
+  position:relative;
+
+  z-index:2;
+
   margin-top:18px;
+
   padding-top:16px;
-  border-top:1px solid #293547;
-  color:#758194;
+
+  border-top:
+    1px solid #293648;
+
+  color:#728095;
+
   font-size:11px;
 }
 
-/* FILTER */
+
+/* =========================================================
+   FILTRY
+========================================================= */
 
 .filters{
-  display:flex;
-  gap:7px;
-  overflow:auto;
+  margin:
+    10px 0 42px;
+
   padding:8px;
-  margin:10px 0 42px;
-  border:1px solid #212c3a;
-  border-radius:16px;
-  background:#0a1017;
-}
 
-.filter{
-  border:0;
-  border-radius:11px;
-  min-height:43px;
-  padding:0 18px;
-  color:#919daf;
-  background:transparent;
-  white-space:nowrap;
-  font-size:12px;
-  font-weight:900;
-  cursor:pointer;
-}
-
-.filter.active{
-  background:#fff;
-  color:#111;
-}
-
-/* SECTION */
-
-.section-head{
   display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:20px;
-  margin:25px 0 18px;
+
+  gap:7px;
+
+  overflow-x:auto;
+
+  background:#0a1017;
+
+  border:
+    1px solid #202b39;
+
+  border-radius:16px;
 }
 
-.section-label{
-  color:#718094;
-  font-size:10px;
-  letter-spacing:1.5px;
+.filter-button{
+  min-height:43px;
+
+  padding:
+    0 18px;
+
+  border:0;
+
+  border-radius:11px;
+
+  color:#8e9aac;
+
+  background:transparent;
+
+  white-space:nowrap;
+
+  font-size:12px;
+
   font-weight:900;
 }
 
-.section-head h2{
-  margin:5px 0 0;
+.filter-button:hover{
+  color:#fff;
+}
+
+.filter-button.active{
+  color:#111;
+
+  background:#fff;
+}
+
+
+/* =========================================================
+   NADPIS SEKCE
+========================================================= */
+
+.section-header{
+  margin:
+    24px 0 18px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-end;
+
+  gap:20px;
+}
+
+.section-small{
+  color:#728095;
+
+  font-size:10px;
+
+  font-weight:950;
+
+  letter-spacing:1.5px;
+
+  text-transform:uppercase;
+}
+
+.section-header h2{
+  margin:
+    5px 0 0;
+
   font-size:30px;
-  letter-spacing:-1px;
+
+  letter-spacing:-1.2px;
 }
 
 .section-note{
-  color:#748196;
+  color:#748195;
+
   font-size:11px;
 }
 
-/* FEATURED */
+
+/* =========================================================
+   HLAVNÍ ČLÁNEK
+========================================================= */
 
 .featured{
   display:grid;
-  grid-template-columns:1.5fr .5fr;
+
+  grid-template-columns:
+    minmax(0,1.5fr)
+    minmax(310px,.5fr);
+
   gap:18px;
 }
 
 .main-story{
-  min-height:490px;
-  border:1px solid #293547;
-  border-radius:24px;
+  min-height:500px;
+
   overflow:hidden;
+
   position:relative;
+
+  border-radius:24px;
+
+  border:
+    1px solid #293648;
+
   background:
-    radial-gradient(circle at 80% 25%,rgba(67,116,220,.55),transparent 22%),
-    linear-gradient(135deg,#17253e,#091019 65%);
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(73,119,220,.55),
+      transparent 24%
+    ),
+    linear-gradient(
+      135deg,
+      #17263d,
+      #091019 65%
+    );
+
+  background-size:cover;
+
+  background-position:center;
 }
 
-.main-content{
-  min-height:490px;
+.main-story::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(5,8,13,.98) 0%,
+      rgba(5,8,13,.72) 30%,
+      rgba(5,8,13,.16) 100%
+    );
+}
+
+.main-story-content{
+  min-height:500px;
+
   padding:45px;
+
+  position:relative;
+
+  z-index:2;
+
   display:flex;
+
   flex-direction:column;
+
   justify-content:flex-end;
-  background:linear-gradient(0deg,rgba(5,8,13,.98),rgba(5,8,13,.05));
 }
 
 .category{
   width:max-content;
-  padding:7px 10px;
+
+  padding:
+    7px 10px;
+
   border-radius:7px;
+
   font-size:10px;
+
   font-weight:950;
+
+  letter-spacing:.6px;
 }
 
-.category.pokemon{background:#f4ca42;color:#151515}
-.category.onepiece{background:#e85660}
-.category.lorcana{background:#7d63df}
-.category.magic{background:#e68b54;color:#151515}
-.category.other{background:#438ac9}
+.category.pokemon{
+  color:#161616;
+
+  background:#f4ca42;
+}
+
+.category.onepiece{
+  color:#fff;
+
+  background:#e6535e;
+}
+
+.category.lorcana{
+  color:#fff;
+
+  background:#795fdc;
+}
+
+.category.magic{
+  color:#161616;
+
+  background:#e88952;
+}
+
+.category.yugioh{
+  color:#fff;
+
+  background:#ac59cc;
+}
+
+.category.starwars{
+  color:#fff;
+
+  background:#4389c8;
+}
+
+.category.other{
+  color:#fff;
+
+  background:#556477;
+}
 
 .main-story h3{
-  margin:15px 0 10px;
-  max-width:780px;
-  font-size:40px;
-  line-height:1.08;
+  max-width:800px;
+
+  margin:
+    15px 0 10px;
+
+  font-size:41px;
+
+  line-height:1.07;
+
   letter-spacing:-1.7px;
+}
+
+.main-summary{
+  max-width:760px;
+
+  margin:0;
+
+  color:#a0acbc;
+
+  font-size:14px;
+
+  line-height:1.65;
 }
 
 .story-meta{
   margin-top:18px;
-  color:#748195;
-  font-size:11px;
+
   display:flex;
-  flex-wrap:wrap;
+
   gap:15px;
+
+  flex-wrap:wrap;
+
+  color:#748195;
+
+  font-size:11px;
 }
 
-.story-button{
+.story-link{
   width:max-content;
-  margin-top:22px;
-  font-weight:900;
+
+  margin-top:21px;
+
   color:var(--gold);
+
+  font-size:12px;
+
+  font-weight:950;
 }
 
-.side-list{
+
+/* =========================================================
+   BOČNÍ ČLÁNKY
+========================================================= */
+
+.side-stories{
   display:flex;
+
   flex-direction:column;
+
   gap:18px;
 }
 
 .side-story{
   flex:1;
-  padding:24px;
-  min-height:235px;
-  background:linear-gradient(145deg,#141d29,#0c121a);
-  border:1px solid #273344;
+
+  min-height:240px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  padding:23px;
+
   border-radius:20px;
+
+  border:
+    1px solid #273344;
+
+  background:
+    linear-gradient(
+      145deg,
+      #141d29,
+      #0c121a
+    );
+
+  background-size:cover;
+
+  background-position:center;
+}
+
+.side-story::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(7,10,15,.98),
+      rgba(7,10,15,.35)
+    );
+}
+
+.side-story > *{
+  position:relative;
+
+  z-index:2;
 }
 
 .side-story h3{
-  margin:14px 0 8px;
-  font-size:20px;
-  line-height:1.25;
+  margin:
+    13px 0 8px;
+
+  font-size:19px;
+
+  line-height:1.28;
 }
 
-.side-story small{color:#778397}
+.side-summary{
+  color:#8c98a8;
 
-/* NEWS GRID */
+  font-size:11px;
+
+  line-height:1.5;
+
+  display:
+    -webkit-box;
+
+  -webkit-line-clamp:2;
+
+  -webkit-box-orient:vertical;
+
+  overflow:hidden;
+}
+
+.side-link{
+  margin-top:12px;
+
+  color:var(--gold);
+
+  font-size:10px;
+
+  font-weight:900;
+}
+
+
+/* =========================================================
+   NEWS GRID
+========================================================= */
 
 .news-grid{
   display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0,1fr)
+    );
+
   gap:16px;
 }
 
 .news-card{
-  display:flex;
-  flex-direction:column;
-  background:linear-gradient(145deg,#111923,#0c121a);
-  border:1px solid #242f3f;
-  border-radius:19px;
   overflow:hidden;
-  transition:.2s;
+
+  display:flex;
+
+  flex-direction:column;
+
+  min-width:0;
+
+  border-radius:19px;
+
+  border:
+    1px solid #242f40;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111923,
+      #0c121a
+    );
+
+  transition:
+    transform .2s,
+    border-color .2s;
 }
 
 .news-card:hover{
-  transform:translateY(-4px);
-  border-color:#42546d;
+  transform:
+    translateY(-4px);
+
+  border-color:#40516a;
 }
 
 .news-image{
-  height:125px;
+  height:175px;
+
   display:grid;
+
   place-items:center;
-  background:radial-gradient(circle,#253650,#101722 65%);
-  font-size:42px;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle,
+      #253650,
+      #111822 64%
+    );
+
+  font-size:50px;
+}
+
+.news-image img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
 }
 
 .news-body{
-  padding:18px;
-  display:flex;
-  flex-direction:column;
   flex:1;
+
+  padding:18px;
+
+  display:flex;
+
+  flex-direction:column;
 }
 
 .news-body h3{
-  margin:11px 0 8px;
-  font-size:16px;
+  margin:
+    11px 0 8px;
+
+  font-size:17px;
+
   line-height:1.35;
 }
 
-.news-body p{
-  color:#7d899b;
+.news-summary{
+  margin:0;
+
+  color:#8491a3;
+
   font-size:12px;
-  line-height:1.5;
+
+  line-height:1.55;
+
+  display:
+    -webkit-box;
+
+  -webkit-line-clamp:3;
+
+  -webkit-box-orient:vertical;
+
+  overflow:hidden;
 }
 
 .news-meta{
   margin-top:auto;
-  padding-top:15px;
-  color:#697689;
-  font-size:10px;
+
+  padding-top:17px;
+
   display:flex;
+
   justify-content:space-between;
+
+  gap:10px;
+
+  color:#677488;
+
+  font-size:10px;
+}
+
+.live-label{
+  color:var(--green);
+
+  font-weight:950;
 }
 
 .news-link{
   display:inline-block;
+
   margin-top:13px;
+
   color:var(--gold);
+
   font-size:11px;
-  font-weight:900;
+
+  font-weight:950;
 }
 
-/* EMPTY */
+
+/* =========================================================
+   PRÁZDNÝ STAV / ERROR
+========================================================= */
 
 .empty{
   display:none;
-  grid-column:1/-1;
+
+  margin-top:20px;
+
   padding:40px;
+
   text-align:center;
-  color:#8390a2;
-  border:1px dashed #2a3545;
+
+  color:#8491a4;
+
+  border:
+    1px dashed #2b3748;
+
   border-radius:18px;
 }
 
-/* FOOTER */
+.error-message{
+  display:none;
+
+  margin:
+    25px 0;
+
+  padding:20px;
+
+  color:#ffb7bd;
+
+  background:
+    rgba(236,89,100,.07);
+
+  border:
+    1px solid rgba(236,89,100,.3);
+
+  border-radius:15px;
+}
+
+
+/* =========================================================
+   INFO BLOKY
+========================================================= */
+
+.info-grid{
+  margin-top:50px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0,1fr)
+    );
+
+  gap:15px;
+}
+
+.info-card{
+  min-height:175px;
+
+  padding:23px;
+
+  border-radius:19px;
+
+  border:
+    1px solid #24303f;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111a25,
+      #0a1017
+    );
+}
+
+.info-icon{
+  font-size:28px;
+}
+
+.info-card h3{
+  margin:
+    13px 0 7px;
+
+  font-size:16px;
+}
+
+.info-card p{
+  margin:0;
+
+  color:#7f8c9e;
+
+  font-size:12px;
+
+  line-height:1.55;
+}
+
+
+/* =========================================================
+   DŮVĚRYHODNOST
+========================================================= */
+
+.trust{
+  margin-top:45px;
+
+  padding:34px;
+
+  display:grid;
+
+  grid-template-columns:
+    1.2fr .8fr;
+
+  gap:35px;
+
+  border-radius:22px;
+
+  border:
+    1px solid #283548;
+
+  background:
+    linear-gradient(
+      120deg,
+      #121b28,
+      #0a1018
+    );
+}
+
+.trust h2{
+  margin:
+    7px 0 10px;
+
+  font-size:27px;
+}
+
+.trust p{
+  max-width:760px;
+
+  margin:0;
+
+  color:#8996a8;
+
+  line-height:1.65;
+}
+
+.trust-grid{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:10px;
+}
+
+.trust-box{
+  padding:18px;
+
+  border-radius:14px;
+
+  border:
+    1px solid #222d3c;
+
+  background:#091018;
+}
+
+.trust-box strong{
+  display:block;
+
+  font-size:25px;
+}
+
+.trust-box small{
+  color:#738095;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
   margin-top:70px;
-  border-top:1px solid #192330;
-  padding:35px 0;
-  color:#667386;
+
+  border-top:
+    1px solid #192331;
+
+  background:#06090d;
+}
+
+.footer-inner{
+  min-height:110px;
+
+  padding:
+    28px 0;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  color:#637085;
+
   font-size:11px;
 }
 
-/* MOBILE */
+.footer-brand{
+  color:#a4afbe;
 
-@media(max-width:1100px){
-  nav{display:none}
-  .hero{grid-template-columns:1fr}
-  .featured{grid-template-columns:1fr}
-  .side-list{display:grid;grid-template-columns:1fr 1fr}
-  .news-grid{grid-template-columns:repeat(2,1fr)}
+  font-weight:950;
 }
 
-@media(max-width:700px){
-  .container{width:calc(100% - 28px)}
-  .search{display:none}
-  .hero h1{letter-spacing:-2px}
-  .side-list{grid-template-columns:1fr}
-  .news-grid{grid-template-columns:1fr}
+
+/* =========================================================
+   MOBIL
+========================================================= */
+
+@media(max-width:1150px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:
+      1fr;
+  }
+
+  .featured{
+    grid-template-columns:
+      1fr;
+  }
+
+  .side-stories{
+    display:grid;
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .news-grid,
+  .info-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
 }
+
+
+@media(max-width:760px){
+
+  .container{
+    width:
+      calc(100% - 28px);
+  }
+
+  .search{
+    display:none;
+  }
+
+  .hero{
+    padding-top:38px;
+  }
+
+  .hero h1{
+    letter-spacing:-2.5px;
+  }
+
+  .main-story h3{
+    font-size:30px;
+  }
+
+  .main-story-content{
+    padding:28px;
+  }
+
+  .side-stories{
+    grid-template-columns:
+      1fr;
+  }
+
+  .news-grid,
+  .info-grid{
+    grid-template-columns:
+      1fr;
+  }
+
+  .trust{
+    grid-template-columns:
+      1fr;
+  }
+
+  .footer-inner{
+    display:block;
+  }
+
+  .footer-inner div + div{
+    margin-top:12px;
+  }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =====================================================
+     LIVE BAR
+===================================================== -->
+
 <div class="livebar">
+
   <div class="container live-inner">
-    <div class="live">
-      <span class="dot"></span>
+
+    <div class="live-status">
+
+      <span class="live-dot"></span>
+
       RADAR LIVE
+
     </div>
 
-    <div class="live-text" id="liveText">
-      Načítám aktuální zprávy…
+    <div
+      class="live-message"
+      id="liveMessage"
+    >
+      Načítám aktuální informace…
     </div>
+
   </div>
+
 </div>
 
 
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
-  <div class="container header">
 
-    <a class="logo" href="#">
-      <div class="logo-icon">RK</div>
-      <div>RADAR<span>KARET</span>.CZ</div>
-    </a>
+  <div class="container header-inner">
 
-    <nav>
-      <a href="#news">Novinky</a>
-      <a href="#pokemon">Pokémon</a>
-      <a href="#onepiece">One Piece</a>
-      <a href="#lorcana">Lorcana</a>
-      <a href="#latest">Nejnovější</a>
-    </nav>
 
-    <input
-      id="searchInput"
-      class="search"
-      placeholder="Hledat zprávu, set, produkt…"
+    <a
+      class="logo"
+      href="#"
     >
 
+      <div class="logo-symbol">
+        RK
+      </div>
+
+      <div class="logo-text">
+        RADAR<span>KARET</span>.CZ
+      </div>
+
+    </a>
+
+
+    <nav>
+
+      <a href="#aktualne">
+        Aktuálně
+      </a>
+
+      <a href="#novinky">
+        Novinky
+      </a>
+
+      <a href="#pro-sberatele">
+        Pro sběratele
+      </a>
+
+      <a href="#zdroje">
+        Zdroje
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <input
+        id="searchInput"
+        class="search"
+        type="search"
+        placeholder="Hledat zprávu, kartu, set…"
+      >
+
+    </div>
+
   </div>
+
 </header>
 
 
 <main class="container">
 
 
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section class="hero">
+
 
   <div>
 
     <div class="eyebrow">
-      ČESKÝ RADAR SBĚRATELSKÝCH KARET
+      Český informační portál pro sběratele
     </div>
 
     <h1>
-      Co se děje ve světě <span>karet.</span>
+      Vše, co se děje
+      ve světě <span>karet.</span>
     </h1>
 
-    <p>
-      Aktuální informace o Pokémon TCG, One Piece Card Game,
-      Disney Lorcana a dalších sběratelských karetních hrách.
-      Radar automaticky sleduje nové zprávy a zdroje.
+    <p class="hero-text">
+      Pokémon, One Piece, Disney Lorcana, Magic,
+      Yu-Gi-Oh!, Star Wars Unlimited a další TCG.
+      Nové edice, promo karty, reprinty, sběratelské
+      produkty a důležité informace přehledně v češtině.
     </p>
 
     <div class="hero-actions">
 
-      <a class="btn primary" href="#news">
+      <a
+        class="button primary"
+        href="#aktualne"
+      >
         ⚡ Dnešní radar
       </a>
 
-      <a class="btn" href="#latest">
+      <a
+        class="button"
+        href="#novinky"
+      >
         📰 Všechny zprávy
+      </a>
+
+      <a
+        class="button"
+        href="#pro-sberatele"
+      >
+        💎 Pro sběratele
       </a>
 
     </div>
@@ -579,88 +1541,169 @@ footer{
   </div>
 
 
-  <aside class="radar">
+  <aside class="radar-panel">
 
-    <div class="eyebrow">
+    <div class="radar-label">
       RADAR POSLEDNÍCH 24 HODIN
     </div>
 
-    <h2>Co se právě děje</h2>
+    <h2>
+      Co se právě děje
+    </h2>
+
 
     <div class="radar-grid">
 
-      <div class="stat">
-        <strong id="count24">–</strong>
-        <small>zpráv za 24 h</small>
+
+      <div class="stat hot">
+
+        <strong id="count24">
+          –
+        </strong>
+
+        <small>
+          zpráv za 24 hodin
+        </small>
+
       </div>
 
-      <div class="stat">
-        <strong id="totalCount">–</strong>
-        <small>zpráv v radaru</small>
-      </div>
 
       <div class="stat">
-        <strong id="gameCount">–</strong>
-        <small>sledovaných her</small>
+
+        <strong id="totalCount">
+          –
+        </strong>
+
+        <small>
+          zpráv v radaru
+        </small>
+
       </div>
 
+
       <div class="stat">
-        <strong id="todayCount">–</strong>
-        <small>dnes zachyceno</small>
+
+        <strong id="gameCount">
+          –
+        </strong>
+
+        <small>
+          sledovaných her
+        </small>
+
       </div>
+
+
+      <div class="stat">
+
+        <strong id="todayCount">
+          –
+        </strong>
+
+        <small>
+          dnešních zpráv
+        </small>
+
+      </div>
+
 
     </div>
 
-    <div class="updated" id="updateInfo">
+
+    <div
+      class="last-update"
+      id="lastUpdate"
+    >
       Načítám data…
     </div>
 
   </aside>
 
+
 </section>
 
 
+<!-- =====================================================
+     FILTRY
+===================================================== -->
+
 <div class="filters">
 
-  <button class="filter active" data-filter="all">
+  <button
+    class="filter-button active"
+    data-filter="all"
+  >
     Vše
   </button>
 
-  <button class="filter" data-filter="pokemon">
+  <button
+    class="filter-button"
+    data-filter="pokemon"
+  >
     ⚡ Pokémon
   </button>
 
-  <button class="filter" data-filter="onepiece">
+  <button
+    class="filter-button"
+    data-filter="onepiece"
+  >
     ☠ One Piece
   </button>
 
-  <button class="filter" data-filter="lorcana">
+  <button
+    class="filter-button"
+    data-filter="lorcana"
+  >
     ✦ Lorcana
   </button>
 
-  <button class="filter" data-filter="magic">
+  <button
+    class="filter-button"
+    data-filter="magic"
+  >
     🔥 Magic
+  </button>
+
+  <button
+    class="filter-button"
+    data-filter="yugioh"
+  >
+    ◈ Yu-Gi-Oh!
+  </button>
+
+  <button
+    class="filter-button"
+    data-filter="starwars"
+  >
+    ✧ Star Wars
   </button>
 
 </div>
 
 
-<section id="news">
+<!-- =====================================================
+     HLAVNÍ ZPRÁVY
+===================================================== -->
 
-  <div class="section-head">
+<section id="aktualne">
+
+
+  <div class="section-header">
 
     <div>
-      <div class="section-label">
+
+      <div class="section-small">
         RADAR TODAY
       </div>
 
       <h2>
         Nejdůležitější právě teď
       </h2>
+
     </div>
 
     <div class="section-note">
-      automaticky ze zdrojů
+      automaticky aktualizováno
     </div>
 
   </div>
@@ -668,12 +1711,16 @@ footer{
 
   <div class="featured">
 
-    <article class="main-story">
 
-      <div class="main-content">
+    <article
+      class="main-story"
+      id="mainStory"
+    >
+
+      <div class="main-story-content">
 
         <span
-          class="category pokemon"
+          class="category other"
           id="mainCategory"
         >
           RADAR
@@ -683,19 +1730,26 @@ footer{
           Načítám nejnovější zprávu…
         </h3>
 
+        <p
+          class="main-summary"
+          id="mainSummary"
+        >
+        </p>
+
         <div
           class="story-meta"
           id="mainMeta"
-        ></div>
+        >
+        </div>
 
         <a
-          class="story-button"
+          class="story-link"
           id="mainLink"
           href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Původní zdroj →
+          Přejít na původní článek →
         </a>
 
       </div>
@@ -703,56 +1757,260 @@ footer{
     </article>
 
 
-    <div class="side-list">
+    <div class="side-stories">
 
       <article
         class="side-story"
-        id="side1"
+        id="sideStory1"
       >
-        Načítám…
       </article>
 
       <article
         class="side-story"
-        id="side2"
+        id="sideStory2"
       >
-        Načítám…
       </article>
 
     </div>
 
+
   </div>
+
 
 </section>
 
 
-<section id="latest">
+<!-- =====================================================
+     NEJNOVĚJŠÍ
+===================================================== -->
 
-  <div class="section-head" style="margin-top:48px">
+<section id="novinky">
+
+
+  <div
+    class="section-header"
+    style="margin-top:48px"
+  >
 
     <div>
-      <div class="section-label">
+
+      <div class="section-small">
         LIVE FEED
       </div>
 
       <h2>
         Nejnovější zprávy
       </h2>
+
     </div>
 
-    <div class="section-note" id="resultCount"></div>
+    <div
+      class="section-note"
+      id="resultCount"
+    >
+    </div>
 
+  </div>
+
+
+  <div
+    class="error-message"
+    id="errorMessage"
+  >
+    Nepodařilo se načíst aktuální data.
   </div>
 
 
   <div
     class="news-grid"
     id="newsGrid"
-  ></div>
-
-  <div class="empty" id="emptyState">
-    Pro vybraný filtr nebyla nalezena žádná zpráva.
+  >
   </div>
+
+
+  <div
+    class="empty"
+    id="emptyState"
+  >
+    Pro tento filtr zatím nejsou žádné zprávy.
+  </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     PRO SBĚRATELE
+===================================================== -->
+
+<section
+  class="info-grid"
+  id="pro-sberatele"
+>
+
+
+  <article class="info-card">
+
+    <div class="info-icon">
+      📦
+    </div>
+
+    <h3>
+      Reprint Radar
+    </h3>
+
+    <p>
+      Sledujeme nové výrobní a distribuční
+      vlny populárních sealed produktů.
+    </p>
+
+  </article>
+
+
+  <article class="info-card">
+
+    <div class="info-icon">
+      💎
+    </div>
+
+    <h3>
+      Chase Cards
+    </h3>
+
+    <p>
+      Nové vzácné varianty, manga rare,
+      enchanted, illustration rare a promo karty.
+    </p>
+
+  </article>
+
+
+  <article class="info-card">
+
+    <div class="info-icon">
+      🏆
+    </div>
+
+    <h3>
+      Turnajové karty
+    </h3>
+
+    <p>
+      Promo karty, prize cards a exkluzivní
+      produkty z organizovaného hraní.
+    </p>
+
+  </article>
+
+
+  <article class="info-card">
+
+    <div class="info-icon">
+      📈
+    </div>
+
+    <h3>
+      Sběratelské trendy
+    </h3>
+
+    <p>
+      Co právě získává pozornost sběratelů
+      a které produkty stojí za sledování.
+    </p>
+
+  </article>
+
+
+</section>
+
+
+<!-- =====================================================
+     ZDROJE
+===================================================== -->
+
+<section
+  class="trust"
+  id="zdroje"
+>
+
+
+  <div>
+
+    <div class="section-small">
+      DŮVĚRYHODNOST
+    </div>
+
+    <h2>
+      Zpráva má vždy původní zdroj.
+    </h2>
+
+    <p>
+      RadarKaret zobrazuje české shrnutí informace,
+      ale návštěvník se může jedním kliknutím
+      dostat na původní článek. Originální fotografie
+      jsou používány pouze jako náhled daného zdroje.
+    </p>
+
+  </div>
+
+
+  <div class="trust-grid">
+
+
+    <div class="trust-box">
+
+      <strong>
+        ✓
+      </strong>
+
+      <small>
+        původní zdroj
+      </small>
+
+    </div>
+
+
+    <div class="trust-box">
+
+      <strong>
+        CZ
+      </strong>
+
+      <small>
+        český překlad
+      </small>
+
+    </div>
+
+
+    <div class="trust-box">
+
+      <strong>
+        24/7
+      </strong>
+
+      <small>
+        automatický radar
+      </small>
+
+    </div>
+
+
+    <div class="trust-box">
+
+      <strong>
+        LIVE
+      </strong>
+
+      <small>
+        průběžné aktualizace
+      </small>
+
+    </div>
+
+
+  </div>
+
 
 </section>
 
@@ -760,93 +2018,86 @@ footer{
 </main>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
-  <div class="container">
-    <strong>RADARKARET.CZ</strong> — český informační radar pro svět sběratelských karet.<br><br>
-    RadarKaret není spojen s The Pokémon Company, Bandai, Ravensburger ani dalšími vlastníky značek.
-    Obsahuje odkazy na původní informační zdroje.
+
+  <div class="container footer-inner">
+
+    <div>
+
+      <span class="footer-brand">
+        RADARKARET.CZ
+      </span>
+
+      — český informační portál
+      ze světa sběratelských karet.
+
+    </div>
+
+
+    <div>
+      Pokémon, One Piece, Disney Lorcana,
+      Magic a další názvy jsou ochrannými
+      známkami příslušných vlastníků.
+    </div>
+
   </div>
+
 </footer>
 
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
 let allNews = [];
+
 let activeFilter = "all";
 
+
 const gameInfo = {
-  pokemon: {
-    name: "Pokémon",
-    icon: "⚡"
+
+  pokemon:{
+    name:"Pokémon",
+    icon:"⚡"
   },
-  onepiece: {
-    name: "One Piece",
-    icon: "☠"
+
+  onepiece:{
+    name:"One Piece",
+    icon:"☠"
   },
-  lorcana: {
-    name: "Lorcana",
-    icon: "✦"
+
+  lorcana:{
+    name:"Disney Lorcana",
+    icon:"✦"
   },
-  magic: {
-    name: "Magic",
-    icon: "🔥"
+
+  magic:{
+    name:"Magic",
+    icon:"🔥"
+  },
+
+  yugioh:{
+    name:"Yu-Gi-Oh!",
+    icon:"◈"
+  },
+
+  starwars:{
+    name:"Star Wars",
+    icon:"✧"
   }
+
 };
 
 
-function safeCategory(category){
-  return gameInfo[category]
-    ? category
-    : "other";
-}
-
-
-function gameName(item){
-  return item.game ||
-    gameInfo[item.category]?.name ||
-    "TCG";
-}
-
-
-function icon(item){
-  return gameInfo[item.category]?.icon || "🎴";
-}
-
-
-function parseDate(value){
-
-  if(!value) return null;
-
-  const d = new Date(value);
-
-  if(Number.isNaN(d.getTime())){
-    return null;
-  }
-
-  return d;
-}
-
-
-function dateLabel(item){
-
-  if(item.date){
-    return item.date;
-  }
-
-  const d = parseDate(item.published);
-
-  if(!d) return "";
-
-  return d.toLocaleDateString(
-    "cs-CZ",
-    {
-      day:"numeric",
-      month:"numeric",
-      year:"numeric"
-    }
-  );
-}
-
+/* =========================================================
+   BEZPEČNÝ TEXT
+========================================================= */
 
 function escapeHtml(text){
 
@@ -857,388 +2108,983 @@ function escapeHtml(text){
     text || "";
 
   return div.innerHTML;
+
 }
 
 
-function renderTop(news){
+/* =========================================================
+   KATEGORIE
+========================================================= */
 
-  if(!news.length){
-    document.getElementById("mainTitle").textContent =
-      "Radar zatím nemá žádná data.";
-    return;
+function safeCategory(category){
+
+  const allowed = [
+    "pokemon",
+    "onepiece",
+    "lorcana",
+    "magic",
+    "yugioh",
+    "starwars"
+  ];
+
+  return allowed.includes(category)
+    ? category
+    : "other";
+
+}
+
+
+function gameName(item){
+
+  if(item.game){
+    return item.game;
   }
 
-  const main = news[0];
+  return (
+    gameInfo[item.category]?.name
+    ||
+    "Sběratelské karty"
+  );
 
-  const mainCategory =
-    document.getElementById("mainCategory");
-
-  mainCategory.textContent =
-    gameName(main).toUpperCase();
-
-  mainCategory.className =
-    "category " +
-    safeCategory(main.category);
+}
 
 
-  document.getElementById("mainTitle")
+function gameIcon(item){
+
+  return (
+    gameInfo[item.category]?.icon
+    ||
+    "🎴"
+  );
+
+}
+
+
+/* =========================================================
+   DATUM
+========================================================= */
+
+function parseDate(value){
+
+  if(!value){
+    return null;
+  }
+
+  const date =
+    new Date(value);
+
+  if(
+    Number.isNaN(
+      date.getTime()
+    )
+  ){
+    return null;
+  }
+
+  return date;
+
+}
+
+
+function dateLabel(item){
+
+  if(item.published){
+
+    const date =
+      parseDate(
+        item.published
+      );
+
+    if(date){
+
+      return date
+        .toLocaleDateString(
+          "cs-CZ",
+          {
+            day:"numeric",
+            month:"numeric",
+            year:"numeric"
+          }
+        );
+
+    }
+
+  }
+
+  return item.date || "";
+
+}
+
+
+/* =========================================================
+   OBRÁZEK
+========================================================= */
+
+function imageHtml(item){
+
+  if(
+    item.image
+    &&
+    item.image.startsWith("http")
+  ){
+
+    return `
+      <img
+        src="${escapeHtml(item.image)}"
+        alt="${escapeHtml(item.title)}"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        onerror="
+          this.remove();
+          this.parentElement.innerHTML='${gameIcon(item)}';
+        "
+      >
+    `;
+
+  }
+
+  return gameIcon(item);
+
+}
+
+
+/* =========================================================
+   HLAVNÍ ČLÁNEK
+========================================================= */
+
+function renderMainStory(item){
+
+  if(!item){
+
+    document
+      .getElementById("mainTitle")
+      .textContent =
+      "Radar zatím nemá žádnou zprávu.";
+
+    return;
+
+  }
+
+
+  const category =
+    safeCategory(
+      item.category
+    );
+
+
+  const categoryElement =
+    document.getElementById(
+      "mainCategory"
+    );
+
+
+  categoryElement.className =
+    "category " + category;
+
+
+  categoryElement.textContent =
+    gameName(item)
+      .toUpperCase();
+
+
+  document
+    .getElementById("mainTitle")
     .textContent =
-    main.title;
+    item.title ||
+    "Aktuální informace";
 
 
-  document.getElementById("mainMeta")
-    .innerHTML =
-    `<span>${dateLabel(main)}</span>
-     <span>✓ sledovaný zdroj</span>`;
+  document
+    .getElementById("mainSummary")
+    .textContent =
+    item.summary ||
+    "Aktuální informace z původního zdroje.";
+
+
+  document
+    .getElementById("mainMeta")
+    .innerHTML = `
+
+      <span>
+        ${escapeHtml(dateLabel(item))}
+      </span>
+
+      <span>
+        ✓ původní zdroj
+      </span>
+
+      <span>
+        český překlad
+      </span>
+
+    `;
 
 
   const link =
-    document.getElementById("mainLink");
+    document.getElementById(
+      "mainLink"
+    );
+
 
   link.href =
-    main.url || "#";
+    item.url || "#";
 
 
-  renderSide(
-    "side1",
-    news[1]
-  );
+  const story =
+    document.getElementById(
+      "mainStory"
+    );
 
-  renderSide(
-    "side2",
-    news[2]
-  );
+
+  if(
+    item.image
+    &&
+    item.image.startsWith("http")
+  ){
+
+    story.style.backgroundImage = `
+
+      linear-gradient(
+        0deg,
+        rgba(5,8,13,.97),
+        rgba(5,8,13,.18)
+      ),
+
+      url("${item.image}")
+
+    `;
+
+  }
 
 }
 
 
-function renderSide(id,item){
+/* =========================================================
+   BOČNÍ ČLÁNKY
+========================================================= */
 
-  const el =
+function renderSideStory(
+  id,
+  item
+){
+
+  const element =
     document.getElementById(id);
 
+
   if(!item){
-    el.innerHTML =
-      "<small>Další zpráva zatím není k dispozici.</small>";
+
+    element.innerHTML =
+      "Další zpráva zatím není k dispozici.";
+
     return;
+
   }
 
-  el.innerHTML = `
-    <span class="category ${safeCategory(item.category)}">
-      ${escapeHtml(gameName(item).toUpperCase())}
+
+  if(
+    item.image
+    &&
+    item.image.startsWith("http")
+  ){
+
+    element.style.backgroundImage = `
+
+      linear-gradient(
+        0deg,
+        rgba(5,8,13,.98),
+        rgba(5,8,13,.24)
+      ),
+
+      url("${item.image}")
+
+    `;
+
+  }
+
+
+  element.innerHTML = `
+
+    <span class="
+      category
+      ${safeCategory(item.category)}
+    ">
+
+      ${escapeHtml(
+        gameName(item)
+          .toUpperCase()
+      )}
+
     </span>
 
+
     <h3>
-      ${escapeHtml(item.title)}
+      ${escapeHtml(
+        item.title ||
+        "Aktuální zpráva"
+      )}
     </h3>
 
-    <small>
-      ${escapeHtml(dateLabel(item))}
-    </small>
 
-    <br><br>
+    <div class="side-summary">
+
+      ${escapeHtml(
+        item.summary ||
+        "Aktuální informace z původního zdroje."
+      )}
+
+    </div>
+
 
     <a
-      href="${escapeHtml(item.url || "#")}"
+      class="side-link"
+      href="${escapeHtml(
+        item.url || "#"
+      )}"
       target="_blank"
       rel="noopener noreferrer"
-      style="color:#f7c843;font-weight:900;font-size:11px"
     >
-      Zdroj →
+
+      Původní článek →
+
     </a>
+
   `;
 
 }
 
 
+/* =========================================================
+   HLAVNÍ BLOK
+========================================================= */
+
+function renderFeatured(){
+
+  if(!allNews.length){
+    return;
+  }
+
+
+  renderMainStory(
+    allNews[0]
+  );
+
+
+  renderSideStory(
+    "sideStory1",
+    allNews[1]
+  );
+
+
+  renderSideStory(
+    "sideStory2",
+    allNews[2]
+  );
+
+}
+
+
+/* =========================================================
+   SEZNAM ZPRÁV
+========================================================= */
+
 function renderNews(){
 
   const grid =
-    document.getElementById("newsGrid");
+    document.getElementById(
+      "newsGrid"
+    );
 
-  const query =
+
+  const search =
     document
-      .getElementById("searchInput")
+      .getElementById(
+        "searchInput"
+      )
       .value
       .trim()
       .toLowerCase();
 
 
   const visible =
-    allNews.filter(item => {
-
-      const categoryMatch =
-        activeFilter === "all" ||
-        item.category === activeFilter;
-
-      const searchMatch =
-        !query ||
-        (item.title || "")
-          .toLowerCase()
-          .includes(query) ||
-        (item.game || "")
-          .toLowerCase()
-          .includes(query);
-
-      return categoryMatch &&
-        searchMatch;
-
-    });
+    allNews.filter(
+      item => {
 
 
-  document.getElementById("resultCount")
+        const categoryOK =
+
+          activeFilter === "all"
+
+          ||
+
+          item.category ===
+          activeFilter;
+
+
+        const searchableText = [
+
+          item.title,
+
+          item.summary,
+
+          item.game,
+
+          item.title_original
+
+        ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+
+
+        const searchOK =
+
+          !search
+
+          ||
+
+          searchableText
+            .includes(search);
+
+
+        return (
+          categoryOK
+          &&
+          searchOK
+        );
+
+      }
+    );
+
+
+  document
+    .getElementById(
+      "resultCount"
+    )
     .textContent =
     `${visible.length} zpráv`;
 
 
-  document.getElementById("emptyState")
+  document
+    .getElementById(
+      "emptyState"
+    )
     .style.display =
+
     visible.length
+
       ? "none"
+
       : "block";
 
 
   grid.innerHTML =
     visible
-      .map(item => `
+      .map(
+        item => `
 
         <article class="news-card">
 
+
           <div class="news-image">
-            ${icon(item)}
+
+            ${imageHtml(item)}
+
           </div>
+
 
           <div class="news-body">
 
-            <span class="category ${safeCategory(item.category)}">
-              ${escapeHtml(gameName(item).toUpperCase())}
+
+            <span class="
+              category
+              ${safeCategory(item.category)}
+            ">
+
+              ${escapeHtml(
+                gameName(item)
+                  .toUpperCase()
+              )}
+
             </span>
 
+
             <h3>
-              ${escapeHtml(item.title)}
+
+              ${escapeHtml(
+                item.title ||
+                "Aktuální zpráva"
+              )}
+
             </h3>
 
-            <p>
-              Aktuální zpráva zachycená systémem RadarKaret.
+
+            <p class="news-summary">
+
+              ${escapeHtml(
+                item.summary ||
+                "Aktuální informace z původního zdroje."
+              )}
+
             </p>
+
 
             <div class="news-meta">
 
               <span>
-                ${escapeHtml(dateLabel(item))}
+                ${escapeHtml(
+                  dateLabel(item)
+                )}
               </span>
 
-              <span style="color:#42d392;font-weight:900">
-                ● LIVE
+              <span class="live-label">
+                ● AKTUÁLNÍ
               </span>
 
             </div>
 
+
             <a
               class="news-link"
-              href="${escapeHtml(item.url || "#")}"
+              href="${escapeHtml(
+                item.url || "#"
+              )}"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Původní zdroj →
+
+              Přejít na původní článek →
+
             </a>
+
 
           </div>
 
+
         </article>
 
-      `)
+      `
+      )
       .join("");
 
 }
 
+
+/* =========================================================
+   STATISTIKY
+========================================================= */
 
 function renderStats(){
 
   const now =
     new Date();
 
-  const ago24 =
-    now.getTime() -
-    24 * 60 * 60 * 1000;
+
+  const dayAgo =
+    now.getTime()
+    -
+    (
+      24
+      *
+      60
+      *
+      60
+      *
+      1000
+    );
 
 
-  const count24 =
-    allNews.filter(item => {
+  const last24 =
+    allNews.filter(
+      item => {
 
-      const d =
-        parseDate(item.published);
+        const date =
+          parseDate(
+            item.published
+          );
 
-      return d &&
-        d.getTime() >= ago24;
+        return (
+          date
+          &&
+          date.getTime()
+          >=
+          dayAgo
+        );
 
-    }).length;
+      }
+    ).length;
 
 
-  const today =
+  const todayString =
     now.toLocaleDateString(
       "cs-CZ"
     );
 
 
-  const todayCount =
-    allNews.filter(item => {
+  const today =
+    allNews.filter(
+      item => {
 
-      const d =
-        parseDate(item.published);
+        const date =
+          parseDate(
+            item.published
+          );
 
-      if(!d) return false;
+        if(!date){
+          return false;
+        }
 
-      return d.toLocaleDateString(
-        "cs-CZ"
-      ) === today;
+        return (
 
-    }).length;
+          date.toLocaleDateString(
+            "cs-CZ"
+          )
+
+          ===
+
+          todayString
+
+        );
+
+      }
+    ).length;
 
 
   const games =
     new Set(
+
       allNews
-        .map(item => item.category)
+
+        .map(
+          item =>
+            item.category
+        )
+
         .filter(Boolean)
+
     );
 
 
-  document.getElementById("count24")
+  document
+    .getElementById(
+      "count24"
+    )
     .textContent =
-    count24;
+    last24;
 
 
-  document.getElementById("totalCount")
+  document
+    .getElementById(
+      "totalCount"
+    )
     .textContent =
     allNews.length;
 
 
-  document.getElementById("gameCount")
+  document
+    .getElementById(
+      "gameCount"
+    )
     .textContent =
     games.size;
 
 
-  document.getElementById("todayCount")
+  document
+    .getElementById(
+      "todayCount"
+    )
     .textContent =
-    todayCount;
+    today;
 
 
-  document.getElementById("updateInfo")
-    .textContent =
-    "● Data načtena " +
-    new Date().toLocaleTimeString(
-      "cs-CZ",
-      {
-        hour:"2-digit",
-        minute:"2-digit"
+  let newestDate = null;
+
+
+  allNews.forEach(
+    item => {
+
+      const date =
+        parseDate(
+          item.published
+        );
+
+
+      if(
+        date
+        &&
+        (
+          !newestDate
+          ||
+          date > newestDate
+        )
+      ){
+
+        newestDate =
+          date;
+
       }
-    );
+
+    }
+  );
 
 
-  document.getElementById("liveText")
+  if(newestDate){
+
+    document
+      .getElementById(
+        "lastUpdate"
+      )
+      .textContent =
+
+      "● Nejnovější zachycená zpráva: "
+      +
+      newestDate
+        .toLocaleString(
+          "cs-CZ",
+          {
+            day:"numeric",
+            month:"numeric",
+            hour:"2-digit",
+            minute:"2-digit"
+          }
+        );
+
+  }
+
+
+  document
+    .getElementById(
+      "liveMessage"
+    )
     .textContent =
+
     allNews.length
-    ? `Radar právě sleduje ${allNews.length} aktuálních položek.`
-    : "Radar čeká na první zprávy.";
+
+      ?
+
+      `Radar aktuálně obsahuje ${allNews.length} zpráv ze světa sběratelských karet.`
+
+      :
+
+      "Radar čeká na první zprávy.";
 
 }
 
+
+/* =========================================================
+   NAČTENÍ JSON
+========================================================= */
 
 async function loadNews(){
 
   try{
 
+
     const response =
       await fetch(
-        "data/news.json?v=" +
+
+        "data/news.json?v="
+        +
         Date.now()
+
       );
 
 
-    if(!response.ok){
+    if(
+      !response.ok
+    ){
+
       throw new Error(
-        "news.json nelze načíst"
+        "Soubor news.json nelze načíst."
       );
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    if(
+      !Array.isArray(data)
+    ){
+
+      throw new Error(
+        "news.json nemá správný formát."
+      );
+
     }
 
 
     allNews =
-      await response.json();
+      data.filter(
+        item =>
+          item
+          &&
+          item.title
+      );
 
 
     allNews.sort(
-      (a,b) =>
-        new Date(b.published || 0) -
-        new Date(a.published || 0)
+      (a,b) => {
+
+        const dateA =
+          parseDate(
+            a.published
+          );
+
+        const dateB =
+          parseDate(
+            b.published
+          );
+
+        return (
+
+          (
+            dateB
+            ?
+            dateB.getTime()
+            :
+            0
+          )
+
+          -
+
+          (
+            dateA
+            ?
+            dateA.getTime()
+            :
+            0
+          )
+
+        );
+
+      }
     );
 
 
     renderStats();
-    renderTop(allNews);
+
+    renderFeatured();
+
     renderNews();
+
 
   }
   catch(error){
 
-    console.error(error);
 
-    document.getElementById("liveText")
-      .textContent =
-      "Radar momentálně nemůže načíst data.";
+    console.error(
+      error
+    );
 
-    document.getElementById("mainTitle")
+
+    document
+      .getElementById(
+        "errorMessage"
+      )
+      .style.display =
+      "block";
+
+
+    document
+      .getElementById(
+        "liveMessage"
+      )
       .textContent =
-      "Nepodařilo se načíst data/news.json";
+      "Radar momentálně nemůže načíst aktualizace.";
+
+
+    document
+      .getElementById(
+        "mainTitle"
+      )
+      .textContent =
+      "Aktuální data se nepodařilo načíst.";
+
 
   }
 
 }
 
 
+/* =========================================================
+   FILTRY
+========================================================= */
+
 document
-  .querySelectorAll(".filter")
-  .forEach(button => {
-
-    button.addEventListener(
-      "click",
-      () => {
-
-        document
-          .querySelectorAll(".filter")
-          .forEach(item =>
-            item.classList.remove("active")
-          );
+  .querySelectorAll(
+    ".filter-button"
+  )
+  .forEach(
+    button => {
 
 
-        button.classList.add(
-          "active"
+      button
+        .addEventListener(
+          "click",
+          () => {
+
+
+            document
+              .querySelectorAll(
+                ".filter-button"
+              )
+              .forEach(
+                item =>
+                  item
+                    .classList
+                    .remove(
+                      "active"
+                    )
+              );
+
+
+            button
+              .classList
+              .add(
+                "active"
+              );
+
+
+            activeFilter =
+              button.dataset.filter;
+
+
+            renderNews();
+
+
+          }
         );
 
 
-        activeFilter =
-          button.dataset.filter;
+    }
+  );
 
 
-        renderNews();
-
-      }
-    );
-
-  });
-
+/* =========================================================
+   VYHLEDÁVÁNÍ
+========================================================= */
 
 document
-  .getElementById("searchInput")
+  .getElementById(
+    "searchInput"
+  )
   .addEventListener(
     "input",
     renderNews
   );
 
 
+/* =========================================================
+   START
+========================================================= */
+
 loadNews();
 
 </script>
+
 
 </body>
 </html>

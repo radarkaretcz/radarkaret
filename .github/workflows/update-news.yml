@@ -1,17 +1,17 @@
 name: Aktualizace RadarKaret
 
-on:
+"on":
   workflow_dispatch:
 
   schedule:
-    - cron: '15 5 * * *'
+    - cron: "15 5 * * *"
 
   push:
     branches:
       - main
     paths:
-      - 'update_news.py'
-      - '.github/workflows/update-news.yml'
+      - "update_news.py"
+      - ".github/workflows/update-news.yml"
 
 permissions:
   contents: write
@@ -27,17 +27,25 @@ jobs:
       - name: Nastavit Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
-      - name: Nainstalovat knihovny
+      - name: Nainstalovat potrebne knihovny
         run: |
           python -m pip install --upgrade pip
           pip install feedparser requests beautifulsoup4 deep-translator googlenewsdecoder
 
-      - name: Aktualizovat zpravy
-        run: python update_news.py
+      - name: Spustit RadarKaret
+        run: |
+          python update_news.py
 
-      - name: Ulozit nove zpravy
+      - name: Zkontrolovat vytvoreny JSON
+        run: |
+          echo "Kontrola data/news.json"
+          ls -la data
+          python -m json.tool data/news.json > /dev/null
+          echo "news.json je platny JSON"
+
+      - name: Ulozit aktualizovane zpravy
         run: |
           git config user.name "RadarKaret Bot"
           git config user.email "radarkaret-bot@users.noreply.github.com"

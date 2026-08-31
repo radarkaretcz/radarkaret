@@ -32,7 +32,7 @@ jobs:
       - name: Nainstalovat knihovny
         run: |
           python -m pip install --upgrade pip
-          pip install feedparser
+          pip install feedparser requests beautifulsoup4 deep-translator googlenewsdecoder
 
       - name: Aktualizovat zpravy
         run: python update_news.py

@@ -1,7 +1,6 @@
 import json
 import re
 import time
-
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
@@ -9,22 +8,34 @@ from urllib.parse import quote_plus, urljoin
 
 import feedparser
 import requests
-
 from bs4 import BeautifulSoup
 from deep_translator import GoogleTranslator
 from googlenewsdecoder import gnewsdecoder
 
 
-# =========================================================
+# ============================================================
+# RADARKARET.CZ
+# Automatický sběr TCG novinek
+# ============================================================
+
+
+# ------------------------------------------------------------
 # NASTAVENÍ
-# =========================================================
+# ------------------------------------------------------------
+
+MAX_PER_SOURCE = 12
+MAX_AGE_DAYS = 180
+MAX_TOTAL_ARTICLES = 80
+
+OUTPUT_FILE = Path("data/news.json")
+
 
 SOURCES = [
 
     {
         "game": "Pokémon",
         "category": "pokemon",
-        "query": 'site:pokemon.com/us/pokemon-news "Trading Card Game"',
+        "query": 'site:pokemon.com "Trading Card Game"',
     },
 
     {
@@ -39,12 +50,25 @@ SOURCES = [
         "query": "site:disneylorcana.com",
     },
 
+    {
+        "game": "Magic",
+        "category": "magic",
+        "query": "site:magic.wizards.com",
+    },
+
+    {
+        "game": "Yu-Gi-Oh!",
+        "category": "yugioh",
+        "query": "site:yugioh-card.com",
+    },
+
+    {
+        "game": "Star Wars Unlimited",
+        "category": "starwars",
+        "query": "site:starwarsunlimited.com",
+    },
+
 ]
-
-
-MAX_AGE_DAYS = 180
-
-MAX_PER_SOURCE = 10
 
 
 HEADERS = {
@@ -53,7 +77,8 @@ HEADERS = {
         "Mozilla/5.0 "
         "(Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 "
-        "Chrome/124 Safari/537.36 "
+        "(KHTML, like Gecko) "
+        "Chrome/124.0 Safari/537.36 "
         "RadarKaret/1.0",
 
     "Accept-Language":
@@ -68,39 +93,41 @@ translator = GoogleTranslator(
 )
 
 
-# =========================================================
-# GOOGLE NEWS
-# =========================================================
+# ------------------------------------------------------------
+# GOOGLE NEWS RSS
+# ------------------------------------------------------------
 
 def google_news_feed(query):
 
-    q = quote_plus(query)
+    encoded = quote_plus(query)
 
     return (
         "https://news.google.com/rss/search"
-        f"?q={q}"
+        f"?q={encoded}"
         "&hl=en-US"
         "&gl=US"
         "&ceid=US:en"
     )
 
 
-# =========================================================
+# ------------------------------------------------------------
 # DATUM
-# =========================================================
+# ------------------------------------------------------------
 
-def parse_date(entry):
+def parse_entry_date(entry):
 
     try:
 
-        if getattr(
+        published = getattr(
             entry,
             "published",
             None
-        ):
+        )
+
+        if published:
 
             dt = parsedate_to_datetime(
-                entry.published
+                published
             )
 
             if dt.tzinfo is None:
@@ -113,19 +140,23 @@ def parse_date(entry):
                 timezone.utc
             )
 
-    except Exception:
-        pass
+    except Exception as error:
+
+        print(
+            "Chyba při čtení data:",
+            error
+        )
 
     return datetime.now(
         timezone.utc
     )
 
 
-# =========================================================
-# ČIŠTĚNÍ TITULKU
-# =========================================================
+# ------------------------------------------------------------
+# ČIŠTĚNÍ TEXTU
+# ------------------------------------------------------------
 
-def clean_title(text):
+def clean_text(text):
 
     if not text:
         return ""
@@ -134,95 +165,101 @@ def clean_title(text):
         r"\s+",
         " ",
         text
-    ).strip()
+    )
+
+    return text.strip()
 
 
-    suffixes = [
+def clean_title(text):
+
+    text = clean_text(text)
+
+    if not text:
+        return ""
+
+    patterns = [
 
         r"\s*-\s*Pokemon\.com$",
 
-        r"\s*-\s*ONE PIECE CARD GAME\s*-\s*Official Web Site$",
+        r"\s*-\s*Pokémon.*$",
 
-        r"\s*-\s*disneylorcana\.com$",
+        r"\s*-\s*ONE PIECE CARD GAME.*$",
 
-        r"\s*\|\s*Disney Lorcana TCG by Ravensburger\s*-\s*disneylorcana\.com$",
+        r"\s*-\s*Disney Lorcana.*$",
+
+        r"\s*\|\s*Disney Lorcana.*$",
+
+        r"\s*-\s*Magic.*$",
+
+        r"\s*-\s*Wizards of the Coast.*$",
+
+        r"\s*-\s*Yu-Gi-Oh!.*$",
+
+        r"\s*-\s*Star Wars Unlimited.*$",
 
     ]
 
-
-    for pattern in suffixes:
+    for pattern in patterns:
 
         text = re.sub(
             pattern,
             "",
             text,
-            flags=re.I
+            flags=re.IGNORECASE
         )
-
 
     return text.strip()
 
 
-# =========================================================
-# PŮVODNÍ URL ČLÁNKU
-# =========================================================
+# ------------------------------------------------------------
+# DEKÓDOVÁNÍ GOOGLE NEWS URL
+# ------------------------------------------------------------
 
-def resolve_original_url(
-    google_url
-):
+def resolve_original_url(url):
 
-    if (
-        not google_url
-        or
-        "news.google.com"
-        not in google_url
-    ):
-        return google_url
+    if not url:
+        return ""
 
+    if "news.google.com" not in url:
+        return url
 
     try:
 
         result = gnewsdecoder(
-            google_url,
-            interval=0.3
+            url,
+            interval=0.5
         )
 
+        if isinstance(result, dict):
 
-        if (
-            isinstance(
-                result,
-                dict
-            )
-            and
-            result.get("status")
-        ):
-
-            return (
-                result.get(
-                    "decoded_url"
-                )
-                or google_url
+            decoded = (
+                result.get("decoded_url")
+                or
+                result.get("url")
             )
 
+            if decoded:
+                return decoded
 
-    except Exception as exc:
+    except Exception as error:
 
         print(
-            "Google News URL "
-            f"se nepodařilo rozbalit: {exc}"
+            "Nepodařilo se dekódovat Google News URL:",
+            error
         )
 
+    return url
 
-    return google_url
 
+# ------------------------------------------------------------
+# META DATA ORIGINÁLNÍHO ČLÁNKU
+# ------------------------------------------------------------
 
-# =========================================================
-# DATA Z ORIGINÁLNÍHO ČLÁNKU
-# =========================================================
-
-def get_article_meta(url):
+def get_article_metadata(url):
 
     result = {
+
+        "url": url,
 
         "title": "",
 
@@ -230,19 +267,13 @@ def get_article_meta(url):
 
         "image": "",
 
-        "url": url,
-
     }
 
-
-    if (
-        not url
-        or
-        "news.google.com"
-        in url
-    ):
+    if not url:
         return result
 
+    if "news.google.com" in url:
+        return result
 
     try:
 
@@ -252,20 +283,15 @@ def get_article_meta(url):
 
             headers=HEADERS,
 
-            timeout=15,
+            timeout=20,
 
             allow_redirects=True,
 
         )
 
-
         response.raise_for_status()
 
-
-        result["url"] = (
-            response.url
-        )
-
+        result["url"] = response.url
 
         soup = BeautifulSoup(
             response.text,
@@ -273,9 +299,11 @@ def get_article_meta(url):
         )
 
 
-        def meta_value(
-            *selectors
-        ):
+        # ----------------------------------------------------
+        # Pomocná funkce pro meta tag
+        # ----------------------------------------------------
+
+        def meta_content(selectors):
 
             for selector in selectors:
 
@@ -283,88 +311,101 @@ def get_article_meta(url):
                     selector
                 )
 
-                if tag:
+                if not tag:
+                    continue
 
-                    value = tag.get(
-                        "content"
+                content = tag.get(
+                    "content"
+                )
+
+                if content:
+
+                    return clean_text(
+                        content
                     )
-
-                    if value:
-                        return value.strip()
 
             return ""
 
 
+        # ----------------------------------------------------
         # TITULEK
+        # ----------------------------------------------------
 
-        result["title"] = meta_value(
+        result["title"] = meta_content([
 
             'meta[property="og:title"]',
 
             'meta[name="twitter:title"]',
 
-        )
+        ])
 
 
         if (
             not result["title"]
-            and soup.title
+            and
+            soup.title
         ):
 
-            result["title"] = (
+            result["title"] = clean_text(
+
                 soup.title.get_text(
                     " ",
                     strip=True
                 )
+
             )
 
 
+        # ----------------------------------------------------
         # POPIS
+        # ----------------------------------------------------
 
-        result["description"] = (
-            meta_value(
+        result["description"] = meta_content([
 
-                'meta[property="og:description"]',
+            'meta[property="og:description"]',
 
-                'meta[name="description"]',
+            'meta[name="description"]',
 
-                'meta[name="twitter:description"]',
+            'meta[name="twitter:description"]',
 
-            )
-        )
+        ])
 
 
-        # ORIGINÁLNÍ OBRÁZEK
+        # ----------------------------------------------------
+        # OBRÁZEK
+        # ----------------------------------------------------
 
-        result["image"] = (
-            meta_value(
+        result["image"] = meta_content([
 
-                'meta[property="og:image"]',
+            'meta[property="og:image"]',
 
-                'meta[name="twitter:image"]',
+            'meta[property="og:image:secure_url"]',
 
-                'meta[property="twitter:image"]',
+            'meta[name="twitter:image"]',
 
-            )
-        )
+            'meta[property="twitter:image"]',
+
+        ])
 
 
         if result["image"]:
 
-            result["image"] = (
-                urljoin(
-                    response.url,
-                    result["image"]
-                )
+            result["image"] = urljoin(
+
+                response.url,
+
+                result["image"]
+
             )
 
 
+        # ----------------------------------------------------
         # CANONICAL URL
+        # ----------------------------------------------------
 
         canonical = soup.select_one(
             'link[rel="canonical"]'
         )
-
 
         if (
             canonical
@@ -376,146 +417,138 @@ def get_article_meta(url):
 
                 response.url,
 
-                canonical["href"]
+                canonical.get("href")
 
             )
 
-
-    except Exception as exc:
+    except Exception as error:
 
         print(
-            "Metadata článku "
-            f"se nepodařila načíst: "
-            f"{url} -> {exc}"
+            "Nepodařilo se načíst článek:",
+            url,
+            error
         )
-
 
     return result
 
 
-# =========================================================
+# ------------------------------------------------------------
 # PŘEKLAD DO ČEŠTINY
-# =========================================================
+# ------------------------------------------------------------
 
-def translate_cs(
+def translate_to_czech(
     text,
-    max_chars=1200
+    max_length=1000
 ):
 
-    text = (
-        text or ""
-    ).strip()
-
+    text = clean_text(text)
 
     if not text:
         return ""
 
-
-    text = text[
-        :max_chars
-    ]
-
+    text = text[:max_length]
 
     try:
 
-        translated = (
-            translator.translate(
-                text
-            )
+        translated = translator.translate(
+            text
         )
 
+        if translated:
 
-        return (
-            translated
-            or text
-        ).strip()
+            return clean_text(
+                translated
+            )
 
-
-    except Exception as exc:
+    except Exception as error:
 
         print(
-            f"Překlad selhal: {exc}"
+            "Překlad selhal:",
+            error
         )
 
-        return text
+    # pokud bezplatný překlad selže,
+    # necháme původní text
+
+    return text
 
 
-# =========================================================
-# CACHE
-# =========================================================
+# ------------------------------------------------------------
+# NAČTENÍ STARÉHO NEWS.JSON
+# ------------------------------------------------------------
 
-def load_cache():
+def load_old_data():
 
-    path = Path(
-        "data/news.json"
-    )
+    if not OUTPUT_FILE.exists():
 
-
-    if not path.exists():
-        return {}
-
+        return []
 
     try:
 
-        old_items = json.loads(
+        return json.loads(
 
-            path.read_text(
+            OUTPUT_FILE.read_text(
                 encoding="utf-8"
             )
 
         )
 
     except Exception:
-        return {}
 
+        return []
+
+
+# ------------------------------------------------------------
+# CACHE
+# ------------------------------------------------------------
+
+def build_cache(old_items):
 
     cache = {}
 
-
     for item in old_items:
 
-        original = (
+        original_title = (
 
-            item.get(
-                "title_original"
-            )
-
+            item.get("title_original")
             or
+            item.get("title")
+            or
+            ""
 
-            item.get(
-                "title"
-            )
+        )
 
-            or ""
-
-        ).lower().strip()
-
+        original_title = clean_text(
+            original_title
+        ).lower()
 
         category = item.get(
             "category",
             ""
         )
 
-
-        if original:
+        if original_title:
 
             cache[
                 (
                     category,
-                    original
+                    original_title
                 )
             ] = item
-
 
     return cache
 
 
-# =========================================================
-# SBĚR ZPRÁV
-# =========================================================
+old_items = load_old_data()
 
-cache = load_cache()
+cache = build_cache(
+    old_items
+)
 
+
+# ------------------------------------------------------------
+# ČASOVÁ HRANICE
+# ------------------------------------------------------------
 
 cutoff = (
 
@@ -532,41 +565,53 @@ cutoff = (
 )
 
 
+# ------------------------------------------------------------
+# SBĚR DAT
+# ------------------------------------------------------------
+
 items = []
 
 
 for source in SOURCES:
 
-
-    feed = feedparser.parse(
-
-        google_news_feed(
-            source["query"]
-        )
-
+    print(
+        "\nSleduji:",
+        source["game"]
     )
 
+    rss_url = google_news_feed(
+        source["query"]
+    )
+
+    feed = feedparser.parse(
+        rss_url
+    )
 
     accepted = 0
 
 
     for entry in feed.entries:
 
-
         if accepted >= MAX_PER_SOURCE:
             break
 
 
-        published = parse_date(
+        # ----------------------------------------------------
+        # DATUM
+        # ----------------------------------------------------
+
+        published = parse_entry_date(
             entry
         )
 
 
-        # ignoruj příliš staré výsledky
-
         if published < cutoff:
             continue
 
+
+        # ----------------------------------------------------
+        # RSS TITULEK
+        # ----------------------------------------------------
 
         rss_title = clean_title(
 
@@ -582,7 +627,11 @@ for source in SOURCES:
             continue
 
 
-        key = (
+        # ----------------------------------------------------
+        # ZKONTROLUJ CACHE
+        # ----------------------------------------------------
+
+        cache_key = (
 
             source["category"],
 
@@ -592,30 +641,21 @@ for source in SOURCES:
 
 
         cached = cache.get(
-            key
+            cache_key
         )
 
 
-        # pokud už máme obrázek i překlad,
-        # nemusíme všechno zpracovávat znovu
+        if cached:
 
-        if (
-            cached
-            and
-            cached.get("image")
-            and
-            cached.get("title")
-        ):
+            # už jsme zprávu zpracovali dříve
 
             item = dict(
                 cached
             )
 
-
             item["published"] = (
                 published.isoformat()
             )
-
 
             item["date"] = (
                 published.strftime(
@@ -623,16 +663,18 @@ for source in SOURCES:
                 )
             )
 
-
             items.append(
                 item
             )
-
 
             accepted += 1
 
             continue
 
+
+        # ----------------------------------------------------
+        # GOOGLE NEWS ODKAZ
+        # ----------------------------------------------------
 
         google_url = entry.get(
             "link",
@@ -640,67 +682,126 @@ for source in SOURCES:
         )
 
 
-        original_url = (
-            resolve_original_url(
-                google_url
-            )
+        # ----------------------------------------------------
+        # PŮVODNÍ ODKAZ
+        # ----------------------------------------------------
+
+        original_url = resolve_original_url(
+            google_url
         )
 
 
-        meta = get_article_meta(
+        # ----------------------------------------------------
+        # DATA ORIGINÁLNÍHO ČLÁNKU
+        # ----------------------------------------------------
+
+        meta = get_article_metadata(
             original_url
         )
 
 
+        # ----------------------------------------------------
+        # PŮVODNÍ TITULEK
+        # ----------------------------------------------------
+
         original_title = clean_title(
 
-            meta["title"]
+            meta.get("title")
             or
             rss_title
 
         )
 
 
-        original_description = (
+        if not original_title:
 
-            meta["description"]
-            or ""
+            original_title = (
+                rss_title
+            )
 
-        ).strip()
 
+        # ----------------------------------------------------
+        # POPIS
+        # ----------------------------------------------------
 
-        # ČESKÝ TITULEK
+        original_description = clean_text(
 
-        title_cs = translate_cs(
-
-            original_title,
-
-            350
+            meta.get(
+                "description",
+                ""
+            )
 
         )
 
 
+        # ----------------------------------------------------
+        # ČESKÝ TITULEK
+        # ----------------------------------------------------
+
+        title_cs = translate_to_czech(
+
+            original_title,
+
+            max_length=350
+
+        )
+
+
+        # ----------------------------------------------------
         # ČESKÝ POPIS
+        # ----------------------------------------------------
 
         if original_description:
 
-            summary_cs = translate_cs(
+            summary_cs = translate_to_czech(
 
                 original_description,
 
-                850
+                max_length=900
 
             )
 
         else:
 
             summary_cs = (
+
                 "Aktuální informace "
-                "z oficiálního zdroje."
+                "ze světa "
+                f"{source['game']}."
+
             )
 
 
-        items.append({
+        # ----------------------------------------------------
+        # OBRÁZEK
+        # ----------------------------------------------------
+
+        image = meta.get(
+            "image",
+            ""
+        )
+
+
+        # ----------------------------------------------------
+        # KONEČNÁ URL
+        # ----------------------------------------------------
+
+        final_url = (
+
+            meta.get("url")
+            or
+            original_url
+            or
+            google_url
+
+        )
+
+
+        # ----------------------------------------------------
+        # VYTVOŘ ZÁZNAM
+        # ----------------------------------------------------
+
+        item = {
 
             "game":
                 source["game"],
@@ -717,13 +818,14 @@ for source in SOURCES:
             "summary":
                 summary_cs,
 
+            "summary_original":
+                original_description,
+
             "image":
-                meta["image"],
+                image,
 
             "url":
-                meta["url"]
-                or
-                original_url,
+                final_url,
 
             "google_news_url":
                 google_url,
@@ -739,42 +841,101 @@ for source in SOURCES:
             "source_type":
                 "official-monitor",
 
-        })
+        }
+
+
+        items.append(
+            item
+        )
 
 
         accepted += 1
 
 
-        time.sleep(
-            0.25
+        print(
+            " +",
+            source["game"],
+            "-",
+            title_cs[:80]
         )
 
 
-# =========================================================
-# DUPLICITY
-# =========================================================
+        # malá pauza, abychom weby
+        # zbytečně nezatěžovali
+
+        time.sleep(
+            0.4
+        )
+
+
+# ------------------------------------------------------------
+# ODSTRANĚNÍ DUPLICIT
+# ------------------------------------------------------------
 
 unique = {}
 
 
 for item in items:
 
-    key = (
+    title_key = (
 
-        item["category"],
+        item.get(
+            "title_original"
+        )
 
-        (
-            item.get(
-                "title_original"
-            )
-            or
-            item["title"]
-        ).lower(),
+        or
+
+        item.get(
+            "title"
+        )
+
+        or ""
 
     )
 
 
-    unique[key] = item
+    title_key = clean_text(
+        title_key
+    ).lower()
+
+
+    key = (
+
+        item.get(
+            "category",
+            ""
+        ),
+
+        title_key
+
+    )
+
+
+    if not title_key:
+        continue
+
+
+    existing = unique.get(
+        key
+    )
+
+
+    # pokud už máme stejný článek,
+    # necháme verzi s obrázkem
+
+    if existing:
+
+        if (
+            not existing.get("image")
+            and
+            item.get("image")
+        ):
+
+            unique[key] = item
+
+    else:
+
+        unique[key] = item
 
 
 items = list(
@@ -782,33 +943,37 @@ items = list(
 )
 
 
-# =========================================================
-# NEJNOVĚJŠÍ NAHORU
-# =========================================================
+# ------------------------------------------------------------
+# ŘAZENÍ PODLE DATA
+# ------------------------------------------------------------
 
 items.sort(
 
     key=lambda item:
-        item["published"],
+        item.get(
+            "published",
+            ""
+        ),
 
     reverse=True
 
 )
 
 
-items = items[:60]
+# ------------------------------------------------------------
+# LIMIT
+# ------------------------------------------------------------
+
+items = items[
+    :MAX_TOTAL_ARTICLES
+]
 
 
-# =========================================================
-# ULOŽIT
-# =========================================================
+# ------------------------------------------------------------
+# ULOŽENÍ
+# ------------------------------------------------------------
 
-output = Path(
-    "data/news.json"
-)
-
-
-output.parent.mkdir(
+OUTPUT_FILE.parent.mkdir(
 
     parents=True,
 
@@ -817,7 +982,7 @@ output.parent.mkdir(
 )
 
 
-output.write_text(
+OUTPUT_FILE.write_text(
 
     json.dumps(
 
@@ -834,10 +999,53 @@ output.write_text(
 )
 
 
+# ------------------------------------------------------------
+# STATISTIKA
+# ------------------------------------------------------------
+
+counts = {}
+
+for item in items:
+
+    game = item.get(
+        "game",
+        "Ostatní"
+    )
+
+    counts[game] = (
+        counts.get(
+            game,
+            0
+        )
+        +
+        1
+    )
+
+
+print("\n==============================")
+
 print(
-
-    "RadarKaret: "
-    f"uloženo {len(items)} "
-    "zpráv v češtině."
-
+    "RADARKARET HOTOVO"
 )
+
+print(
+    "Celkem zpráv:",
+    len(items)
+)
+
+print(
+    "Zapsáno do:",
+    OUTPUT_FILE
+)
+
+print(
+    "Kategorie:"
+)
+
+for game, count in counts.items():
+
+    print(
+        f" - {game}: {count}"
+    )
+
+print("==============================")

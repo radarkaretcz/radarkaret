@@ -4,1782 +4,574 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RadarKaret.cz – Svět sběratelských karet</title>
+<title>RadarKaret.cz – Aktuální svět sběratelských karet</title>
 
-<meta
-  name="description"
-  content="Pokémon, One Piece, Lorcana, Magic a další TCG. Novinky, nové edice, reprinty, investiční přehledy, kalendář vydání a sběratelské trendy."
->
+<meta name="description"
+content="Aktuální novinky ze světa Pokémon, One Piece, Disney Lorcana a dalších sběratelských karetních her.">
 
 <style>
-
-/* =========================================================
-   ZÁKLAD
-========================================================= */
-
 :root{
-  --bg:#07090d;
-  --bg-soft:#0b0f16;
-  --panel:#10151e;
-  --panel2:#141b27;
-  --panel3:#0c1119;
-
-  --line:#242d3b;
-  --line-light:#303b4d;
-
-  --text:#f3f5f9;
-  --muted:#929dac;
-  --muted2:#687486;
-
+  --bg:#080b11;
+  --panel:#101620;
+  --panel2:#151d29;
+  --line:#253041;
+  --text:#f5f7fb;
+  --muted:#8e9aab;
   --gold:#f7c843;
-  --blue:#5896ff;
   --green:#42d392;
-  --red:#ff6363;
-  --purple:#9d7cff;
-  --orange:#ff9c54;
-
-  --radius:20px;
+  --blue:#5796ff;
+  --red:#ee5863;
+  --purple:#8b6ee9;
+  --orange:#ed8a50;
 }
 
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
-
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
-
   background:
-    radial-gradient(circle at 15% 0%, rgba(60,100,180,.15), transparent 32%),
-    radial-gradient(circle at 90% 20%, rgba(120,70,190,.10), transparent 26%),
-    var(--bg);
-
+    radial-gradient(circle at 15% 0%,rgba(70,105,190,.15),transparent 30%),
+    #080b11;
   color:var(--text);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button,
-input{
-  font:inherit;
-}
-
-button{
-  cursor:pointer;
-}
-
-img{
-  max-width:100%;
-}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
 
 .container{
-  width:min(1400px, calc(100% - 48px));
+  width:min(1400px,calc(100% - 48px));
   margin:auto;
 }
 
+/* TOP */
 
-/* =========================================================
-   HORNÍ LIVE LIŠTA
-========================================================= */
-
-.top-radar{
+.livebar{
+  border-bottom:1px solid #19212d;
   background:#05070a;
-  border-bottom:1px solid #171d27;
 }
 
-.top-radar-inner{
+.live-inner{
   min-height:38px;
-
   display:flex;
   align-items:center;
-  gap:22px;
-
-  overflow:hidden;
+  gap:20px;
+  font-size:12px;
 }
 
 .live{
-  display:flex;
-  align-items:center;
-  gap:8px;
-
-  flex:0 0 auto;
-
-  font-size:11px;
   font-weight:900;
-  letter-spacing:1.3px;
+  white-space:nowrap;
 }
 
-.live-dot{
+.dot{
+  display:inline-block;
   width:8px;
   height:8px;
-
-  border-radius:50%;
-
   background:var(--green);
-
-  box-shadow:
-    0 0 10px rgba(66,211,146,.8);
+  border-radius:50%;
+  margin-right:8px;
+  box-shadow:0 0 10px var(--green);
 }
 
-.ticker{
-  color:#8994a4;
-  font-size:12px;
-
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+.live-text{
+  color:#8995a6;
 }
 
-.ticker strong{
-  color:#d8dde5;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
+/* HEADER */
 
 header{
   position:sticky;
   top:0;
-  z-index:999;
-
-  backdrop-filter:blur(18px);
-
-  background:rgba(7,9,13,.88);
-
+  z-index:50;
   border-bottom:1px solid rgba(255,255,255,.06);
+  background:rgba(8,11,17,.91);
+  backdrop-filter:blur(18px);
 }
 
-.header-inner{
+.header{
   min-height:78px;
-
   display:flex;
   align-items:center;
-
-  gap:35px;
+  gap:34px;
 }
 
 .logo{
   display:flex;
   align-items:center;
   gap:12px;
-
-  flex:0 0 auto;
+  font-weight:950;
+  font-size:23px;
 }
 
-.logo-mark{
-  width:42px;
-  height:42px;
-
+.logo-icon{
+  width:43px;
+  height:43px;
+  border-radius:13px;
   display:grid;
   place-items:center;
-
-  border-radius:13px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #f7d561,
-      #dcae24
-    );
-
+  background:var(--gold);
   color:#111;
-
-  font-weight:950;
-  font-size:18px;
 }
 
-.logo-text{
-  font-size:22px;
-  font-weight:950;
+.logo span{color:var(--gold)}
 
-  letter-spacing:-1px;
-}
-
-.logo-text span{
-  color:var(--gold);
-}
-
-.menu{
+nav{
   display:flex;
-  align-items:center;
   gap:25px;
 }
 
-.menu a{
-  color:#a2acba;
-
+nav a{
+  color:#9aa5b5;
   font-size:13px;
-  font-weight:700;
-
-  transition:.2s;
-}
-
-.menu a:hover{
-  color:#fff;
-}
-
-.header-actions{
-  margin-left:auto;
-
-  display:flex;
-  align-items:center;
-
-  gap:10px;
-}
-
-.search{
-  width:245px;
-  height:43px;
-
-  padding:0 15px;
-
-  color:#fff;
-
-  background:#0d121a;
-
-  border:1px solid #252e3c;
-  border-radius:12px;
-
-  outline:none;
-}
-
-.search:focus{
-  border-color:#526782;
-}
-
-.collection-btn{
-  height:43px;
-
-  padding:0 17px;
-
-  border:1px solid #303a49;
-  border-radius:12px;
-
-  background:#121821;
-  color:#fff;
-
-  font-size:12px;
   font-weight:800;
 }
 
+nav a:hover{color:#fff}
 
-/* =========================================================
-   HERO
-========================================================= */
+.search{
+  margin-left:auto;
+  width:260px;
+  height:43px;
+  border-radius:12px;
+  border:1px solid #273243;
+  background:#0d131c;
+  color:#fff;
+  padding:0 15px;
+  outline:none;
+}
+
+/* HERO */
 
 .hero{
-  padding:60px 0 35px;
-
+  padding:58px 0 35px;
   display:grid;
-
-  grid-template-columns:
-    minmax(0,1.45fr)
-    minmax(340px,.55fr);
-
+  grid-template-columns:1.4fr .6fr;
   gap:35px;
 }
 
-.hero-tag{
-  display:flex;
-  align-items:center;
-  gap:10px;
-
-  margin-bottom:20px;
-
-  color:#8d99aa;
-
+.eyebrow{
+  color:#8b97a8;
   text-transform:uppercase;
-
-  letter-spacing:1.6px;
-
-  font-weight:900;
   font-size:11px;
-}
-
-.hero-tag::before{
-  content:"";
-
-  width:38px;
-  height:2px;
-
-  background:var(--gold);
+  font-weight:900;
+  letter-spacing:1.5px;
 }
 
 .hero h1{
-  margin:0;
-
-  max-width:920px;
-
-  font-size:
-    clamp(48px,5.6vw,79px);
-
+  margin:17px 0 0;
+  max-width:850px;
+  font-size:clamp(48px,5.5vw,78px);
   line-height:.98;
-
   letter-spacing:-4px;
 }
 
-.hero h1 span{
-  color:var(--gold);
-}
+.hero h1 span{color:var(--gold)}
 
-.hero-description{
-  max-width:790px;
-
-  margin:25px 0 0;
-
-  color:#9ca8b8;
-
+.hero p{
+  max-width:770px;
+  color:#9ba7b8;
   font-size:18px;
-  line-height:1.75;
+  line-height:1.7;
+  margin-top:25px;
 }
 
-.hero-buttons{
-  margin-top:29px;
-
+.hero-actions{
   display:flex;
   flex-wrap:wrap;
-
   gap:10px;
+  margin-top:28px;
 }
 
-.primary-btn,
-.secondary-btn{
+.btn{
   min-height:47px;
-
-  padding:0 19px;
-
-  border-radius:13px;
-
-  border:0;
-
-  font-weight:900;
-
-  display:inline-flex;
+  padding:0 18px;
+  display:flex;
   align-items:center;
-  justify-content:center;
-
-  gap:8px;
-}
-
-.primary-btn{
-  color:#121212;
-  background:var(--gold);
-}
-
-.secondary-btn{
-  color:#e8ecf2;
-
-  background:#111720;
-
-  border:1px solid #2a3443;
-}
-
-
-/* =========================================================
-   RADAR 24H
-========================================================= */
-
-.radar-panel{
-  position:relative;
-
-  padding:27px;
-
-  overflow:hidden;
-
-  border:1px solid #2a3444;
-
-  border-radius:24px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #151d2a,
-      #0b1018
-    );
-}
-
-.radar-panel::after{
-  content:"";
-
-  position:absolute;
-
-  width:260px;
-  height:260px;
-
-  top:-140px;
-  right:-100px;
-
-  border-radius:50%;
-
-  background:
-    rgba(91,148,255,.16);
-}
-
-.small-label{
-  position:relative;
-  z-index:2;
-
-  color:#7d899b;
-
-  text-transform:uppercase;
-
-  font-size:10px;
+  border-radius:13px;
+  border:1px solid #2b3747;
+  background:#101720;
+  color:#fff;
   font-weight:900;
-
-  letter-spacing:1.6px;
 }
 
-.radar-panel h2{
-  position:relative;
-  z-index:2;
+.btn.primary{
+  border:0;
+  background:var(--gold);
+  color:#111;
+}
 
-  margin:7px 0 22px;
+/* RADAR */
 
-  font-size:26px;
+.radar{
+  padding:27px;
+  border:1px solid #293648;
+  border-radius:24px;
+  background:linear-gradient(145deg,#172134,#0c121b);
+}
+
+.radar h2{
+  margin:8px 0 22px;
 }
 
 .radar-grid{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:10px;
 }
 
-.radar-stat{
-  position:relative;
-  z-index:2;
-
+.stat{
   padding:17px;
-
-  background:#0a0f16;
-
-  border:1px solid #222d3c;
   border-radius:15px;
+  background:#0a1017;
+  border:1px solid #273243;
 }
 
-.radar-stat strong{
+.stat strong{
   display:block;
-
-  font-size:29px;
+  font-size:30px;
 }
 
-.radar-stat.hot strong{
-  color:var(--gold);
-}
+.stat:first-child strong{color:var(--gold)}
 
-.radar-stat small{
-  color:#7f8a9b;
-}
+.stat small{color:#7f8b9d}
 
-.last-check{
-  position:relative;
-  z-index:2;
-
-  margin-top:17px;
-
+.updated{
+  margin-top:18px;
   padding-top:16px;
-
-  border-top:1px solid #263141;
-
-  color:#738093;
-
+  border-top:1px solid #293547;
+  color:#758194;
   font-size:11px;
 }
 
+/* FILTER */
 
-/* =========================================================
-   TCG NAVIGACE
-========================================================= */
-
-.game-tabs{
-  margin:15px 0 42px;
-
-  padding:8px;
-
+.filters{
   display:flex;
-
   gap:7px;
-
-  overflow-x:auto;
-
-  border:1px solid #202938;
+  overflow:auto;
+  padding:8px;
+  margin:10px 0 42px;
+  border:1px solid #212c3a;
   border-radius:16px;
-
-  background:#0a0f16;
+  background:#0a1017;
 }
 
-.game-tab{
-  min-height:43px;
-
-  padding:0 18px;
-
+.filter{
   border:0;
   border-radius:11px;
-
-  color:#8d98a8;
-
+  min-height:43px;
+  padding:0 18px;
+  color:#919daf;
   background:transparent;
-
+  white-space:nowrap;
   font-size:12px;
   font-weight:900;
-
-  white-space:nowrap;
+  cursor:pointer;
 }
 
-.game-tab:hover{
-  color:#fff;
-}
-
-.game-tab.active{
-  color:#101010;
-
+.filter.active{
   background:#fff;
+  color:#111;
 }
 
-
-/* =========================================================
-   NADPISY SEKCÍ
-========================================================= */
+/* SECTION */
 
 .section-head{
-  margin:22px 0 18px;
-
   display:flex;
-  align-items:flex-end;
   justify-content:space-between;
-
+  align-items:end;
   gap:20px;
+  margin:25px 0 18px;
 }
 
-.section-name{
-  color:#727f91;
-
+.section-label{
+  color:#718094;
   font-size:10px;
-
-  font-weight:900;
-
   letter-spacing:1.5px;
-
-  text-transform:uppercase;
+  font-weight:900;
 }
 
 .section-head h2{
   margin:5px 0 0;
-
   font-size:30px;
-
-  letter-spacing:-1.2px;
+  letter-spacing:-1px;
 }
 
-.section-more{
-  color:#7e8a9c;
-
-  font-size:12px;
+.section-note{
+  color:#748196;
+  font-size:11px;
 }
 
+/* FEATURED */
 
-/* =========================================================
-   HLAVNÍ ZPRÁVA
-========================================================= */
-
-.feature-layout{
+.featured{
   display:grid;
-
-  grid-template-columns:
-    minmax(0,1.5fr)
-    minmax(320px,.5fr);
-
+  grid-template-columns:1.5fr .5fr;
   gap:18px;
 }
 
-.hero-story{
-  min-height:500px;
-
-  position:relative;
-
-  border:1px solid #263141;
-
+.main-story{
+  min-height:490px;
+  border:1px solid #293547;
   border-radius:24px;
-
   overflow:hidden;
-
+  position:relative;
   background:
-    radial-gradient(circle at 78% 22%, rgba(55,100,220,.6), transparent 18%),
-    radial-gradient(circle at 77% 55%, rgba(130,65,210,.35), transparent 30%),
-    linear-gradient(
-      135deg,
-      #16243c,
-      #0b111b 60%
-    );
+    radial-gradient(circle at 80% 25%,rgba(67,116,220,.55),transparent 22%),
+    linear-gradient(135deg,#17253e,#091019 65%);
 }
 
-.hero-story::after{
-  content:"TCG";
-
-  position:absolute;
-
-  right:35px;
-  top:20px;
-
-  font-size:155px;
-  font-weight:950;
-
-  letter-spacing:-15px;
-
-  color:rgba(255,255,255,.025);
-}
-
-.hero-story-content{
-  min-height:500px;
-
+.main-content{
+  min-height:490px;
   padding:45px;
-
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
-
-  position:relative;
-  z-index:3;
-
-  background:
-    linear-gradient(
-      0deg,
-      rgba(6,9,14,.98),
-      rgba(6,9,14,.05) 90%
-    );
+  background:linear-gradient(0deg,rgba(5,8,13,.98),rgba(5,8,13,.05));
 }
 
 .category{
   width:max-content;
-
   padding:7px 10px;
-
   border-radius:7px;
-
   font-size:10px;
-
   font-weight:950;
-
-  letter-spacing:.6px;
 }
 
-.pokemon{
-  background:#f5c942;
-  color:#171717;
+.category.pokemon{background:#f4ca42;color:#151515}
+.category.onepiece{background:#e85660}
+.category.lorcana{background:#7d63df}
+.category.magic{background:#e68b54;color:#151515}
+.category.other{background:#438ac9}
+
+.main-story h3{
+  margin:15px 0 10px;
+  max-width:780px;
+  font-size:40px;
+  line-height:1.08;
+  letter-spacing:-1.7px;
 }
 
-.onepiece{
-  background:#e95660;
-  color:white;
-}
-
-.lorcana{
-  background:#7e65de;
-  color:white;
-}
-
-.magic{
-  background:#e98651;
-  color:#111;
-}
-
-.starwars{
-  background:#4c93d4;
-  color:#fff;
-}
-
-.yugioh{
-  background:#bc5bd5;
-  color:#fff;
-}
-
-.hero-story h3{
-  max-width:760px;
-
-  margin:16px 0 10px;
-
-  font-size:41px;
-
-  line-height:1.06;
-
-  letter-spacing:-1.8px;
-}
-
-.hero-story p{
-  max-width:720px;
-
-  margin:0;
-
-  color:#a2adbd;
-
-  line-height:1.6;
-}
-
-.story-info{
+.story-meta{
+  margin-top:18px;
+  color:#748195;
+  font-size:11px;
   display:flex;
   flex-wrap:wrap;
-
   gap:15px;
-
-  margin-top:19px;
-
-  color:#758195;
-
-  font-size:11px;
 }
 
+.story-button{
+  width:max-content;
+  margin-top:22px;
+  font-weight:900;
+  color:var(--gold);
+}
 
-/* =========================================================
-   BOČNÍ ZPRÁVY
-========================================================= */
-
-.side-news{
+.side-list{
   display:flex;
   flex-direction:column;
-
   gap:18px;
 }
 
-.side-card{
+.side-story{
   flex:1;
-
-  min-height:238px;
-
-  position:relative;
-
-  overflow:hidden;
-
-  padding:25px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #131b27,
-      #0c1119
-    );
-
-  border:1px solid #263141;
-
+  padding:24px;
+  min-height:235px;
+  background:linear-gradient(145deg,#141d29,#0c121a);
+  border:1px solid #273344;
   border-radius:20px;
 }
 
-.side-card::after{
-  content:"";
-
-  position:absolute;
-
-  right:-60px;
-  bottom:-70px;
-
-  width:180px;
-  height:180px;
-
-  border-radius:50%;
-
-  background:
-    rgba(255,255,255,.025);
-}
-
-.side-card h3{
-  position:relative;
-  z-index:2;
-
+.side-story h3{
   margin:14px 0 8px;
-
-  font-size:21px;
-
-  line-height:1.22;
+  font-size:20px;
+  line-height:1.25;
 }
 
-.side-card p{
-  position:relative;
-  z-index:2;
+.side-story small{color:#778397}
 
-  margin:0;
-
-  color:#8995a6;
-
-  font-size:13px;
-
-  line-height:1.55;
-}
-
-
-/* =========================================================
-   TCG PULSE
-========================================================= */
-
-.pulse-grid{
-  margin-top:45px;
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
-  gap:15px;
-}
-
-.pulse{
-  padding:20px;
-
-  border:1px solid #232d3b;
-
-  border-radius:18px;
-
-  background:#0e141d;
-}
-
-.pulse-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:15px;
-}
-
-.pulse-name{
-  font-weight:900;
-}
-
-.pulse-value{
-  font-size:11px;
-
-  color:var(--green);
-
-  font-weight:900;
-}
-
-.pulse-bar{
-  height:5px;
-
-  margin:17px 0 12px;
-
-  background:#202936;
-
-  border-radius:10px;
-
-  overflow:hidden;
-}
-
-.pulse-bar span{
-  height:100%;
-
-  display:block;
-
-  border-radius:10px;
-
-  background:var(--blue);
-}
-
-.pulse p{
-  margin:0;
-
-  color:#7f8a9b;
-
-  font-size:11px;
-}
-
-
-/* =========================================================
-   NEWS GRID
-========================================================= */
+/* NEWS GRID */
 
 .news-grid{
   display:grid;
-
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
+  grid-template-columns:repeat(4,minmax(0,1fr));
   gap:16px;
 }
 
 .news-card{
-  overflow:hidden;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111822,
-      #0c121a
-    );
-
-  border:1px solid #232e3d;
-
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(145deg,#111923,#0c121a);
+  border:1px solid #242f3f;
   border-radius:19px;
-
-  transition:.22s;
+  overflow:hidden;
+  transition:.2s;
 }
 
 .news-card:hover{
   transform:translateY(-4px);
-
-  border-color:#3c4c62;
+  border-color:#42546d;
 }
 
 .news-image{
-  height:160px;
-
+  height:125px;
   display:grid;
   place-items:center;
-
-  position:relative;
-
-  overflow:hidden;
-
-  background:
-    radial-gradient(
-      circle,
-      #24344d,
-      #121925 58%,
-      #0c1118
-    );
+  background:radial-gradient(circle,#253650,#101722 65%);
+  font-size:42px;
 }
 
-.news-image::after{
-  content:"";
-
-  position:absolute;
-
-  width:180px;
-  height:180px;
-
-  border:1px solid rgba(255,255,255,.05);
-
-  border-radius:50%;
-}
-
-.news-image span{
-  position:relative;
-  z-index:2;
-
-  font-size:55px;
-}
-
-.news-content{
-  padding:19px;
-}
-
-.news-content h3{
-  margin:11px 0 8px;
-
-  font-size:17px;
-
-  line-height:1.3;
-}
-
-.news-content p{
-  margin:0 0 15px;
-
-  color:#8692a3;
-
-  font-size:13px;
-
-  line-height:1.55;
-}
-
-.news-bottom{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:10px;
-
-  color:#657184;
-
-  font-size:10px;
-}
-
-.source-official{
-  color:var(--green);
-
-  font-weight:900;
-}
-
-
-/* =========================================================
-   SBĚRATELSKÉ BLOKY
-========================================================= */
-
-.collector-grid{
-  margin-top:48px;
-
-  display:grid;
-
-  grid-template-columns:
-    minmax(0,1.35fr)
-    minmax(320px,.65fr);
-
-  gap:22px;
-}
-
-.panel{
-  overflow:hidden;
-
-  background:#0d131b;
-
-  border:1px solid #222c39;
-
-  border-radius:20px;
-}
-
-.panel-header{
-  padding:20px 22px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  border-bottom:1px solid #222c39;
-}
-
-.panel-header h3{
-  margin:0;
-
-  font-size:18px;
-}
-
-.panel-header span{
-  color:#6f7c8f;
-
-  font-size:10px;
-}
-
-
-/* =========================================================
-   KALENDÁŘ
-========================================================= */
-
-.release{
-  padding:18px 22px;
-
-  display:grid;
-
-  grid-template-columns:
-    65px
-    minmax(0,1fr)
-    auto;
-
-  gap:17px;
-
-  align-items:center;
-
-  border-bottom:1px solid #202a37;
-}
-
-.release:last-child{
-  border:0;
-}
-
-.release-date{
-  text-align:center;
-
-  font-weight:950;
-
-  font-size:22px;
-}
-
-.release-date small{
-  display:block;
-
-  color:#6f7c8f;
-
-  font-size:9px;
-
-  letter-spacing:1px;
-}
-
-.release-info h4{
-  margin:0 0 4px;
-
-  font-size:14px;
-}
-
-.release-info p{
-  margin:0;
-
-  color:#7b8799;
-
-  font-size:11px;
-}
-
-
-/* =========================================================
-   REPRINT WATCH
-========================================================= */
-
-.watch-item{
-  padding:19px 21px;
-
-  display:flex;
-  align-items:center;
-
-  gap:14px;
-
-  border-bottom:1px solid #202a37;
-}
-
-.watch-item:last-child{
-  border:0;
-}
-
-.watch-symbol{
-  width:43px;
-  height:43px;
-
-  flex:0 0 43px;
-
-  display:grid;
-  place-items:center;
-
-  border-radius:12px;
-
-  background:#141d28;
-
-  border:1px solid #293646;
-}
-
-.watch-content{
-  min-width:0;
-}
-
-.watch-content h4{
-  margin:0 0 3px;
-
-  font-size:13px;
-}
-
-.watch-content p{
-  margin:0;
-
-  color:#748195;
-
-  font-size:10px;
-}
-
-.status{
-  margin-left:auto;
-
-  padding:6px 8px;
-
-  border-radius:7px;
-
-  background:
-    rgba(66,211,146,.10);
-
-  color:var(--green);
-
-  font-size:9px;
-
-  font-weight:950;
-}
-
-
-/* =========================================================
-   SBĚRATELSKÁ SEKCE
-========================================================= */
-
-.collector-tools{
-  margin-top:45px;
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
-  gap:15px;
-}
-
-.tool-card{
-  min-height:190px;
-
-  padding:24px;
-
-  position:relative;
-
-  overflow:hidden;
-
-  border:1px solid #24303e;
-
-  border-radius:20px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #121a26,
-      #0b1017
-    );
-}
-
-.tool-card::after{
-  content:"";
-
-  position:absolute;
-
-  right:-60px;
-  bottom:-60px;
-
-  width:170px;
-  height:170px;
-
-  background:
-    rgba(255,255,255,.025);
-
-  border-radius:50%;
-}
-
-.tool-icon{
-  font-size:29px;
-}
-
-.tool-card h3{
-  margin:14px 0 8px;
-
-  font-size:17px;
-}
-
-.tool-card p{
-  margin:0;
-
-  color:#7f8c9e;
-
-  font-size:12px;
-
-  line-height:1.55;
-}
-
-
-/* =========================================================
-   TRENDING
-========================================================= */
-
-.trending{
-  margin-top:45px;
-}
-
-.trend-row{
-  display:grid;
-
-  grid-template-columns:
-    46px
-    minmax(0,1fr)
-    140px
-    90px;
-
-  gap:15px;
-
-  align-items:center;
-
-  padding:16px 20px;
-
-  border-bottom:1px solid #202a37;
-}
-
-.trend-row:last-child{
-  border:0;
-}
-
-.rank{
-  color:#586477;
-
-  font-size:23px;
-
-  font-weight:950;
-}
-
-.trend-name strong{
-  display:block;
-
-  font-size:13px;
-}
-
-.trend-name small{
-  color:#6f7c8f;
-
-  font-size:10px;
-}
-
-.trend-meter{
-  height:5px;
-
-  background:#202936;
-
-  border-radius:20px;
-
-  overflow:hidden;
-}
-
-.trend-meter span{
-  display:block;
-
-  height:100%;
-
-  background:var(--gold);
-}
-
-.trend-change{
-  text-align:right;
-
-  color:var(--green);
-
-  font-size:11px;
-
-  font-weight:900;
-}
-
-
-/* =========================================================
-   DŮVĚRYHODNOST
-========================================================= */
-
-.trust{
-  margin-top:45px;
-
-  padding:34px;
-
-  display:grid;
-
-  grid-template-columns:
-    1.2fr .8fr;
-
-  gap:35px;
-
-  background:
-    linear-gradient(
-      120deg,
-      #121b28,
-      #0a1018
-    );
-
-  border:1px solid #273344;
-
-  border-radius:22px;
-}
-
-.trust h2{
-  margin:5px 0 10px;
-
-  font-size:27px;
-}
-
-.trust p{
-  max-width:760px;
-
-  margin:0;
-
-  color:#8995a7;
-
-  line-height:1.65;
-}
-
-.trust-grid{
-  display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:10px;
-}
-
-.trust-box{
+.news-body{
   padding:18px;
-
-  border:1px solid #222d3b;
-
-  border-radius:14px;
-
-  background:#0a1017;
-}
-
-.trust-box strong{
-  display:block;
-
-  font-size:25px;
-}
-
-.trust-box small{
-  color:#748195;
-}
-
-
-/* =========================================================
-   NEWSLETTER
-========================================================= */
-
-.newsletter{
-  margin:38px 0 70px;
-
-  padding:35px;
-
   display:flex;
-  align-items:center;
+  flex-direction:column;
+  flex:1;
+}
+
+.news-body h3{
+  margin:11px 0 8px;
+  font-size:16px;
+  line-height:1.35;
+}
+
+.news-body p{
+  color:#7d899b;
+  font-size:12px;
+  line-height:1.5;
+}
+
+.news-meta{
+  margin-top:auto;
+  padding-top:15px;
+  color:#697689;
+  font-size:10px;
+  display:flex;
   justify-content:space-between;
-
-  gap:25px;
-
-  border:1px solid #293545;
-
-  border-radius:22px;
-
-  background:
-    radial-gradient(
-      circle at 85% 50%,
-      rgba(247,200,67,.15),
-      transparent 27%
-    ),
-    #101722;
 }
 
-.newsletter h2{
-  margin:0 0 8px;
-
-  font-size:27px;
+.news-link{
+  display:inline-block;
+  margin-top:13px;
+  color:var(--gold);
+  font-size:11px;
+  font-weight:900;
 }
 
-.newsletter p{
-  margin:0;
+/* EMPTY */
 
-  color:#8692a4;
+.empty{
+  display:none;
+  grid-column:1/-1;
+  padding:40px;
+  text-align:center;
+  color:#8390a2;
+  border:1px dashed #2a3545;
+  border-radius:18px;
 }
 
-.newsletter-form{
-  display:flex;
-
-  gap:8px;
-}
-
-.newsletter-form input{
-  width:260px;
-  height:46px;
-
-  padding:0 15px;
-
-  color:#fff;
-
-  background:#080c12;
-
-  border:1px solid #293546;
-
-  border-radius:11px;
-
-  outline:none;
-}
-
-.newsletter-form button{
-  padding:0 20px;
-
-  border:0;
-  border-radius:11px;
-
-  color:#111;
-
-  background:var(--gold);
-
-  font-weight:950;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
+/* FOOTER */
 
 footer{
-  border-top:1px solid #1b2430;
-
-  background:#06080c;
-}
-
-.footer-inner{
-  min-height:100px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:25px;
-
-  color:#657184;
-
+  margin-top:70px;
+  border-top:1px solid #192330;
+  padding:35px 0;
+  color:#667386;
   font-size:11px;
 }
 
-.footer-logo{
-  color:#a5aebb;
+/* MOBILE */
 
-  font-weight:950;
+@media(max-width:1100px){
+  nav{display:none}
+  .hero{grid-template-columns:1fr}
+  .featured{grid-template-columns:1fr}
+  .side-list{display:grid;grid-template-columns:1fr 1fr}
+  .news-grid{grid-template-columns:repeat(2,1fr)}
 }
 
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:1150px){
-
-  .menu{
-    display:none;
-  }
-
-  .hero{
-    grid-template-columns:1fr;
-  }
-
-  .feature-layout{
-    grid-template-columns:1fr;
-  }
-
-  .side-news{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-  }
-
-  .pulse-grid,
-  .news-grid,
-  .collector-tools{
-    grid-template-columns:repeat(2,1fr);
-  }
-
+@media(max-width:700px){
+  .container{width:calc(100% - 28px)}
+  .search{display:none}
+  .hero h1{letter-spacing:-2px}
+  .side-list{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
 }
-
-@media(max-width:760px){
-
-  .container{
-    width:min(100% - 28px,1400px);
-  }
-
-  .search{
-    display:none;
-  }
-
-  .collection-btn{
-    display:none;
-  }
-
-  .hero{
-    padding-top:40px;
-  }
-
-  .hero h1{
-    letter-spacing:-2.5px;
-  }
-
-  .side-news{
-    grid-template-columns:1fr;
-  }
-
-  .pulse-grid,
-  .news-grid,
-  .collector-tools{
-    grid-template-columns:1fr;
-  }
-
-  .collector-grid{
-    grid-template-columns:1fr;
-  }
-
-  .trust{
-    grid-template-columns:1fr;
-  }
-
-  .newsletter{
-    display:block;
-  }
-
-  .newsletter-form{
-    margin-top:20px;
-  }
-
-  .newsletter-form input{
-    width:100%;
-  }
-
-  .release{
-    grid-template-columns:
-      55px
-      1fr;
-  }
-
-  .release > .category{
-    display:none;
-  }
-
-  .trend-row{
-    grid-template-columns:
-      38px
-      1fr
-      70px;
-  }
-
-  .trend-meter{
-    display:none;
-  }
-
-  .footer-inner{
-    display:block;
-
-    padding:28px 0;
-  }
-
-  .footer-inner div+div{
-    margin-top:12px;
-  }
-
-}
-
 </style>
 </head>
 
 <body>
 
-
-<!-- =====================================================
-     LIVE RADAR
-===================================================== -->
-
-<div class="top-radar">
-
-  <div class="container top-radar-inner">
-
+<div class="livebar">
+  <div class="container live-inner">
     <div class="live">
-      <span class="live-dot"></span>
+      <span class="dot"></span>
       RADAR LIVE
     </div>
 
-    <div class="ticker">
-      <strong>Právě sledujeme:</strong>
-      Pokémon reprinty • nové One Piece produkty • Lorcana promo karty • Magic preview • předobjednávky
+    <div class="live-text" id="liveText">
+      Načítám aktuální zprávy…
     </div>
-
   </div>
-
 </div>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
-
-  <div class="container header-inner">
+  <div class="container header">
 
     <a class="logo" href="#">
-
-      <div class="logo-mark">
-        RK
-      </div>
-
-      <div class="logo-text">
-        RADAR<span>KARET</span>.CZ
-      </div>
-
+      <div class="logo-icon">RK</div>
+      <div>RADAR<span>KARET</span>.CZ</div>
     </a>
 
-
-    <nav class="menu">
-
-      <a href="#news">
-        Novinky
-      </a>
-
-      <a href="#releases">
-        Nové edice
-      </a>
-
-      <a href="#reprints">
-        Reprinty
-      </a>
-
-      <a href="#trends">
-        Trendy
-      </a>
-
-      <a href="#collector">
-        Pro sběratele
-      </a>
-
+    <nav>
+      <a href="#news">Novinky</a>
+      <a href="#pokemon">Pokémon</a>
+      <a href="#onepiece">One Piece</a>
+      <a href="#lorcana">Lorcana</a>
+      <a href="#latest">Nejnovější</a>
     </nav>
 
-
-    <div class="header-actions">
-
-      <input
-        id="searchInput"
-        class="search"
-        type="search"
-        placeholder="Hledat zprávu, set, kartu..."
-      >
-
-      <button class="collection-btn">
-        ♢ Moje sbírka
-      </button>
-
-    </div>
+    <input
+      id="searchInput"
+      class="search"
+      placeholder="Hledat zprávu, set, produkt…"
+    >
 
   </div>
-
 </header>
 
 
 <main class="container">
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <section class="hero">
 
   <div>
 
-    <div class="hero-tag">
-      Český informační portál pro sběratele
+    <div class="eyebrow">
+      ČESKÝ RADAR SBĚRATELSKÝCH KARET
     </div>
 
     <h1>
-      Vše, co se děje
-      ve světě <span>karet.</span>
+      Co se děje ve světě <span>karet.</span>
     </h1>
 
-    <p class="hero-description">
-      Pokémon, One Piece, Disney Lorcana, Magic, Yu-Gi-Oh!,
-      Star Wars Unlimited a další TCG.
-      Nové edice, reprinty, promo karty, předobjednávky,
-      turnaje a sběratelské trendy na jednom místě.
+    <p>
+      Aktuální informace o Pokémon TCG, One Piece Card Game,
+      Disney Lorcana a dalších sběratelských karetních hrách.
+      Radar automaticky sleduje nové zprávy a zdroje.
     </p>
 
-    <div class="hero-buttons">
+    <div class="hero-actions">
 
-      <a class="primary-btn" href="#news">
-        ⚡ Dnešní novinky
+      <a class="btn primary" href="#news">
+        ⚡ Dnešní radar
       </a>
 
-      <a class="secondary-btn" href="#releases">
-        📅 Kalendář vydání
-      </a>
-
-      <a class="secondary-btn" href="#reprints">
-        📦 Reprint Watch
+      <a class="btn" href="#latest">
+        📰 Všechny zprávy
       </a>
 
     </div>
@@ -1787,67 +579,40 @@ footer{
   </div>
 
 
-  <aside class="radar-panel">
+  <aside class="radar">
 
-    <div class="small-label">
+    <div class="eyebrow">
       RADAR POSLEDNÍCH 24 HODIN
     </div>
 
-    <h2>
-      Co se právě děje
-    </h2>
-
+    <h2>Co se právě děje</h2>
 
     <div class="radar-grid">
 
-      <div class="radar-stat hot">
-
-        <strong>17</strong>
-
-        <small>
-          nových zpráv
-        </small>
-
+      <div class="stat">
+        <strong id="count24">–</strong>
+        <small>zpráv za 24 h</small>
       </div>
 
-
-      <div class="radar-stat">
-
-        <strong>7</strong>
-
-        <small>
-          TCG značek
-        </small>
-
+      <div class="stat">
+        <strong id="totalCount">–</strong>
+        <small>zpráv v radaru</small>
       </div>
 
-
-      <div class="radar-stat">
-
-        <strong>4</strong>
-
-        <small>
-          nové produkty
-        </small>
-
+      <div class="stat">
+        <strong id="gameCount">–</strong>
+        <small>sledovaných her</small>
       </div>
 
-
-      <div class="radar-stat">
-
-        <strong>2</strong>
-
-        <small>
-          reprint signály
-        </small>
-
+      <div class="stat">
+        <strong id="todayCount">–</strong>
+        <small>dnes zachyceno</small>
       </div>
 
     </div>
 
-
-    <div class="last-check">
-      ● Poslední kontrola zdrojů před 12 minutami
+    <div class="updated" id="updateInfo">
+      Načítám data…
     </div>
 
   </aside>
@@ -1855,167 +620,103 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     GAME FILTER
-===================================================== -->
+<div class="filters">
 
-<div class="game-tabs">
-
-  <button
-    class="game-tab active"
-    data-filter="all"
-  >
+  <button class="filter active" data-filter="all">
     Vše
   </button>
 
-  <button
-    class="game-tab"
-    data-filter="pokemon"
-  >
+  <button class="filter" data-filter="pokemon">
     ⚡ Pokémon
   </button>
 
-  <button
-    class="game-tab"
-    data-filter="onepiece"
-  >
+  <button class="filter" data-filter="onepiece">
     ☠ One Piece
   </button>
 
-  <button
-    class="game-tab"
-    data-filter="lorcana"
-  >
+  <button class="filter" data-filter="lorcana">
     ✦ Lorcana
   </button>
 
-  <button
-    class="game-tab"
-    data-filter="magic"
-  >
+  <button class="filter" data-filter="magic">
     🔥 Magic
-  </button>
-
-  <button
-    class="game-tab"
-    data-filter="yugioh"
-  >
-    ◈ Yu-Gi-Oh!
-  </button>
-
-  <button
-    class="game-tab"
-    data-filter="starwars"
-  >
-    ✧ Star Wars
   </button>
 
 </div>
 
-
-<!-- =====================================================
-     HLAVNÍ ZPRÁVY
-===================================================== -->
 
 <section id="news">
 
   <div class="section-head">
 
     <div>
-
-      <div class="section-name">
+      <div class="section-label">
         RADAR TODAY
       </div>
 
       <h2>
         Nejdůležitější právě teď
       </h2>
-
     </div>
 
-    <div class="section-more">
-      Aktualizováno průběžně
+    <div class="section-note">
+      automaticky ze zdrojů
     </div>
 
   </div>
 
 
-  <div class="feature-layout">
+  <div class="featured">
 
-    <article class="hero-story">
+    <article class="main-story">
 
-      <div class="hero-story-content">
+      <div class="main-content">
 
-        <span class="category pokemon">
-          POKÉMON
+        <span
+          class="category pokemon"
+          id="mainCategory"
+        >
+          RADAR
         </span>
 
-        <h3>
-          Nová velká Pokémon TCG edice míří mezi sběratele
+        <h3 id="mainTitle">
+          Načítám nejnovější zprávu…
         </h3>
 
-        <p>
-          Nové ilustrace, promo produkty, speciální karty
-          a sběratelské varianty. Přehled toho nejdůležitějšího
-          na jednom místě.
-        </p>
+        <div
+          class="story-meta"
+          id="mainMeta"
+        ></div>
 
-        <div class="story-info">
-
-          <span>
-            Dnes 09:30
-          </span>
-
-          <span>
-            ✓ Oficiální zdroj
-          </span>
-
-          <span>
-            4 min čtení
-          </span>
-
-        </div>
+        <a
+          class="story-button"
+          id="mainLink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Původní zdroj →
+        </a>
 
       </div>
 
     </article>
 
 
-    <div class="side-news">
+    <div class="side-list">
 
-
-      <article class="side-card">
-
-        <span class="category onepiece">
-          ONE PIECE
-        </span>
-
-        <h3>
-          Nové Parallel karty z připravované série
-        </h3>
-
-        <p>
-          Bandai postupně zveřejňuje další karty
-          připravovaného rozšíření.
-        </p>
-
+      <article
+        class="side-story"
+        id="side1"
+      >
+        Načítám…
       </article>
 
-
-      <article class="side-card">
-
-        <span class="category lorcana">
-          LORCANA
-        </span>
-
-        <h3>
-          Další Enchanted karty byly odhaleny
-        </h3>
-
-        <p>
-          Nové sběratelské varianty z nadcházejícího setu.
-        </p>
-
+      <article
+        class="side-story"
+        id="side2"
+      >
+        Načítám…
       </article>
 
     </div>
@@ -2025,1087 +726,33 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     PULSE
-===================================================== -->
+<section id="latest">
 
-<div class="pulse-grid">
-
-
-  <div class="pulse">
-
-    <div class="pulse-top">
-
-      <div class="pulse-name">
-        Pokémon
-      </div>
-
-      <div class="pulse-value">
-        VYSOKÁ AKTIVITA
-      </div>
-
-    </div>
-
-    <div class="pulse-bar">
-      <span style="width:90%"></span>
-    </div>
-
-    <p>
-      Edice • reprinty • promo
-    </p>
-
-  </div>
-
-
-  <div class="pulse">
-
-    <div class="pulse-top">
-
-      <div class="pulse-name">
-        One Piece
-      </div>
-
-      <div class="pulse-value">
-        VYSOKÁ AKTIVITA
-      </div>
-
-    </div>
-
-    <div class="pulse-bar">
-      <span style="width:84%"></span>
-    </div>
-
-    <p>
-      Nové sety • Parallel
-    </p>
-
-  </div>
-
-
-  <div class="pulse">
-
-    <div class="pulse-top">
-
-      <div class="pulse-name">
-        Lorcana
-      </div>
-
-      <div class="pulse-value">
-        AKTIVNÍ
-      </div>
-
-    </div>
-
-    <div class="pulse-bar">
-      <span style="width:66%"></span>
-    </div>
-
-    <p>
-      Enchanted • nové produkty
-    </p>
-
-  </div>
-
-
-  <div class="pulse">
-
-    <div class="pulse-top">
-
-      <div class="pulse-name">
-        Magic
-      </div>
-
-      <div class="pulse-value">
-        AKTIVNÍ
-      </div>
-
-    </div>
-
-    <div class="pulse-bar">
-      <span style="width:61%"></span>
-    </div>
-
-    <p>
-      Preview • bannery • sety
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- =====================================================
-     NEJNOVĚJŠÍ
-===================================================== -->
-
-<div class="section-head" style="margin-top:48px">
-
-  <div>
-
-    <div class="section-name">
-      LATEST NEWS
-    </div>
-
-    <h2>
-      Nejnovější zprávy
-    </h2>
-
-  </div>
-
-  <a class="section-more" href="#">
-    Všechny zprávy →
-  </a>
-
-</div>
-
-
-<div
-  class="news-grid"
-  id="newsGrid"
->
-
-
-  <article
-    class="news-card"
-    data-category="pokemon"
-  >
-
-    <div class="news-image">
-      <span>⚡</span>
-    </div>
-
-    <div class="news-content">
-
-      <span class="category pokemon">
-        POKÉMON
-      </span>
-
-      <h3>
-        Objevují se nové informace o očekávaném reprintu
-      </h3>
-
-      <p>
-        Distribuční signály naznačují další vlnu
-        populárního produktu.
-      </p>
-
-      <div class="news-bottom">
-
-        <span>
-          Dnes • 10:12
-        </span>
-
-        <span class="source-official">
-          ✓ OVĚŘENO
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
-
-  <article
-    class="news-card"
-    data-category="onepiece"
-  >
-
-    <div class="news-image">
-      <span>☠</span>
-    </div>
-
-    <div class="news-content">
-
-      <span class="category onepiece">
-        ONE PIECE
-      </span>
-
-      <h3>
-        Nový Starter Deck získává první produktové informace
-      </h3>
-
-      <p>
-        Přehled obsahu a prvních zveřejněných karet.
-      </p>
-
-      <div class="news-bottom">
-
-        <span>
-          Dnes • 09:42
-        </span>
-
-        <span class="source-official">
-          ✓ OFICIÁLNÍ
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
-
-  <article
-    class="news-card"
-    data-category="lorcana"
-  >
-
-    <div class="news-image">
-      <span>✦</span>
-    </div>
-
-    <div class="news-content">
-
-      <span class="category lorcana">
-        LORCANA
-      </span>
-
-      <h3>
-        Nové sběratelské varianty míří do dalšího setu
-      </h3>
-
-      <p>
-        Ravensburger pokračuje v odhalování nových karet.
-      </p>
-
-      <div class="news-bottom">
-
-        <span>
-          Dnes • 08:55
-        </span>
-
-        <span class="source-official">
-          ✓ OFICIÁLNÍ
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
-
-  <article
-    class="news-card"
-    data-category="magic"
-  >
-
-    <div class="news-image">
-      <span>🔥</span>
-    </div>
-
-    <div class="news-content">
-
-      <span class="category magic">
-        MAGIC
-      </span>
-
-      <h3>
-        První preview připravované sady zveřejněno
-      </h3>
-
-      <p>
-        Nové mechaniky a první výrazné Mythic Rare karty.
-      </p>
-
-      <div class="news-bottom">
-
-        <span>
-          Včera • 22:11
-        </span>
-
-        <span class="source-official">
-          ✓ OFICIÁLNÍ
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
-
-  <article
-    class="news-card"
-    data-category="pokemon"
-  >
-
-    <div class="news-image">
-      <span>🎴</span>
-    </div>
-
-    <div class="news-content">
-
-      <span class="category pokemon">
-        POKÉMON
-      </span>
-
-      <h3>
-        Nové promo karty pro organizované hraní
-      </h3>
-
-      <p>
-        Přichází další série ligových promo karet.
-      </p>
-
-      <div class="news-bottom">
-
-        <span>
-          Včera • 19:20
-        </span>
-
-        <span class="source-official">
-          ✓ OVĚŘENO
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
-
-  <article
-    class="news-card"
-    data-category="starwars"
-  >
-
-    <div class="news-image">
-      <span>✧</span>
-    </div>
-
-    <div class="news-content">
-
-      <span class="category starwars">
-        STAR WARS
-      </span>
-
-      <h3>
-        Star Wars Unlimited chystá další produktovou vlnu
-      </h3>
-
-      <p>
-        Nové boostery a organizované hraní přinášejí další karty.
-      </p>
-
-      <div class="news-bottom">
-
-        <span>
-          Včera • 17:55
-        </span>
-
-        <span class="source-official">
-          ✓ OFICIÁLNÍ
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
-
-  <article
-    class="news-card"
-    data-category="onepiece"
-  >
-
-    <div class="news-image">
-      <span>🏴‍☠️</span>
-    </div>
-
-    <div class="news-content">
-
-      <span class="category onepiece">
-        ONE PIECE
-      </span>
-
-      <h3>
-        Nové turnajové promo karty byly odhaleny
-      </h3>
-
-      <p>
-        Přehled exkluzivních karet pro další turnajovou sezónu.
-      </p>
-
-      <div class="news-bottom">
-
-        <span>
-          29. 8. • 15:11
-        </span>
-
-        <span class="source-official">
-          ✓ OVĚŘENO
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
-
-  <article
-    class="news-card"
-    data-category="yugioh"
-  >
-
-    <div class="news-image">
-      <span>◈</span>
-    </div>
-
-    <div class="news-content">
-
-      <span class="category yugioh">
-        YU-GI-OH!
-      </span>
-
-      <h3>
-        Připravovaná edice přidává nové rarity
-      </h3>
-
-      <p>
-        První informace o kartách a nových produktech.
-      </p>
-
-      <div class="news-bottom">
-
-        <span>
-          29. 8. • 13:40
-        </span>
-
-        <span class="source-official">
-          ✓ OVĚŘENO
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
-</div>
-
-
-<!-- =====================================================
-     KALENDÁŘ + REPRINT WATCH
-===================================================== -->
-
-<div class="collector-grid">
-
-
-<section id="releases">
-
-  <div class="section-head">
+  <div class="section-head" style="margin-top:48px">
 
     <div>
-
-      <div class="section-name">
-        RELEASE CALENDAR
+      <div class="section-label">
+        LIVE FEED
       </div>
 
       <h2>
-        Co právě vychází
+        Nejnovější zprávy
       </h2>
-
     </div>
+
+    <div class="section-note" id="resultCount"></div>
 
   </div>
 
 
-  <div class="panel">
+  <div
+    class="news-grid"
+    id="newsGrid"
+  ></div>
 
-
-    <div class="release">
-
-      <div class="release-date">
-        05
-        <small>ZÁŘÍ</small>
-      </div>
-
-      <div class="release-info">
-
-        <h4>
-          Pokémon TCG – nový produkt
-        </h4>
-
-        <p>
-          Booster / Collection / Promo
-        </p>
-
-      </div>
-
-      <span class="category pokemon">
-        POKÉMON
-      </span>
-
-    </div>
-
-
-    <div class="release">
-
-      <div class="release-date">
-        12
-        <small>ZÁŘÍ</small>
-      </div>
-
-      <div class="release-info">
-
-        <h4>
-          One Piece Card Game – nová série
-        </h4>
-
-        <p>
-          Booster Display
-        </p>
-
-      </div>
-
-      <span class="category onepiece">
-        ONE PIECE
-      </span>
-
-    </div>
-
-
-    <div class="release">
-
-      <div class="release-date">
-        19
-        <small>ZÁŘÍ</small>
-      </div>
-
-      <div class="release-info">
-
-        <h4>
-          Disney Lorcana – nové rozšíření
-        </h4>
-
-        <p>
-          Boostery • Starter Deck • Trove
-        </p>
-
-      </div>
-
-      <span class="category lorcana">
-        LORCANA
-      </span>
-
-    </div>
-
-
-    <div class="release">
-
-      <div class="release-date">
-        26
-        <small>ZÁŘÍ</small>
-      </div>
-
-      <div class="release-info">
-
-        <h4>
-          Magic: The Gathering
-        </h4>
-
-        <p>
-          Nová hlavní sada
-        </p>
-
-      </div>
-
-      <span class="category magic">
-        MAGIC
-      </span>
-
-    </div>
-
+  <div class="empty" id="emptyState">
+    Pro vybraný filtr nebyla nalezena žádná zpráva.
   </div>
-
-</section>
-
-
-<aside id="reprints">
-
-  <div class="section-head">
-
-    <div>
-
-      <div class="section-name">
-        MONITORING
-      </div>
-
-      <h2>
-        Reprint Watch
-      </h2>
-
-    </div>
-
-  </div>
-
-
-  <div class="panel">
-
-
-    <div class="watch-item">
-
-      <div class="watch-symbol">
-        ⚡
-      </div>
-
-      <div class="watch-content">
-
-        <h4>
-          Pokémon ETB
-        </h4>
-
-        <p>
-          Nová distribuční aktivita
-        </p>
-
-      </div>
-
-      <div class="status">
-        SLEDUJEME
-      </div>
-
-    </div>
-
-
-    <div class="watch-item">
-
-      <div class="watch-symbol">
-        ☠
-      </div>
-
-      <div class="watch-content">
-
-        <h4>
-          One Piece Booster
-        </h4>
-
-        <p>
-          Změna evropské dostupnosti
-        </p>
-
-      </div>
-
-      <div class="status">
-        AKTIVNÍ
-      </div>
-
-    </div>
-
-
-    <div class="watch-item">
-
-      <div class="watch-symbol">
-        ✦
-      </div>
-
-      <div class="watch-content">
-
-        <h4>
-          Lorcana Trove
-        </h4>
-
-        <p>
-          Další distribuční vlna
-        </p>
-
-      </div>
-
-      <div class="status">
-        SLEDUJEME
-      </div>
-
-    </div>
-
-
-    <div class="watch-item">
-
-      <div class="watch-symbol">
-        🔥
-      </div>
-
-      <div class="watch-content">
-
-        <h4>
-          Collector Booster
-        </h4>
-
-        <p>
-          Stabilní dostupnost
-        </p>
-
-      </div>
-
-      <div class="status">
-        STABILNÍ
-      </div>
-
-    </div>
-
-  </div>
-
-</aside>
-
-</div>
-
-
-<!-- =====================================================
-     PRO SBĚRATELE
-===================================================== -->
-
-<section
-  id="collector"
-  class="collector-tools"
->
-
-
-  <div class="tool-card">
-
-    <div class="tool-icon">
-      🏆
-    </div>
-
-    <h3>
-      Top sběratelské karty
-    </h3>
-
-    <p>
-      Výběr nejzajímavějších chase cards,
-      promo karet a vzácných variant.
-    </p>
-
-  </div>
-
-
-  <div class="tool-card">
-
-    <div class="tool-icon">
-      📦
-    </div>
-
-    <h3>
-      Sealed produkty
-    </h3>
-
-    <p>
-      ETB, booster boxy, collection boxy,
-      trove a další produkty pro dlouhodobé držení.
-    </p>
-
-  </div>
-
-
-  <div class="tool-card">
-
-    <div class="tool-icon">
-      💎
-    </div>
-
-    <h3>
-      Grading Radar
-    </h3>
-
-    <p>
-      PSA, CGC, Beckett a další informace
-      ze světa profesionálního gradingu.
-    </p>
-
-  </div>
-
-
-  <div class="tool-card">
-
-    <div class="tool-icon">
-      📈
-    </div>
-
-    <h3>
-      Sběratelské trendy
-    </h3>
-
-    <p>
-      Co právě roste na popularitě
-      a o kterých produktech se nejvíce mluví.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     TRENDY
-===================================================== -->
-
-<section
-  id="trends"
-  class="trending"
->
-
-  <div class="section-head">
-
-    <div>
-
-      <div class="section-name">
-        COLLECTOR TRENDING
-      </div>
-
-      <h2>
-        Co sběratelé právě sledují
-      </h2>
-
-    </div>
-
-  </div>
-
-
-  <div class="panel">
-
-
-    <div class="trend-row">
-
-      <div class="rank">
-        01
-      </div>
-
-      <div class="trend-name">
-
-        <strong>
-          Pokémon special sets
-        </strong>
-
-        <small>
-          Sealed produkty
-        </small>
-
-      </div>
-
-      <div class="trend-meter">
-        <span style="width:94%"></span>
-      </div>
-
-      <div class="trend-change">
-        ▲ HOT
-      </div>
-
-    </div>
-
-
-    <div class="trend-row">
-
-      <div class="rank">
-        02
-      </div>
-
-      <div class="trend-name">
-
-        <strong>
-          One Piece Manga Rare
-        </strong>
-
-        <small>
-          Chase cards
-        </small>
-
-      </div>
-
-      <div class="trend-meter">
-        <span style="width:88%"></span>
-      </div>
-
-      <div class="trend-change">
-        ▲ HOT
-      </div>
-
-    </div>
-
-
-    <div class="trend-row">
-
-      <div class="rank">
-        03
-      </div>
-
-      <div class="trend-name">
-
-        <strong>
-          Lorcana Enchanted
-        </strong>
-
-        <small>
-          Premium rarity
-        </small>
-
-      </div>
-
-      <div class="trend-meter">
-        <span style="width:78%"></span>
-      </div>
-
-      <div class="trend-change">
-        ▲ ROSTE
-      </div>
-
-    </div>
-
-
-    <div class="trend-row">
-
-      <div class="rank">
-        04
-      </div>
-
-      <div class="trend-name">
-
-        <strong>
-          Vintage Pokémon
-        </strong>
-
-        <small>
-          Graded cards
-        </small>
-
-      </div>
-
-      <div class="trend-meter">
-        <span style="width:71%"></span>
-      </div>
-
-      <div class="trend-change">
-        ● STABILNÍ
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     DŮVĚRYHODNOST
-===================================================== -->
-
-<section class="trust">
-
-  <div>
-
-    <div class="section-name">
-      DŮVĚRYHODNOST INFORMACÍ
-    </div>
-
-    <h2>
-      Oddělujeme fakta od sběratelských fám.
-    </h2>
-
-    <p>
-      Každá zpráva může být označena podle zdroje:
-      oficiální oznámení výrobce, distributor,
-      důvěryhodné médium nebo zatím nepotvrzená informace.
-      Hned tak poznáš, čemu můžeš věřit.
-    </p>
-
-  </div>
-
-
-  <div class="trust-grid">
-
-    <div class="trust-box">
-
-      <strong>
-        24/7
-      </strong>
-
-      <small>
-        monitoring zdrojů
-      </small>
-
-    </div>
-
-
-    <div class="trust-box">
-
-      <strong>
-        7+
-      </strong>
-
-      <small>
-        sledovaných TCG
-      </small>
-
-    </div>
-
-
-    <div class="trust-box">
-
-      <strong>
-        CZ
-      </strong>
-
-      <small>
-        český přehled
-      </small>
-
-    </div>
-
-
-    <div class="trust-box">
-
-      <strong>
-        ✓
-      </strong>
-
-      <small>
-        označení zdrojů
-      </small>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     NEWSLETTER
-===================================================== -->
-
-<section class="newsletter">
-
-  <div>
-
-    <h2>
-      📡 Denní RadarKaret
-    </h2>
-
-    <p>
-      Jednou denně jen to nejdůležitější
-      ze světa sběratelských karet.
-    </p>
-
-  </div>
-
-
-  <form
-    class="newsletter-form"
-    id="newsletter"
-  >
-
-    <input
-      type="email"
-      placeholder="tvuj@email.cz"
-      required
-    >
-
-    <button type="submit">
-      Chci přehled
-    </button>
-
-  </form>
 
 </section>
 
@@ -3113,140 +760,485 @@ footer{
 </main>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
-
-  <div class="container footer-inner">
-
-    <div>
-
-      <span class="footer-logo">
-        RADARKARET.CZ
-      </span>
-
-      — český informační portál pro sběratele.
-
-    </div>
-
-    <div>
-      Pokémon, One Piece, Lorcana, Magic
-      a další názvy jsou ochrannými známkami
-      příslušných vlastníků.
-    </div>
-
+  <div class="container">
+    <strong>RADARKARET.CZ</strong> — český informační radar pro svět sběratelských karet.<br><br>
+    RadarKaret není spojen s The Pokémon Company, Bandai, Ravensburger ani dalšími vlastníky značek.
+    Obsahuje odkazy na původní informační zdroje.
   </div>
-
 </footer>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
 
-const tabs =
-  document.querySelectorAll(".game-tab");
-
-const newsCards =
-  document.querySelectorAll(".news-card");
-
-const searchInput =
-  document.getElementById("searchInput");
-
+let allNews = [];
 let activeFilter = "all";
 
+const gameInfo = {
+  pokemon: {
+    name: "Pokémon",
+    icon: "⚡"
+  },
+  onepiece: {
+    name: "One Piece",
+    icon: "☠"
+  },
+  lorcana: {
+    name: "Lorcana",
+    icon: "✦"
+  },
+  magic: {
+    name: "Magic",
+    icon: "🔥"
+  }
+};
 
-function filterNews(){
+
+function safeCategory(category){
+  return gameInfo[category]
+    ? category
+    : "other";
+}
+
+
+function gameName(item){
+  return item.game ||
+    gameInfo[item.category]?.name ||
+    "TCG";
+}
+
+
+function icon(item){
+  return gameInfo[item.category]?.icon || "🎴";
+}
+
+
+function parseDate(value){
+
+  if(!value) return null;
+
+  const d = new Date(value);
+
+  if(Number.isNaN(d.getTime())){
+    return null;
+  }
+
+  return d;
+}
+
+
+function dateLabel(item){
+
+  if(item.date){
+    return item.date;
+  }
+
+  const d = parseDate(item.published);
+
+  if(!d) return "";
+
+  return d.toLocaleDateString(
+    "cs-CZ",
+    {
+      day:"numeric",
+      month:"numeric",
+      year:"numeric"
+    }
+  );
+}
+
+
+function escapeHtml(text){
+
+  const div =
+    document.createElement("div");
+
+  div.textContent =
+    text || "";
+
+  return div.innerHTML;
+}
+
+
+function renderTop(news){
+
+  if(!news.length){
+    document.getElementById("mainTitle").textContent =
+      "Radar zatím nemá žádná data.";
+    return;
+  }
+
+  const main = news[0];
+
+  const mainCategory =
+    document.getElementById("mainCategory");
+
+  mainCategory.textContent =
+    gameName(main).toUpperCase();
+
+  mainCategory.className =
+    "category " +
+    safeCategory(main.category);
+
+
+  document.getElementById("mainTitle")
+    .textContent =
+    main.title;
+
+
+  document.getElementById("mainMeta")
+    .innerHTML =
+    `<span>${dateLabel(main)}</span>
+     <span>✓ sledovaný zdroj</span>`;
+
+
+  const link =
+    document.getElementById("mainLink");
+
+  link.href =
+    main.url || "#";
+
+
+  renderSide(
+    "side1",
+    news[1]
+  );
+
+  renderSide(
+    "side2",
+    news[2]
+  );
+
+}
+
+
+function renderSide(id,item){
+
+  const el =
+    document.getElementById(id);
+
+  if(!item){
+    el.innerHTML =
+      "<small>Další zpráva zatím není k dispozici.</small>";
+    return;
+  }
+
+  el.innerHTML = `
+    <span class="category ${safeCategory(item.category)}">
+      ${escapeHtml(gameName(item).toUpperCase())}
+    </span>
+
+    <h3>
+      ${escapeHtml(item.title)}
+    </h3>
+
+    <small>
+      ${escapeHtml(dateLabel(item))}
+    </small>
+
+    <br><br>
+
+    <a
+      href="${escapeHtml(item.url || "#")}"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="color:#f7c843;font-weight:900;font-size:11px"
+    >
+      Zdroj →
+    </a>
+  `;
+
+}
+
+
+function renderNews(){
+
+  const grid =
+    document.getElementById("newsGrid");
 
   const query =
-    searchInput
+    document
+      .getElementById("searchInput")
       .value
       .trim()
       .toLowerCase();
 
 
-  newsCards.forEach(card => {
+  const visible =
+    allNews.filter(item => {
 
-    const category =
-      card.dataset.category;
+      const categoryMatch =
+        activeFilter === "all" ||
+        item.category === activeFilter;
 
-    const content =
-      card.innerText.toLowerCase();
+      const searchMatch =
+        !query ||
+        (item.title || "")
+          .toLowerCase()
+          .includes(query) ||
+        (item.game || "")
+          .toLowerCase()
+          .includes(query);
+
+      return categoryMatch &&
+        searchMatch;
+
+    });
 
 
-    const categoryMatch =
-      activeFilter === "all" ||
-      activeFilter === category;
+  document.getElementById("resultCount")
+    .textContent =
+    `${visible.length} zpráv`;
 
 
-    const searchMatch =
-      !query ||
-      content.includes(query);
+  document.getElementById("emptyState")
+    .style.display =
+    visible.length
+      ? "none"
+      : "block";
 
 
-    card.style.display =
-      categoryMatch && searchMatch
-        ? "block"
-        : "none";
+  grid.innerHTML =
+    visible
+      .map(item => `
 
-  });
+        <article class="news-card">
+
+          <div class="news-image">
+            ${icon(item)}
+          </div>
+
+          <div class="news-body">
+
+            <span class="category ${safeCategory(item.category)}">
+              ${escapeHtml(gameName(item).toUpperCase())}
+            </span>
+
+            <h3>
+              ${escapeHtml(item.title)}
+            </h3>
+
+            <p>
+              Aktuální zpráva zachycená systémem RadarKaret.
+            </p>
+
+            <div class="news-meta">
+
+              <span>
+                ${escapeHtml(dateLabel(item))}
+              </span>
+
+              <span style="color:#42d392;font-weight:900">
+                ● LIVE
+              </span>
+
+            </div>
+
+            <a
+              class="news-link"
+              href="${escapeHtml(item.url || "#")}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Původní zdroj →
+            </a>
+
+          </div>
+
+        </article>
+
+      `)
+      .join("");
 
 }
 
 
-tabs.forEach(tab => {
+function renderStats(){
 
-  tab.addEventListener(
-    "click",
-    () => {
+  const now =
+    new Date();
 
-      tabs.forEach(item =>
-        item.classList.remove("active")
+  const ago24 =
+    now.getTime() -
+    24 * 60 * 60 * 1000;
+
+
+  const count24 =
+    allNews.filter(item => {
+
+      const d =
+        parseDate(item.published);
+
+      return d &&
+        d.getTime() >= ago24;
+
+    }).length;
+
+
+  const today =
+    now.toLocaleDateString(
+      "cs-CZ"
+    );
+
+
+  const todayCount =
+    allNews.filter(item => {
+
+      const d =
+        parseDate(item.published);
+
+      if(!d) return false;
+
+      return d.toLocaleDateString(
+        "cs-CZ"
+      ) === today;
+
+    }).length;
+
+
+  const games =
+    new Set(
+      allNews
+        .map(item => item.category)
+        .filter(Boolean)
+    );
+
+
+  document.getElementById("count24")
+    .textContent =
+    count24;
+
+
+  document.getElementById("totalCount")
+    .textContent =
+    allNews.length;
+
+
+  document.getElementById("gameCount")
+    .textContent =
+    games.size;
+
+
+  document.getElementById("todayCount")
+    .textContent =
+    todayCount;
+
+
+  document.getElementById("updateInfo")
+    .textContent =
+    "● Data načtena " +
+    new Date().toLocaleTimeString(
+      "cs-CZ",
+      {
+        hour:"2-digit",
+        minute:"2-digit"
+      }
+    );
+
+
+  document.getElementById("liveText")
+    .textContent =
+    allNews.length
+    ? `Radar právě sleduje ${allNews.length} aktuálních položek.`
+    : "Radar čeká na první zprávy.";
+
+}
+
+
+async function loadNews(){
+
+  try{
+
+    const response =
+      await fetch(
+        "data/news.json?v=" +
+        Date.now()
       );
 
 
-      tab.classList.add("active");
-
-
-      activeFilter =
-        tab.dataset.filter;
-
-
-      filterNews();
-
+    if(!response.ok){
+      throw new Error(
+        "news.json nelze načíst"
+      );
     }
-  );
-
-});
 
 
-searchInput.addEventListener(
-  "input",
-  filterNews
-);
+    allNews =
+      await response.json();
+
+
+    allNews.sort(
+      (a,b) =>
+        new Date(b.published || 0) -
+        new Date(a.published || 0)
+    );
+
+
+    renderStats();
+    renderTop(allNews);
+    renderNews();
+
+  }
+  catch(error){
+
+    console.error(error);
+
+    document.getElementById("liveText")
+      .textContent =
+      "Radar momentálně nemůže načíst data.";
+
+    document.getElementById("mainTitle")
+      .textContent =
+      "Nepodařilo se načíst data/news.json";
+
+  }
+
+}
 
 
 document
-  .getElementById("newsletter")
+  .querySelectorAll(".filter")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        document
+          .querySelectorAll(".filter")
+          .forEach(item =>
+            item.classList.remove("active")
+          );
+
+
+        button.classList.add(
+          "active"
+        );
+
+
+        activeFilter =
+          button.dataset.filter;
+
+
+        renderNews();
+
+      }
+    );
+
+  });
+
+
+document
+  .getElementById("searchInput")
   .addEventListener(
-    "submit",
-    function(event){
-
-      event.preventDefault();
-
-      alert(
-        "Newsletter zatím není připojen. Později ho napojíme na databázi."
-      );
-
-    }
+    "input",
+    renderNews
   );
 
-</script>
 
+loadNews();
+
+</script>
 
 </body>
 </html>

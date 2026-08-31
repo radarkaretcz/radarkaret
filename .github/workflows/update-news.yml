@@ -4,7 +4,14 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "15 5 * * *"
+    - cron: '15 5 * * *'
+
+  push:
+    branches:
+      - main
+    paths:
+      - 'update_news.py'
+      - '.github/workflows/update-news.yml'
 
 permissions:
   contents: write
@@ -14,24 +21,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Stáhnout repository
+      - name: Stahnout repository
         uses: actions/checkout@v4
 
       - name: Nastavit Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.12'
 
       - name: Nainstalovat knihovny
         run: |
           python -m pip install --upgrade pip
           pip install feedparser
 
-      - name: Aktualizovat zprávy
-        run: |
-          python update_news.py
+      - name: Aktualizovat zpravy
+        run: python update_news.py
 
-      - name: Uložit nové zprávy
+      - name: Ulozit nove zpravy
         run: |
           git config user.name "RadarKaret Bot"
           git config user.email "radarkaret-bot@users.noreply.github.com"
@@ -39,8 +45,8 @@ jobs:
           git add data/news.json
 
           if git diff --cached --quiet; then
-            echo "Žádné nové změny."
+            echo "Zadne nove zmeny."
           else
-            git commit -m "Automatická aktualizace RadarKaret"
+            git commit -m "Automaticka aktualizace RadarKaret"
             git push
           fi

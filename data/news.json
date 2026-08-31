@@ -2,72 +2,58 @@
   {
     "game": "One Piece",
     "category": "onepiece",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "title": "Flame-Flame Fruit Coliseum",
     "title_original": "Flame-Flame Fruit Coliseum",
-    "summary": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "summary": "Oficiální stránky ONE PIECE Card Game. Zjistěte více o nejnovějších kartách, produktech, událostech, pravidlech, často kladených dotazech a dalších! Vyplujte do nové éry karetních her!",
     "summary_original": "The official ONE PIECE Card Game website. Find out about the latest cards, products, events, rules, FAQ and more! Set sail for the new era of card games!",
     "image": "https://en.onepiece-cardgame.com/ogp.png",
     "url": "https://en.onepiece-cardgame.com/events/flameflame_Coliseum.html",
     "published": "2026-09-04T00:00:00+00:00",
     "date": "04.09.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "One Piece",
     "category": "onepiece",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "title": "Pirátská strana 2026 sv. 2",
     "title_original": "Pirates Party 2026 Vol. 2",
-    "summary": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "summary": "Oficiální stránky ONE PIECE Card Game. Zjistěte více o nejnovějších kartách, produktech, událostech, pravidlech, často kladených dotazech a dalších! Vyplujte do nové éry karetních her!",
     "summary_original": "The official ONE PIECE Card Game website. Find out about the latest cards, products, events, rules, FAQ and more! Set sail for the new era of card games!",
     "image": "https://en.onepiece-cardgame.com/ogp.png",
     "url": "https://en.onepiece-cardgame.com/events/pirates-party-vol2-2026.html",
     "published": "2026-08-31T00:00:00+00:00",
     "date": "31.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Pokémon",
     "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "2026 Pokémon World Championships Event Results",
-    "summary": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "summary_original": "Check out the top Pokémon VGC, Pokémon TCG, Pokémon GO, and Pokémon UNITE competitors from this exciting event.",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/play-pokemon/championship/2026/2026-worlds/winners/2026-worlds-169.png",
-    "url": "https://www.pokemon.com/us/news/2026-pokemon-world-championships-event-results",
-    "published": "2026-08-30T00:00:00+00:00",
-    "date": "30.08.2026",
+    "title": "Podívejte se na nové kapesní karty Pokémon TCG oznámené na PokémonXP",
+    "title_original": "Check Out the New Pokémon TCG Pocket Cards Announced at PokémonXP",
+    "summary": "Tato nová mechanika karet byla oznámena na PokémonXP spolu s více vzrušujícími kartami, které do hry přijdou letos.",
+    "summary_original": "This new card mechanic was announced at PokémonXP, alongside more exciting cards coming to the game this year.",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/video-games/tiles/tcg-pocket/2026/08/28/pokemon-tcg-pocket-169-en.png",
+    "url": "https://www.pokemon.com/us/news/check-out-the-new-pokemon-tcg-pocket-cards-announced-at-pokemonxp",
+    "published": "2026-08-28T00:00:00+00:00",
+    "date": "28.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "PokémonXP and the 2026 Pokémon World Championships Closing Ceremonies Recap",
-    "summary": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "summary_original": "Get hyped for the future of the Pokémon TCG, the upcoming feature-length animated film Pokémon: Wild Card, next year’s first-time Worlds location, and more.",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/play-pokemon/championship/2026/2026-worlds/closing-ceremonies/worlds-169.png",
-    "url": "https://www.pokemon.com/us/news/pokemonxp-and-the-2026-pokemon-world-championships-closing-ceremonies-recap",
-    "published": "2026-08-30T00:00:00+00:00",
-    "date": "30.08.2026",
+    "game": "Magic",
+    "category": "magic",
+    "title": "Planeswalker's Guide to Reality Fracture",
+    "title_original": "Planeswalker's Guide to Reality Fracture",
+    "summary": "Vítej, Planeswalker, v Echoverse a Hexhaven Academy. Odhalte tajemství hlavního plánu teoretika a připravte se na příběh Reality Fracture!",
+    "summary_original": "Welcome, Planeswalker, to the Echoverse and Hexhaven Academy. Unravel the secrets of the Theorist's master plan and prepare yourself for the story of Reality Fracture!",
+    "image": "https://images.ctfassets.net/s5n2t79q9icq/4l0t89wyYMKOhuTx9HMsKS/98199b79dac0ee4800d207747964a637/FRA_Planeswalker-s_Guide_960x540.jpg",
+    "url": "https://magic.wizards.com/en/news/magic-story/planeswalkers-guide-to-reality-fracture",
+    "published": "2026-08-28T00:00:00+00:00",
+    "date": "28.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "One Piece",
-    "category": "onepiece",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "Beginners Deck Party 2026 [ST-31]~[ST-36]",
-    "summary": "Oficiální stránky ONE PIECE Card Game. Zjistěte o nejnovějších kartách, produktech, událostech, pravidlech, často kladených dotazech a dalších! Vyplujte do nové éry karetních her!",
-    "summary_original": "The official ONE PIECE Card Game website. Find out about the latest cards, products, events, rules, FAQ and more! Set sail for the new era of card games!",
-    "image": "https://en.onepiece-cardgame.com/ogp.png",
-    "url": "https://en.onepiece-cardgame.com/events/beginners-deck-party2026.html",
-    "published": "2026-08-30T00:00:00+00:00",
-    "date": "30.08.2026",
-    "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Magic",
@@ -78,24 +64,10 @@
     "summary_original": "An update regarding Reality Fracture Play Booster delays in North America.",
     "image": "https://images.ctfassets.net/s5n2t79q9icq/6MMJhk12pGmZCRxDFiDTBk/655d7b5cbc97c9df65a5a0e37b331435/new_default_wizards_icon_header.jpg",
     "url": "https://magic.wizards.com/en/news/announcements/reality-fracture-play-booster-supply-may-be-tight-at-release",
-    "published": "2026-08-28T18:00:00+00:00",
+    "published": "2026-08-28T00:00:00+00:00",
     "date": "28.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "Planeswalker's Guide to Reality Fracture",
-    "title_original": "Planeswalker's Guide to Reality Fracture",
-    "summary": "Vítej, Planeswalkere, v Echoverse a Hexhaven Academy. Odhalte tajemství hlavního plánu teoretika a připravte se na příběh Reality Fracture!",
-    "summary_original": "Welcome, Planeswalker, to the Echoverse and Hexhaven Academy. Unravel the secrets of the Theorist's master plan and prepare yourself for the story of Reality Fracture!",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/4l0t89wyYMKOhuTx9HMsKS/98199b79dac0ee4800d207747964a637/FRA_Planeswalker-s_Guide_960x540.jpg",
-    "url": "https://magic.wizards.com/en/news/magic-story/planeswalkers-guide-to-reality-fracture",
-    "published": "2026-08-28T15:00:00+00:00",
-    "date": "28.08.2026",
-    "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Magic",
@@ -106,38 +78,38 @@
     "summary_original": "Please remain calm. A Perfectly Normal Superdrop arrives with eight Secret Lair drops on August 31, 2026.",
     "image": "https://images.ctfassets.net/s5n2t79q9icq/evSTcQ0riyv2fcJmFfEsA/21dfecf2770a44d4a07ac087e3f1c9fa/SLD_Perfectly_Normal_960x540.jpg",
     "url": "https://magic.wizards.com/en/news/announcements/secret-lair-a-perfectly-normal-superdrop",
-    "published": "2026-08-27T16:00:00+00:00",
+    "published": "2026-08-27T00:00:00+00:00",
     "date": "27.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Pokémon",
     "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "title": "Pokémon TCG Pocket: Team Rocket’s Ambition Expansion je nyní k dispozici",
     "title_original": "Pokémon TCG Pocket: Team Rocket’s Ambition Expansion Is Now Available",
-    "summary": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "summary": "Team Rocket’s Ambition je tady a přináší neplechu a chaos.",
     "summary_original": "Team Rocket’s Ambition is here, bringing mischief and mayhem.",
     "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/video-games/tiles/tcg-pocket/2026/08/20/pokemon-tcg-pocket-169-en.png",
     "url": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-team-rockets-ambition-expansion-is-now-available",
     "published": "2026-08-26T00:00:00+00:00",
     "date": "26.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Magic",
     "category": "magic",
-    "title": "Arena Direct | Smluvní podmínky",
-    "title_original": "Arena Direct | Terms and Conditions",
-    "summary": "Tyto oficiální podmínky Arena Direct upravují vaši účast na akcích play Arena Direct organizovaných MTG Arena",
-    "summary_original": "These Arena Direct Official Terms and Conditions govern your participation in the MTG Arena organized play Arena Direct events",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/3ZKFVCed6Sa7m5z1QRyebE/9213e31e5020389cdfd47d2522a3a72d/MTGA_News_Icon.jpg",
-    "url": "https://magic.wizards.com/en/news/mtg-arena/arena-direct-terms-and-conditions",
-    "published": "2026-08-24T17:00:00+00:00",
+    "title": "Arena Direct for Magic: The Gathering® | The Hobbit™, 28. srpna – 6. září",
+    "title_original": "Arena Direct for Magic: The Gathering® | The Hobbit™, August 28–September 6",
+    "summary": "Zahrajte si MTG Arena a vyhrajte fyzické karty Magic: The Gathering v akcích Arena Direct!",
+    "summary_original": "Play MTG Arena and win physical Magic: The Gathering cards in Arena Direct events!",
+    "image": "https://images.ctfassets.net/s5n2t79q9icq/9srGefLBhdSPzT8aqaBpv/eab06e38e4c6595cef926457aa43dba1/ZJA03DHU5t.webp",
+    "url": "https://magic.wizards.com/en/news/mtg-arena/arena-direct",
+    "published": "2026-08-24T00:00:00+00:00",
     "date": "24.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -151,21 +123,7 @@
     "published": "2026-08-14T11:15:11+00:00",
     "date": "14.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "Magic: The Gathering® | The Hobbit™ Update Bulletin",
-    "title_original": "Magic: The Gathering® | The Hobbit™ Update Bulletin",
-    "summary": "Přečtěte si vše o změnách pravidel a aktualizacích přicházejících s Magic: The Gathering | Hobit.",
-    "summary_original": "Read all about the rules changes and updates arriving with Magic: The Gathering | The Hobbit.",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/1ONallP2FgTOMpDm6xEwOo/11ae1f22a5fe22857244406c82a12df0/HOB_Silvan_Reveler_960x540.jpg",
-    "url": "https://magic.wizards.com/en/news/announcements/the-hobbit-update-bulletin",
-    "published": "2026-08-10T14:59:00+00:00",
-    "date": "10.08.2026",
-    "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -179,7 +137,21 @@
     "published": "2026-08-10T11:03:48+00:00",
     "date": "10.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
+  },
+  {
+    "game": "Magic",
+    "category": "magic",
+    "title": "Magic: The Gathering® | The Hobbit™ Update Bulletin",
+    "title_original": "Magic: The Gathering® | The Hobbit™ Update Bulletin",
+    "summary": "Přečtěte si vše o změnách pravidel a aktualizacích přicházejících s Magic: The Gathering | Hobit.",
+    "summary_original": "Read all about the rules changes and updates arriving with Magic: The Gathering | The Hobbit.",
+    "image": "https://images.ctfassets.net/s5n2t79q9icq/1ONallP2FgTOMpDm6xEwOo/11ae1f22a5fe22857244406c82a12df0/HOB_Silvan_Reveler_960x540.jpg",
+    "url": "https://magic.wizards.com/en/news/announcements/the-hobbit-update-bulletin",
+    "published": "2026-08-10T00:00:00+00:00",
+    "date": "10.08.2026",
+    "source_type": "official",
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -193,21 +165,21 @@
     "published": "2026-08-07T15:24:14+00:00",
     "date": "07.08.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Magic",
     "category": "magic",
     "title": "Magic: The Gathering® | Průvodce před vydáním Hobita™",
     "title_original": "Magic: The Gathering® | The Hobbit™ Prerelease Guide",
-    "summary": "Vstupte do říše goblinů, draků a medvědů s Magic: The Gathering | Události před vydáním Hobita, začínající 7. srpna.",
+    "summary": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
     "summary_original": "Enter a realm of Goblins, Dragons, and Bears with Magic: The Gathering | The Hobbit Prerelease events, starting on August 7.",
     "image": "https://images.ctfassets.net/s5n2t79q9icq/4iGZ7atwIgc6l1T3UI9kh0/0b7cb28b6744e05e4918aa8dccae81d8/HOB_Radaghast_960x540.jpg",
     "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
-    "published": "2026-07-31T15:03:00+00:00",
+    "published": "2026-07-31T00:00:00+00:00",
     "date": "31.07.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Magic",
@@ -218,15 +190,15 @@
     "summary_original": "Join us for a feast of amazing artwork from Middle-earth. Relive your favorite moments from The Hobbit with scene cards!",
     "image": "https://images.ctfassets.net/s5n2t79q9icq/1fF4C1vGQLW34iY2C6Xfvk/1b4b17dfc1068731b68b3186a8e9aa9a/HOB_Fight_with_the_Great_Goblin_960X540.jpg",
     "url": "https://magic.wizards.com/en/news/feature/all-the-scene-cards-from-the-hobbit",
-    "published": "2026-07-31T15:02:00+00:00",
+    "published": "2026-07-31T00:00:00+00:00",
     "date": "31.07.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Star Wars Unlimited",
     "category": "starwars",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "title": "Star Wars: Neomezeno | Defend and Destory",
     "title_original": "Star Wars: Unlimited | Defend and Destory",
     "summary": "Hluboký ponor do Chewbacca a Grand Moff Tarkin Spotlight Decks pro domovské světy",
     "summary_original": "A Deep Dive into the Chewbacca and Grand Moff Tarkin Spotlight Decks for Homeworlds",
@@ -235,7 +207,7 @@
     "published": "2026-07-27T00:00:00+00:00",
     "date": "27.07.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -249,7 +221,7 @@
     "published": "2026-07-23T07:55:13+00:00",
     "date": "23.07.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Magic",
@@ -260,24 +232,10 @@
     "summary_original": "You don't need to be a canny burglar to get your hands on these cards from Magic: The Gathering | The Hobbit. Here's everything you need to know about Magic's return to Middle-earth!",
     "image": "https://images.ctfassets.net/s5n2t79q9icq/1cV9mzaoBW5EsMDx15sDeh/e0c2a9dfb77126264c659ede026bfc58/HOB_Treasure_Vault_960x540.webp",
     "url": "https://magic.wizards.com/en/news/feature/collecting-the-hobbit",
-    "published": "2026-07-18T16:13:00+00:00",
+    "published": "2026-07-18T00:00:00+00:00",
     "date": "18.07.2026",
     "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "Vše bylo oznámeno pro Magic Multiverse v roce 2027",
-    "title_original": "Everything Announced for the Magic Multiverse in 2027",
-    "summary": "Ponořte se do nového letadla, staňte se svědky střetu dvou fanouškovsky oblíbených prostředí a vraťte se do světa překypující krásy. Zde je vše, co jsme odhalili z Multiverse na MagicCon: Amsterdam!",
-    "summary_original": "Dive into a new plane, witness the collision of two fan-favorite settings, and return to a world of exuberant beauty. Here's everything we revealed from the Multiverse at MagicCon: Amsterdam!",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/1sLAML7BMKT33UMIt0AYGx/2be9124978753c650e4dfb0ab87c409e/NAU_Hero_Image_960x540.jpg",
-    "url": "https://magic.wizards.com/en/news/announcements/everything-announced-for-the-magic-multiverse-in-2027",
-    "published": "2026-07-17T17:30:00+00:00",
-    "date": "17.07.2026",
-    "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Magic",
@@ -288,24 +246,38 @@
     "summary_original": "Jace's solution. Everyone's problem. Enter the Echoverse and face yourself when Reality Fracture releases on October 2, 2026.",
     "image": "https://images.ctfassets.net/s5n2t79q9icq/5Q3JjddeFuMiNkzHogq4nu/b2a5c046ce03aa1e4d215ab10226ce10/FRA_The_Theorist__Jace_Beleren_960x540.jpg",
     "url": "https://magic.wizards.com/en/news/feature/collecting-reality-fracture",
-    "published": "2026-07-17T17:29:00+00:00",
+    "published": "2026-07-17T00:00:00+00:00",
     "date": "17.07.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
+  },
+  {
+    "game": "Magic",
+    "category": "magic",
+    "title": "Vše bylo oznámeno pro Magic Multiverse v roce 2027",
+    "title_original": "Everything Announced for the Magic Multiverse in 2027",
+    "summary": "Ponořte se do nového letadla, staňte se svědky střetu dvou fanouškovsky oblíbených prostředí a vraťte se do světa překypující krásy. Zde je vše, co jsme odhalili z Multiverse na MagicCon: Amsterdam!",
+    "summary_original": "Dive into a new plane, witness the collision of two fan-favorite settings, and return to a world of exuberant beauty. Here's everything we revealed from the Multiverse at MagicCon: Amsterdam!",
+    "image": "https://images.ctfassets.net/s5n2t79q9icq/1sLAML7BMKT33UMIt0AYGx/2be9124978753c650e4dfb0ab87c409e/NAU_Hero_Image_960x540.jpg",
+    "url": "https://magic.wizards.com/en/news/announcements/everything-announced-for-the-magic-multiverse-in-2027",
+    "published": "2026-07-17T00:00:00+00:00",
+    "date": "17.07.2026",
+    "source_type": "official",
+    "pipeline_version": 4
   },
   {
     "game": "One Piece",
     "category": "onepiece",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "title": "Předpisy týkající se ochrany duševního vlastnictví spojeného s karetní hrou ONE PIECE",
     "title_original": "Regulations Regarding the Protection of Intellectual Property Associated with ONE PIECE Card Game",
-    "summary": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "summary": "Oficiální stránky ONE PIECE Card Game. Zjistěte více o nejnovějších kartách, produktech, událostech, pravidlech, často kladených dotazech a dalších! Vyplujte do nové éry karetních her!",
     "summary_original": "The official ONE PIECE Card Game website. Find out about the latest cards, products, events, rules, FAQ and more! Set sail for the new era of card games!",
     "image": "https://en.onepiece-cardgame.com/ogp.png",
     "url": "https://en.onepiece-cardgame.com/news/02_382.html",
     "published": "2026-07-10T00:00:00+00:00",
     "date": "10.07.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -319,7 +291,7 @@
     "published": "2026-07-02T12:19:54+00:00",
     "date": "02.07.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -333,21 +305,7 @@
     "published": "2026-06-25T14:59:40+00:00",
     "date": "25.06.2026",
     "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "One Piece",
-    "category": "onepiece",
-    "title": "BOOSTER PACK – ČAS BITVY – [OP-16]",
-    "title_original": "BOOSTER PACK -THE TIME OF BATTLE- [OP-16]",
-    "summary": "Oficiální stránky ONE PIECE Card Game. Zjistěte o nejnovějších kartách, produktech, událostech, pravidlech, často kladených dotazech a dalších! Vyplujte do nové éry karetních her!",
-    "summary_original": "The official ONE PIECE Card Game website. Find out about the latest cards, products, events, rules, FAQ and more! Set sail for the new era of card games!",
-    "image": "https://en.onepiece-cardgame.com/ogp.png",
-    "url": "https://en.onepiece-cardgame.com/products/op16.html",
-    "published": "2026-06-12T00:00:00+00:00",
-    "date": "12.06.2026",
-    "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -361,7 +319,7 @@
     "published": "2026-06-05T15:01:38+00:00",
     "date": "05.06.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -375,7 +333,7 @@
     "published": "2026-05-12T16:09:51+00:00",
     "date": "12.05.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
@@ -389,26 +347,26 @@
     "published": "2026-04-20T14:49:24+00:00",
     "date": "20.04.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "One Piece",
     "category": "onepiece",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "title": "Zakázané/omezené karty platné od 10. dubna 2026",
     "title_original": "Banned/Restricted Cards effective from April 10, 2026",
-    "summary": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "summary": "Oficiální stránky ONE PIECE Card Game. Zjistěte více o nejnovějších kartách, produktech, událostech, pravidlech, často kladených dotazech a dalších! Vyplujte do nové éry karetních her!",
     "summary_original": "The official ONE PIECE Card Game website. Find out about the latest cards, products, events, rules, FAQ and more! Set sail for the new era of card games!",
     "image": "https://en.onepiece-cardgame.com/ogp.png",
     "url": "https://en.onepiece-cardgame.com/news/restriction-260501.html",
     "published": "2026-04-10T00:00:00+00:00",
     "date": "10.04.2026",
     "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   },
   {
     "game": "Yu-Gi-Oh!",
     "category": "yugioh",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "title": "Yu-Gi-Oh! ODKAZY NA DUEL Průzkum EU k 9. výročí",
     "title_original": "Yu‑Gi‑Oh! DUEL LINKS 9th Anniversary EU Survey",
     "summary": "V současné době provádíme průzkum k 9. výročí DUEL LINKS a souvisejícím aktivitám v Evropě. Pokud se chcete zúčastnit, podívejte se níže!",
     "summary_original": "We are currently conducting a survey for DUEL LINKS 9th Anniversary and its related Activities in Europe. If you would like to participate, please see below!",
@@ -417,104 +375,6 @@
     "published": "2026-03-23T15:51:14+00:00",
     "date": "23.03.2026",
     "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "Pardon Our Interruption",
-    "summary": "Aktuální informace ze světa Pokémon.",
-    "summary_original": "",
-    "image": "",
-    "url": "https://www.pokemon.com/us/news/new-feature-length-animated-film-pokemon-wild-card-coming-soon",
-    "published": "",
-    "date": "",
-    "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "Pardon Our Interruption",
-    "summary": "Aktuální informace ze světa Pokémon.",
-    "summary_original": "",
-    "image": "",
-    "url": "https://www.pokemon.com/us/news/check-out-the-new-pokemon-tcg-pocket-cards-announced-at-pokemonxp",
-    "published": "",
-    "date": "",
-    "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "Pardon Our Interruption",
-    "summary": "Aktuální informace ze světa Pokémon.",
-    "summary_original": "",
-    "image": "",
-    "url": "https://www.pokemon.com/us/news/pokemon-pokopias-pokemonxp-worlds-cloud-island-is-live",
-    "published": "",
-    "date": "",
-    "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "Pardon Our Interruption",
-    "summary": "Aktuální informace ze světa Pokémon.",
-    "summary_original": "",
-    "image": "",
-    "url": "https://www.pokemon.com/us/news/pokemon-tales-the-misadventures-of-sirfetchd-pichu-coming-to-disney-in-2027",
-    "published": "",
-    "date": "",
-    "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "Pardon Our Interruption",
-    "summary": "Aktuální informace ze světa Pokémon.",
-    "summary_original": "",
-    "image": "",
-    "url": "https://www.pokemon.com/us/news/celebrate-worlds-and-pokemonxp-with-champion-level-bundles-and-a-pikachu-coin",
-    "published": "",
-    "date": "",
-    "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "Pardon Our Interruption",
-    "summary": "Aktuální informace ze světa Pokémon.",
-    "summary_original": "",
-    "image": "",
-    "url": "https://www.pokemon.com/us/news/pokemon-gos-2026-pokemon-world-championships-event",
-    "published": "",
-    "date": "",
-    "source_type": "official",
-    "pipeline_version": 3
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-    "title_original": "Pardon Our Interruption",
-    "summary": "Aktuální informace ze světa Pokémon.",
-    "summary_original": "",
-    "image": "",
-    "url": "https://www.pokemon.com/us/news/preorder-pokemon-polaroid-special-edition-range-cameras-now",
-    "published": "",
-    "date": "",
-    "source_type": "official",
-    "pipeline_version": 3
+    "pipeline_version": 4
   }
 ]

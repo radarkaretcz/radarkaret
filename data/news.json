@@ -1,5 +1,19 @@
 [
   {
+    "game": "Magic",
+    "category": "magic",
+    "title": "Enter the Echoverse with Reality Fracture Design",
+    "title_original": "Enter the Echoverse with Reality Fracture Design",
+    "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
+    "summary_original": "Hello! I'm Yoni Skolnik, the set design lead for Reality Fracture , and I'm thrilled to get a chance to tell y'all about the process of designing the set's echoed pairs. Starting out, I was very nervous about the alternate-reality concept. Although the Time Spiral block is a personal favorite of mine, it's famously known for having alienated players who aren't deeply familiar with Magic . In exploratory design and vision design, we united around three pillars. These design pillars gave me the confidence needed to see that we could succeed at making a true alternate-reality set while being accessible to fans who didn't know the ins and outs of Magic 's history. These three elements ensured that the theme of an alternate reality would echo through the entire set in a way that anyone could appreciate. The pair of legendary creatures in every booster was an incredible way to put duality front and center. The schools and Planeswalker characters gave clear entry points for how the duality related to recent lore, and they were also a perfect foundation for the ten color pairs' draft archetypes. The set's design at lower rarities was optimized for draft. Hexhaven and the Lorwyn Five Planes",
+    "image": "https://images.ctfassets.net/s5n2t79q9icq/71xKLyrodRnCcPmO4W1YqK/d9e17cbe4fbd61e9741443e175b71b56/FRA_Yoshimaru__Beloved_Companion_960x540.jpg",
+    "url": "https://magic.wizards.com/en/news/feature/enter-the-echoverse-with-reality-fracture-design",
+    "published": "2026-09-15T00:00:00+00:00",
+    "date": "15.09.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "Pokémon",
     "category": "pokemon",
     "title": "Research Mewtwo’s Mysterious Sleep Styles in Pokémon Sleep",
@@ -821,20 +835,6 @@
     "image": "https://www.yugioh-card.com/eu/wp-content/uploads/2024/05/WCQ_2024_NEWS-POST.webp",
     "url": "https://www.yugioh-card.com/eu/2027-season-world-qualifying-points-update",
     "published": "2026-08-10T11:03:48+00:00",
-    "date": "10.08.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "Magic: The Gathering® | The Hobbit™ Update Bulletin",
-    "title_original": "Magic: The Gathering® | The Hobbit™ Update Bulletin",
-    "summary": "Poznámka redakce: Seznam karet ovlivněných změnou pravidla 605.1a byl aktualizován. Shromážděte se! Zjistěte, jak jsme vylepšili pravidla hry Magic s nejnovější verzí, a podívejte se na změny, které přicházejí v oficiálním textu několika karet. Toto je souhrn změn pravidel plánovaných pro Magic s vydáním Magic: The Gathering ® | Hobit™. Oficiální pravidla najdete na naší stránce s pravidly . Pokud by došlo k rozporu mezi tímto shrnutím a oficiálními pravidly, mají přednost oficiální pravidla. Podrobné popisy každé z nových mechanik najdete ve vynikajícím článku Matta Tabaka o mechanikách . 702.195 je nové pravidlo pro vysvětlení toho, jak funguje legendární schopnost. Toto nové podpravidlo definuje žetony zdokonalování, které jdou na kartu vybavení a udělují tvorovi, k němuž je připojen, +1/+0. Pravidla vysvětlují, jak bitvy Siege fungují, ale ne každá bitva bude nutně Siege! Pravidla bitvy byla aktualizována o nové pravidlo (310.8, vysvětlující akci založenou na státu, která umístí bitvu bez obležení na hřbitov svého vlastníka, když je jeho obrana 0). Následující pravidla jsou přečíslována, aby se přizpůsobila této změně. Pro přehlednost jsou také drobné aktualizace. Tato aktualizace pravidel",
-    "summary_original": "Editor's note: The list of cards affected by the change to rule 605.1a has been updated. Gather 'round! Learn how we honed Magic 's game rules with the latest release and see the changes coming to the official text of a few cards. This is a summary of the rule changes planned for Magic with the release of Magic: The Gathering ® | The Hobbit ™ . The official rules can be found on our rules page . If there should be a discrepancy between this summary and the official rules, the official rules take precedence. For detailed descriptions of each of the new mechanics, check out Matt Tabak's excellent mechanics article . 702.195 is the new rule for explaining how the storied ability works. This new subrule defines hone counters, which go on an Equipment card and grant the creature it's attached to +1/+0. The rules explain how Siege battles work, but not every battle will necessarily be a Siege! The battle rules have been updated with a new rule (310.8, explaining the state-based action that puts a non-Siege battle into its owner's graveyard when its defense is 0). Subsequent rules are renumbered to accommodate this change. There are also minor updates for clarity. This update to the rules",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/1ONallP2FgTOMpDm6xEwOo/11ae1f22a5fe22857244406c82a12df0/HOB_Silvan_Reveler_960x540.jpg",
-    "url": "https://magic.wizards.com/en/news/announcements/the-hobbit-update-bulletin",
-    "published": "2026-08-10T00:00:00+00:00",
     "date": "10.08.2026",
     "source_type": "official",
     "pipeline_version": 6

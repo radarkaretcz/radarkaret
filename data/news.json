@@ -2,6 +2,20 @@
   {
     "game": "Pokémon",
     "category": "pokemon",
+    "title": "Celebrate Pokéween with Play! Pokémon Events",
+    "title_original": "Celebrate Pokéween with Play! Pokémon Events",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "If you’re looking for fun ways to experience the spooky season while bringing home new Pokémon Trading Card Game promo cards, Play! Pokémon has just the treat for you—and that’s no trick! Visit your local Play! Pokémon Store from October 1 to October 31, 2026 , for fun Pokéween activities, like open play and trade sessions, tournaments, and more. You can earn eerie -sistible rewards, including Pokéween promo cards and a Pokéween sticker sheet. Go batty for Zubat, Golbat, and Crobat from the Pokémon TCG: Mega Evolution—Chaos Rising expansion. Each store will offer its own unique activity schedule, so be sure to check with your local Play! Pokémon Store to see how you can take part in the seasonal fun. Find your nearest Play! Pokémon Store to join the Pokéween festivities. The only scary thing about Pokéween is that it only lasts for one month.",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/play-pokemon/tiles/2026/pokeween/play-pokemon-169-en.png",
+    "url": "https://www.pokemon.com/us/news/celebrate-pokeween-with-play-pokemon-events",
+    "published": "2026-09-17T00:00:00+00:00",
+    "date": "17.09.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
+    "game": "Pokémon",
+    "category": "pokemon",
     "title": "The Pokémon TCG: 30th Celebration Expansion Is Available Now",
     "title_original": "The Pokémon TCG: 30th Celebration Expansion Is Available Now",
     "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
@@ -822,20 +836,6 @@
     "url": "https://www.pokemon.com/us/news/new-feature-length-animated-film-pokemon-wild-card-coming-soon",
     "published": "2026-08-30T00:00:00+00:00",
     "date": "30.08.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "Planeswalker's Guide to Reality Fracture",
-    "title_original": "Planeswalker's Guide to Reality Fracture",
-    "summary": "Multivesmír, jak ho známe, je v sázce. Jace Beleren, sférochodec a mág myslí, se pokouší přepsat realitu svou vlastní vizí existence. Reality Fracture nás vezme do jeho Echoverse, postaví se jeho plánům a zvrácené minulosti a navždy změní Magic. Všechno to k tomu vedlo: začátek příběhu Reality Fracture 31. srpna 2026, dostupný na DailyMTG a The Magic Story Podcast. Ale co je Echoverse? Co je Hexhaven Academy? A proč se po letech pokusů o záchranu Multivesmíru Jace Beleren otočil? Abychom vám pomohli připravit se na tento monumentální okamžik v Magicově vyprávění, sestavili jsme Planeswalker's Guide to Reality Fracture. Některé z vašich otázek budou zodpovězeny dnes. Pokud jde o zbytek? Budete si muset přečíst příběh, abyste našli odpovědi. Sledujte příběh Reality Fracture, když vyjde první epizoda 31. srpna! Reality Fracture vychází 2. října 2026 a je nyní k dispozici pro předobjednávku ve vašem místním herním obchodě, TCGplayeru, Amazonu a jinde Magic se prodává. Cestování mezi světy není pro sférochodce nic nového. Vzrušení z nasednutí na nové letadlo nikdy nezmizí. Ale to je vzácné, téměř neslýchané, k ste",
-    "summary_original": "The Multiverse as we know it is at stake. Jace Beleren, Planeswalker and mind-mage, is attempting to rewrite reality with his own vision for existence. Reality Fracture will take us into his Echoverse, confront his plans and twisted past, and change Magic forever. It's all been leading up to this: the start of Reality Fracture 's story on August 31, 2026, available on DailyMTG and The Magic Story Podcast . But what is the Echoverse? What is Hexhaven Academy? And why, after years of attempting to save the Multiverse, has Jace Beleren turned heel? To help prepare you for this monumental moment in Magic 's narrative, we've compiled the Planeswalker's Guide to Reality Fracture . Some of your questions will be answered today. As for the rest? You'll have to read the story to find the answers. Follow the story of Reality Fracture when the first episode releases on August 31! Reality Fracture releases on October 2, 2026, and is available for preorder now from your local game store , TCGplayer , Amazon , and elsewhere Magic is sold. Traveling between worlds is nothing new to a Planeswalker. The thrill of setting foot on a new plane never goes away. But it is rare, nearly unheard of, to ste",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/4l0t89wyYMKOhuTx9HMsKS/98199b79dac0ee4800d207747964a637/FRA_Planeswalker-s_Guide_960x540.jpg",
-    "url": "https://magic.wizards.com/en/news/magic-story/planeswalkers-guide-to-reality-fracture",
-    "published": "2026-08-28T00:00:00+00:00",
-    "date": "28.08.2026",
     "source_type": "official",
     "pipeline_version": 6
   }

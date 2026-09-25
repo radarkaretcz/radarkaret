@@ -1,5 +1,33 @@
 [
   {
+    "game": "One Piece",
+    "category": "onepiece",
+    "title": "Banned/Restricted Cards effective from October 12, 2026",
+    "title_original": "Banned/Restricted Cards effective from October 12, 2026",
+    "summary": "Nová informace z oficiálního webu One Piece. Podrobnosti najdete v původním článku.",
+    "summary_original": "As part of our commitment to maintaining a balanced competitive environment, we are adding and removing the following cards from the Banned/Restricted Card List, effective October 12, 2026. We, the Development Team of ONE PIECE CARD GAME, consider as the main policy for game designing that the players and fans can enjoy numerous decks built around the leader card. Throughout the year, we continuously monitor the game environment to ensure strategic diversity is maintained, always considering whether revisions to the Banned/Restricted Card List are necessary. When determining whether to add cards to the Banned/Restricted List, we evaluate multiple aspects of a deck—such as its win rate, results from major tournaments, usage rate, its projected influence on the future game environment, and whether it restricts the viability of other Leaders. For that reason, we also consider removing certain cards from the Banned/Restricted List when the game environment changes, and when we believe players and fans will once again be able to fully enjoy the game without those restrictions. Typically, we announce revisions to the list once after the conclusion of Championship Season 1 in Japan, and o",
+    "image": "https://en.onepiece-cardgame.com/ogp.png",
+    "url": "https://en.onepiece-cardgame.com/news/restriction-261001.html",
+    "published": "2026-10-12T00:00:00+00:00",
+    "date": "12.10.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
+    "game": "Pokémon",
+    "category": "pokemon",
+    "title": "Take On the 2027 Global Challenge I",
+    "title_original": "Take On the 2027 Global Challenge I",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "Earn rewards and test your skills against Trainers in Pokémon Champions with the 2027 Global Challenge I. Global Challenge events award Championship Points toward an invitation to the Pokémon World Championships , as well as rewards for participating. Registration runs from Thursday, September 17, 2026, at 7:00 p.m. PDT to Sunday, September 27, 2026, at 6:59 p.m. PDT . You may join this tournament even after it has already begun. Battle Teams must be registered during sign-up. To enter this competition in your Pokémon Champions game, go to Battle, then Online Competitions, and then select this competition. The competition runs from Thursday, September 24, 2026, at 7:00 p.m. PDT to Sunday, September 27, 2026, at 6:59 p.m. PDT . This competition will follow Regulation Set M-C and will be comprised of Double Battles. For the full list of eligible Pokémon, ranking announcements, regulations, and other details, please refer to the in-game news. All participants who finish three or more matches with a win or loss during the event period will be eligible to receive an Archaludon via in-game distribution. This powerful Pokémon will make an exceptional addition to your team. Once you’ve che",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/video-games/tiles/pokemon-champions/2026/09/24/pokemon-champions-169-en.png",
+    "url": "https://www.pokemon.com/us/news/take-on-the-2027-global-challenge-i",
+    "published": "2026-09-24T00:00:00+00:00",
+    "date": "24.09.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "Pokémon",
     "category": "pokemon",
     "title": "Come Party at the Pokémon Center Night Out Experience",
@@ -808,34 +836,6 @@
     "url": "https://magic.wizards.com/en/news/magic-story/reality-fracture-episode-4-oh-sweetie",
     "published": "2026-09-03T00:00:00+00:00",
     "date": "03.09.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Quick Attack: Nejlepší momenty z Mistrovství světa Pokémonů 2026",
-    "title_original": "Quick Attack: Top Moments from the 2026 Pokémon World Championships",
-    "summary": "Mistrovství světa Pokémonů 2026 přišlo a odešlo a šampioni byli korunováni v Pokémon VGC, Pokémon TCG, Pokémon GO a Pokémon UNITE. Trenéři se už dívají na příští rok Worlds v Singapuru – a kdo je může vinit –, ale před otočením sezóny je stále co připomínat. V San Franciscu byli korunováni vůbec první šampioni Pokémon VGC na Pokémon Champions, japonský hráč poprvé kraloval v Pokémon GO a fanoušci si v neděli Championship užili zážitek z arény na celý život v Chase Center. Celé vysílání každé soutěže – od fáze 1 do neděle šampionátu – si můžete prohlédnout na webu Play! Pokémon YouTube kanál. Ale pokud hledáte ukázku akce, abyste mohli začít, máme pro vás přehled Rychlý útok, sloupec věnovaný s nejvyšší prioritou seřazení nejlepších momentů ze streamů Worlds. Upozornění: Pokud kliknete na výše uvedené video YouTube, opustíte Pokemon.com. Společnost Pokémon Company International nenese odpovědnost za obsah žádné propojené webové stránky, která není provozována společností The Pokémon Company International. Vezměte prosím na vědomí, že zásady ochrany osobních údajů a bezpečnostní postupy těchto webových stránek mohou",
-    "summary_original": "The 2026 Pokémon World Championships have come and gone, and champions have been crowned in Pokémon VGC, Pokémon TCG, Pokémon GO, and Pokémon UNITE. Trainers are already looking toward next year’s Worlds in Singapore—and who can blame them—but there’s still a ton to recall before turning the season over. In San Francisco, the first-ever Pokémon VGC Champions on Pokémon Champions were crowned, a Japanese player reigned triumphant in Pokémon GO for the first time, and fans enjoyed the arena experience of a lifetime at the Chase Center on Championship Sunday. You can view the entirety of each competition’s broadcast—from Phase 1 to Championship Sunday—on the Play! Pokémon YouTube channel . But if you’re looking for a sample of the action to get you started, we’ve got you covered with Quick Attack, a column dedicated to lining up top moments from the Worlds streams with utmost priority. Notice: If you click on the YouTube video above, you will leave Pokemon.com. The Pokémon Company International is not responsible for the content of any linked website that is not operated by The Pokémon Company International. Please note that these websites' privacy policies and security practices may",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/play-pokemon/championship/2026/2026-worlds/quick-attack/2026-worlds-169.png",
-    "url": "https://www.pokemon.com/us/news/quick-attack-top-moments-from-the-2026-pokemon-world-championships",
-    "published": "2026-09-02T00:00:00+00:00",
-    "date": "02.09.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Připravte se na regulační sadu M-C v Pokémon Champions",
-    "title_original": "Get Ready for Regulation Set M‑C in Pokémon Champions",
-    "summary": "Jak bylo uvedeno na Mistrovství světa Pokémonů v roce 2026, Regulační sada M-C má běžet v Pokémon Champions od úterý 8. září 2026 v 19:00. PDT do úterý 1. prosince 2026 do 17:59. PST. Pokémoni, kteří byli způsobilí pro hodnocené bitvy v předchozích sadách regulací, zůstávají způsobilí a přidají se k nim noví mocní soupeři jako Mega Salamence, Mega Golisopod a Mega Baxcalibur. Pokémon Champions také vidí Z Mega Evolutions Mega Absol Z, Mega Garchomp Z a Mega Lucario Z, kteří se zapojují do boje! Po aktualizaci bude spolu se šesti přidanými Mega Evolutions nově k dispozici 24 Pokémonů pro bitvu, včetně těch, kteří ovlivnili minulé turnaje VGC, jako je Rillaboom. Úplný seznam ve své hře můžete vidět podle následujících kroků: Hodně štěstí ve všech vašich bitvách v Pokémon Champions, Trainers!",
-    "summary_original": "As teased at the 2026 Pokémon World Championships, Regulation Set M-C is set to run in Pokémon Champions from Tuesday, September 8, 2026, at 7:00 p.m. PDT to Tuesday, December 1, 2026, at 5:59 p.m. PST. Pokémon that were eligible for Ranked Battles in previous regulation sets remain eligible, and they’ll be joined by powerful new contenders like Mega Salamence, Mega Golisopod, and Mega Baxcalibur. Pokémon Champions also sees Z Mega Evolutions Mega Absol Z, Mega Garchomp Z, and Mega Lucario Z joining the fray! Following the update, along with the six added Mega Evolutions, there will be 24 Pokémon newly available for battle, including ones that have made an impact in past VGC tournaments, like Rillaboom. You can see the full roster in your game by following these steps: Good luck with all your battles in Pokémon Champions, Trainers!",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/video-games/tiles/pokemon-champions/2026/09/02/pokemon-champions-169-en.png",
-    "url": "https://www.pokemon.com/us/news/get-ready-for-regulation-set-m-c-in-pokemon-champions",
-    "published": "2026-09-02T00:00:00+00:00",
-    "date": "02.09.2026",
     "source_type": "official",
     "pipeline_version": 6
   }

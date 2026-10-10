@@ -14,6 +14,34 @@
     "pipeline_version": 6
   },
   {
+    "game": "Magic",
+    "category": "magic",
+    "title": "Magic: The Gathering® | Marvel: Darkhold Destiny Emerges April 2027",
+    "title_original": "Magic: The Gathering® | Marvel: Darkhold Destiny Emerges April 2027",
+    "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
+    "summary_original": "The world's greatest sorcerers conspired to keep the Darkhold sealed. Its pages should have never seen the eyes of a reader. Its spine should have gone uncracked; the book's secrets hidden from those who'd seek to harness them. But the dark side of the Marvel Universe has been unleashed! Hel is empty, and all the devils, sorcerers, and vampire-hunting vampires are here in Magic: The Gathering ® | Marvel: Darkhold Destiny ! Journey deeper into the mystery for a Universes Beyond set that's unlike anything we've done. For Magic: The Gathering | Marvel: Darkhold Destiny , we collaborated with Marvel to craft an all-new, original story set in the Marvel Universe. These are the characters of Marvel told in a distinctly Magic way. You'll be able to follow this dimension-hopping narrative across the set, all while uncovering the secrets of the Dark Dimension and joining forces with Marvel's pantheon of gods. Magic: The Gathering | Marvel: Darkhold Destiny 's story will include the origin of a brand-new character through a new Marvel Comics release written by Jackson Lanzing and Collin Kelly, with a digital release set for February 2027 and a physical release set for April 2027. This story",
+    "image": "https://images.ctfassets.net/s5n2t79q9icq/7hYwNoVwzmTW73ermmaBwU/a12a326b635adcac28faabf6f46222fa/MDD-8007_UYTGHGFVG_1920x1080_04.jpg",
+    "url": "https://magic.wizards.com/en/news/announcements/marvel-darkhold-destiny-emerges-april-2027",
+    "published": "2026-10-10T00:00:00+00:00",
+    "date": "10.10.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
+    "game": "Pokémon",
+    "category": "pokemon",
+    "title": "Pokémon Red & Pokémon Blue: Game Boy Jukebox Back in Stock at Pokémon Center",
+    "title_original": "Pokémon Red & Pokémon Blue: Game Boy Jukebox Back in Stock at Pokémon Center",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "Fans who missed out on snagging a Pokémon Red & Pokémon Blue Game Music Collection: Game Boy Jukebox from Pokémon Center have another opportunity to relive their favorite Kanto region memories now that the popular device has been restocked. This charming sound toy, which is modeled after Nintendo’s original Game Boy system, takes you on a musical journey through the region that started it all. The Game Boy Jukebox includes 45 cartridges that each contain a familiar melody or sound effect from the Pokémon Red and Pokémon Blue video games. Kick off your nostalgia trip with “Title Screen” before setting off for adventure with “Road to Viridian City: Leaving Pallet Town.” Explore the “Caves of Mt. Moon” and feel a haunting chill with the “Lavender Town Theme.” With these and so many other tracks to choose from, you’ll always have a classic tune ready to brighten your day. The Pokémon Red & Pokémon Blue Game Music Collection: Game Boy Jukebox is back in stock now at Pokémon Center. Don’t miss out, Trainers! Take a musical trip back in time with this collection of tunes from the Kanto region.",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/merchandise/tiles/pokemon-center/2026/10/09/pokemon-center-169.png",
+    "url": "https://www.pokemon.com/us/news/pokemon-red-pokemon-blue-game-boy-jukebox-back-in-stock-at-pokemon-center",
+    "published": "2026-10-09T00:00:00+00:00",
+    "date": "09.10.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "Pokémon",
     "category": "pokemon",
     "title": "Pokémon FireRed Version and Pokémon LeafGreen Version Now Link with Pokémon HOME",
@@ -258,7 +286,7 @@
     "title_original": "Secret Lair: Corn Maze Superdrop",
     "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
     "summary_original": "On winding pathways where demons lurk. Beneath a mist-dappled sky that beckons the dead from the graves. In a packed concert venue for global K-pop superstars. If there's something cool, Secret Lair is there. Watching. Listening. Cheering from the crowd. Now, we're taking what we've seen, crafting some of our most frightfully fabulous Magic cards yet, and delivering them to you in the form of eight brand-new drops in the Corn Maze Superdrop, arriving on October 12, 2026, only on MagicSecretLair.com . Sometimes getting lost will send you on a strange journey to rescue your baby brother from the Goblin King. Other times, it just removes you from combat. You'll receive one (1) foil Maze of Ith as \"The Labyrinth\" promo card with each $199 spent while supplies last. Orders over $99 ship free—see MagicSecretLair.com for details and terms. Don't go into the maze unprepared! Beyond packing garlic for vampires and silver for werewolves, here's a quick checklist to make sure you're set before the sale begins on October 12: You may notice that the art used for Jodah, the Unifier as \"Sarah, Champion to the Lost\" from Secret Lair x Jim Henson's Labyrinth: Should You Need Us and Muxus, Goblin Gr",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/4xeL9sudGU5KIlvf77JMJo/82b4b7603cfcaa716031ab4601382d2e/mP1RbM2kjr_hero.webp",
+    "image": "https://images.ctfassets.net/s5n2t79q9icq/4xeL9sudGU5KIlvf77JMJo/5c53c37727f113c59009a87c719290be/mP1RbM2kjr_hero.webp",
     "url": "https://magic.wizards.com/en/news/announcements/secret-lair-corn-maze-superdrop",
     "published": "2026-09-30T00:00:00+00:00",
     "date": "30.09.2026",
@@ -808,34 +836,6 @@
     "url": "https://magic.wizards.com/en/news/magic-story/reality-fracture-episode-10-happy-birthday",
     "published": "2026-09-10T00:00:00+00:00",
     "date": "10.09.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Nejnovější zprávy",
-    "title_original": "Latest News",
-    "summary": "Po vydání rozšíření Pokémon TCG: 30th Celebration navštivte zúčastněné prodejce a získejte tento dárek k nákupu. Podívejte se na Pokémon Pokopia Expansion Pass — trailer k části 2 představující stylové příslušenství. Navštivte tato místa během vydání rozšíření 30th Celebration a získejte tento dárek k nákupu. Podívejte se na tuto galerii skvělých karet, které najdete v nadcházejícím rozšíření. Zjistěte více o tom, co můžete očekávat v příštím díle, který dorazí koncem roku 2026. Připravte se na Pokémony poprvé objevené v Paldea, debuty Mega-Evolved Pokémon a Max Pokémon. Podívejte se, co můžete od této neuvěřitelné události očekávat. Čekají nové ilustrační vzácnosti a speciální ilustrační vzácnosti. Zorua a Zoroark přinášejí na tento slavnostní čajový dýchánek nějaké neplechu. Tato verze hry zajistí mladším hráčům, že se budou moci nadále účastnit akcí Championship Series. Prožijte znovu vzpomínky z obou neuvěřitelných událostí. Během této akce pilně studujte a připravujte se na nadcházející krajské přebory.",
-    "summary_original": "After the release of the Pokémon TCG: 30th Celebration expansion, visit participating retailers to get this gift with purchase. Watch the Pokémon Pokopia Expansion Pass—Part 2 trailer introducing stylish accessories. Visit these locations during the release of the 30th Celebration expansion to receive this gift with purchase. Check out this gallery of cool cards you can find in the upcoming expansion. Learn more about what to expect in the next part, arriving late 2026. Get ready for Pokémon first discovered in Paldea, Mega-Evolved Pokémon debuts, and Max Pokémon. Get a glimpse at what you can expect from this incredible event. New illustration rares and special illustration rares await. Zorua and Zoroark are bringing some mischief to this festive tea party. This version of the game will ensure younger players can continue to participate in Championship Series events. Relive the memories from both incredible events. Study hard and prepare for upcoming Regional Championships during this event.",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/trading-card-game/tiles/30th/promo/30th-169-en.png",
-    "url": "https://www.pokemon.com/us/news",
-    "published": "2026-09-10T00:00:00+00:00",
-    "date": "10.09.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Yu-Gi-Oh!",
-    "category": "yugioh",
-    "title": "Pozor, duelanti! KONAMI odhaluje Yu-Gi-Oh! TAG FORCE GX, remake milovaného Yu-Gi-Oh! GX TAG FORCE 3!",
-    "title_original": "Attention, Duelists! KONAMI Unveils Yu‑Gi‑Oh! TAG FORCE GX, a Remake of the Beloved Yu‑Gi‑Oh! GX TAG FORCE 3!",
-    "summary": "Brány Duel Academy se znovu otevírají 16. února 2027 pro Steam®, Nintendo Switch™ 2 a Nintendo Switch™ s předobjednávkami nyní WINDSOR, SPOJENÉ KRÁLOVSTVÍ – 9. září 2026 – Konami Digital Entertainment, B.V. (KONAMI) dnes představuje Yu-Gi-Oh! TAG FORCE GX, remake masivně populární RPG karetní hry Yu‑Gi‑Oh! GX TAG FORCE 3 s moderním vizuálem, vylepšenými souboji a nostalgickými kartami od Yu-Gi-Oh! Éra anime GX. Po spuštění 16. února 2027 jsou nyní dostupné předobjednávky na Steamu®, Nintendo Switch™ 2 a Nintendo Switch™ se speciálními bonusy dostupnými pro každou platformu. Podívejte se na oznamovací trailer: Reborn from Yu-Gi-Oh! GX TAG FORCE 3, Yu-Gi-Oh! TAG FORCE GX umožňuje Duelistům znovu prožít svůj poslední rok na Duel Academy, studovat umění Tag Dueling a vybrat si vlastního partnera z více než 100 vizuálně vylepšených postav a podmanit si protivníky jako Duelingové duo. Přinášíme současná vylepšení, Yu-Gi-Oh! Funkce TAG FORCE GX: Zakoupení Steam® verze Yu-Gi-Oh! TAG FORCE GX obsahuje digitální knihu, která vám umožní ponořit se ještě hlouběji do světa Yu-Gi-Oh! TAG FORCE GX . Na druhou stranu, objednání fyzické edice pro Nintendo Switch™ 2",
-    "summary_original": "The Gates of Duel Academy re-open February 16, 2027 for Steam®, Nintendo Switch™ 2 and Nintendo Switch™ with pre-orders now available WINDSOR, UNITED KINGDOM – September 9, 2026 – Konami Digital Entertainment, B.V. (KONAMI) today unveils Yu‑Gi‑Oh! TAG FORCE GX , a remake of the massively popular RPG card game Yu‑Gi‑Oh! GX TAG FORCE 3 with modern visuals, enhanced Dueling and nostalgic cards from the Yu‑Gi‑Oh! GX anime era. Launching on February 16, 2027, pre-orders are now available on Steam®, Nintendo Switch™ 2 and Nintendo Switch™ with special bonuses available for each platform. Watch the announcement trailer: Reborn from Yu‑Gi‑Oh! GX TAG FORCE 3, Yu‑Gi‑Oh! TAG FORCE GX allows Duelists to relive their final year at Duel Academy, study the art of Tag Dueling and select their own partner from over 100 visually upgraded characters and conquer opponents as a Dueling duo. Bringing contemporary improvements, Yu‑Gi‑Oh! TAG FORCE GX features: Purchasing the Steam® version of Yu‑Gi‑Oh! TAG FORCE GX includes a digital book allowing you to immerse yourself even further into the world of Yu‑Gi‑Oh! TAG FORCE GX . On the other hand, ordering the physical edition for either Nintendo Switch™ 2",
-    "image": "https://www.yugioh-card.com/eu/wp-content/uploads/2026/09/TFGX-NEWS_BANNER-1.webp",
-    "url": "https://www.yugioh-card.com/eu/attention-duelists-konami-unveils-yu-gi-oh-tag-force-gx-a-remake-of-the-beloved-yu-gi-oh-gx-tag-force-3",
-    "published": "2026-09-09T13:01:12+00:00",
-    "date": "09.09.2026",
     "source_type": "official",
     "pipeline_version": 6
   }

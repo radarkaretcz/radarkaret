@@ -1,5 +1,19 @@
 [
   {
+    "game": "Star Wars Unlimited",
+    "category": "starwars",
+    "title": "Star Wars: Unlimited | Starting with Icons",
+    "title_original": "Star Wars: Unlimited | Starting with Icons",
+    "summary": "Nová informace z oficiálního webu Star Wars Unlimited. Podrobnosti najdete v původním článku.",
+    "summary_original": "October 14, 2026 | Written by Peter Schumacher Earlier this year, we unveiled a first look at Icons 2027 Edition , the first Icons set for the Star Wars ™: Unlimited trading card game. Slightly smaller than a normal set, Icons puts a heavy focus on fan-favorite characters and straightforward mechanics. This makes it a fantastic entry point for new players—or a reentry point for returning players—especially since the cards in Icons are designed to be on par with those of a standard-sized set in terms of power. On that note, a Star Wars : Unlimited newcomer might be wondering where exactly they should start, since Icons has multiple products as part of its lineup. And for that, we turn to the Icons 2027 Edition Starter Box ! Serving as a fantastic first product for a budding Star Wars : Unlimited fan, the Icons Starter Box walks you through your first few matches, gradually introducing you to the game's core concepts and mechanics over time. After playing through everything this box has to offer, you should have all that you need to dive further into this game of endless possibilities. Let's take a look at what it has in store! While we have released similar “prebuilt” products in th",
+    "image": "https://cdn.starwarsunlimited.com//SWHA_027_Icons_Article_preview_891b76832c.jpg",
+    "url": "https://starwarsunlimited.com/articles/starting-with-icons",
+    "published": "2026-10-14T00:00:00+00:00",
+    "date": "14.10.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "Pokémon",
     "category": "pokemon",
     "title": "Pokémon × Beats Pill Wireless Bluetooth® Speaker Coming Soon",
@@ -822,20 +836,6 @@
     "url": "https://magic.wizards.com/en/news/announcements/reality-fracture-multiverse-reforged-commander-decklist",
     "published": "2026-09-16T00:00:00+00:00",
     "date": "16.09.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "Enter the Echoverse with Reality Fracture Design",
-    "title_original": "Enter the Echoverse with Reality Fracture Design",
-    "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
-    "summary_original": "Hello! I'm Yoni Skolnik, the set design lead for Reality Fracture , and I'm thrilled to get a chance to tell y'all about the process of designing the set's echoed pairs. Starting out, I was very nervous about the alternate-reality concept. Although the Time Spiral block is a personal favorite of mine, it's famously known for having alienated players who aren't deeply familiar with Magic . In exploratory design and vision design, we united around three pillars. These design pillars gave me the confidence needed to see that we could succeed at making a true alternate-reality set while being accessible to fans who didn't know the ins and outs of Magic 's history. These three elements ensured that the theme of an alternate reality would echo through the entire set in a way that anyone could appreciate. The pair of legendary creatures in every booster was an incredible way to put duality front and center. The schools and Planeswalker characters gave clear entry points for how the duality related to recent lore, and they were also a perfect foundation for the ten color pairs' draft archetypes. The set's design at lower rarities was optimized for draft. Hexhaven and the Lorwyn Five Planes",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/71xKLyrodRnCcPmO4W1YqK/d9e17cbe4fbd61e9741443e175b71b56/FRA_Yoshimaru__Beloved_Companion_960x540.jpg",
-    "url": "https://magic.wizards.com/en/news/feature/enter-the-echoverse-with-reality-fracture-design",
-    "published": "2026-09-15T00:00:00+00:00",
-    "date": "15.09.2026",
     "source_type": "official",
     "pipeline_version": 6
   }

@@ -42,6 +42,20 @@
     "pipeline_version": 6
   },
   {
+    "game": "Pokémon",
+    "category": "pokemon",
+    "title": "Pokémon TCG & Santa Cruz Skateboard Decks Available Now",
+    "title_original": "Pokémon TCG & Santa Cruz Skateboard Decks Available Now",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "Recently revealed at the PokémonXP event, Santa Cruz Skateboards and Pokémon have once again teamed up to celebrate 30 years of Pokémon with a new collection of Blind Bag Skateboard decks inspired by iconic Pokémon Trading Card Game cards. There are 30 different designs available now—each features artwork of a beloved Pokémon TCG card from throughout the game’s history. There are also three glitter gold variants that each showcase collages of 10 Pokémon TCG cards. Will you discover a deck sporting the classic Charizard (illus. Mitsuhiro Arita ) card from the original Base Set expansion? Perhaps you’ll find a deck featuring Lugia- EX (illus. Toyste Beach ) from Black & White—Plasma Storm or Umbreon VMAX (illus. KEIICHIRO ITO ) from Sword & Shield—Evolving Skies . No matter which you uncover, you’ll have a rad skateboard deck and an awesome memento of the Pokémon TCG. Each Variant Skateboard deck includes a booklet featuring all 30 deck designs (plus gold variants) along with a collectible sticker. For an inside look at the creation of this incredible collection, check out this behind-the-scenes video: Notice: If you click on the YouTube video above, you will leave Pokemon.com. The P",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/merchandise/tiles/2026/santa-cruz-skateboards/santa-cruz-skateboards-169.png",
+    "url": "https://www.pokemon.com/us/news/pokemon-tcg-santa-cruz-skateboard-decks-available-now",
+    "published": "2026-10-17T00:00:00+00:00",
+    "date": "17.10.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "One Piece",
     "category": "onepiece",
     "title": "BANDAI CARD GAMES Fest 26-27 in ORLANDO​",
@@ -820,20 +834,6 @@
     "summary_original": "This Wednesday, September 23, tune in via YouTube and Twitch to watch a cast of Magic streamers, competitive players, and other brave Echoverse explorers as they take an early journey into Reality Fracture and see what chaos Jace has wrought! The full schedule of events being held during Reality Fracture 's release was published today. It begins when Reality Fracture comes to MTG Arena on September 29 and runs into early November. There are a ton of fun new events on the horizon, including drafts, Arena Directs, Arena Powered Cube , Arena Championship and Limited Championship Qualifier events, a Historic Pauper Challenge, and much, much more! Jace has worked really hard to mess up the Magic Multiverse in Reality Fracture , so it felt fitting to include achievements when it comes to MTG Arena ! There are a variety of achievements that can be earned while playing Reality Fracture , and they will grant prizes including, Reality Fracture Packs, XP, Reality Fracture Mastery Orbs, and more! A full breakdown of the achievements can be found here . Reality Fracture comes to MTG Arena next week! Until the set releases on September 29, three Reality Fracture preorder bundles will be availabl",
     "image": "https://images.ctfassets.net/s5n2t79q9icq/1qqHUJ9cKYenQosEqhXIPD/968f0dfadd6c9b3841beb7a93058e210/en_articles_archive_magic-digital_mtg-arena-announcements-september-14-2022-meta-image.jpeg",
     "url": "https://magic.wizards.com/en/news/mtg-arena/announcements-september-21-2026",
-    "published": "2026-09-21T00:00:00+00:00",
-    "date": "21.09.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "Statement on the Cancellation of the Magic: The Gathering® | Star Trek™ Beginner Box",
-    "title_original": "Statement on the Cancellation of the Magic: The Gathering® | Star Trek™ Beginner Box",
-    "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
-    "summary_original": "Due to delays in production, logistics, and shipping, we will no longer be producing the Magic: The Gathering ® | Star Trek ™ Beginner Box. This product has been canceled in all regions. If you preordered a Beginner Box, contact your local game store or retailer for more information. For Magic events that planned to include the Beginner Box (like MagicCon: Atlanta), we are currently updating our plans and will share details in the future. No other Magic: The Gathering | Star Trek products are affected by this. We appreciate your patience and understanding.",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/6MMJhk12pGmZCRxDFiDTBk/655d7b5cbc97c9df65a5a0e37b331435/new_default_wizards_icon_header.jpg",
-    "url": "https://magic.wizards.com/en/news/announcements/statement-on-the-cancellation-of-the-star-trek-beginner-box",
     "published": "2026-09-21T00:00:00+00:00",
     "date": "21.09.2026",
     "source_type": "official",

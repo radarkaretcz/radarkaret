@@ -42,6 +42,34 @@
     "pipeline_version": 6
   },
   {
+    "game": "Pokémon",
+    "category": "pokemon",
+    "title": "Tune in to the Pokémon Night Out Livestream",
+    "title_original": "Tune in to the Pokémon Night Out Livestream",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "The first Pokémon Night Out show is just days away! This exciting event will be held at the Intuit Dome in Los Angeles on October 24, 2026 , and The O2 in London on November 10, 2026 , uniting the eclectic world of Pokémon with high-energy electronic dance music (EDM) for a truly unforgettable evening. If you can’t make it in person but still want to dance the night away, tune in to our livestream on October 24 on the official Pokémon Twitch and YouTube channels! We’ll be coming to you live from the Intuit Dome in Los Angeles, bringing all the excitement of the event straight to your living room. Plus, to keep the vibes up during the show’s intermission, livestream viewers will be treated to a DJ set from electronic artist and multi-instrumentalist JVNA. This set is exclusive to the Pokémon Night Out livestream, promising themed visuals, sick beats, and some fun opportunities to participate during the performance. And if you watch the Twitch livestream for at least 30 minutes, you can earn an exclusive digital reward for your Pokémon GO avatar. Let everyone know that you joined in on all the Pokémon Night Out fun with this baseball jersey, which sports the Pokémon Night Out logo an",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/misc/tiles/2026/pokemon-30/night-out/10/21/pokemon-30-169-en.png",
+    "url": "https://www.pokemon.com/us/news/tune-in-to-the-pokemon-night-out-livestream",
+    "published": "2026-10-21T00:00:00+00:00",
+    "date": "21.10.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
+    "game": "Star Wars Unlimited",
+    "category": "starwars",
+    "title": "Star Wars: Unlimited | Iconic Musings",
+    "title_original": "Star Wars: Unlimited | Iconic Musings",
+    "summary": "Nová informace z oficiálního webu Star Wars Unlimited. Podrobnosti najdete v původním článku.",
+    "summary_original": "One of the exciting things about Icons is that it’s unprecedented. A smaller set? All-new rare and legendary units? What kinds of exciting cards could it include? I’ve rounded up some details about some of the more memorable cards in the set to give you a glimpse into what you can look forward to, even if I can’t tell you the whole story. I look forward to seeing everyone’s speculation in the weeks to come! We’ve already announced that a bunch of reprints in the set receive new art. This was one of my favorite details to add to make the set more fun to collect. In the end, we got new art onto 20 reprints, many with new art concepts as well. But did you also know… With Icons , we wanted to have a bit more fun with our subtitles, and so you’ll find a lot more humor in them than what we’ve done in the past. Here are some personal favorites—who do you think they could belong to? One of the most famous scenes in the original trilogy is referenced in this set on two different cards—a reprinted event and a new unit—and both lead to the same game result. That’s just one of plenty of fun trivia about the cards in the set, such as… Finally, I know fans are always eager to know what the new c",
+    "image": "https://cdn.starwarsunlimited.com//SWHA_027_Icons_Article_preview_aa8acb71fc.jpg",
+    "url": "https://starwarsunlimited.com/articles/iconic-musings",
+    "published": "2026-10-21T00:00:00+00:00",
+    "date": "21.10.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "Magic",
     "category": "magic",
     "title": "Collecting Magic: The Gathering® | Star Trek™",
@@ -808,34 +836,6 @@
     "url": "https://magic.wizards.com/en/news/making-magic/reality-fracture-vision-design-handoff-part-2",
     "published": "2026-09-28T00:00:00+00:00",
     "date": "28.09.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "MTG Arena Announcements – September 28, 2026",
-    "title_original": "MTG Arena Announcements – September 28, 2026",
-    "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
-    "summary_original": "Reality Fracture comes to MTG Arena tomorrow, September 29! Even new sets that don't feature the entire Magic Multiverse being turned on its head come bearing a lot of new information, so here are some friendly reminders: The first Reality Fracture Arena Direct is coming up very soon! From October 2–11, you can get to know the new set on the battlefield by diving into Jace's Echoverse and facing off against other competitors. The format for this event is Best-of-One Reality Fracture Sealed. Players with three to six wins will earn gems and MTG Arena packs, while players who reach seven wins will net themselves a Reality Fracture Collector Booster box, while supplies last! Please visit the Arena Direct page and the official terms and conditions for more details regarding this event. On the surface, it may seem like having fun and following rules would be opposing forces, but in Magic and MTG Arena , they're actually symbiotic. While imagery and lore give the game form, rules give it function. They dictate basic facets of the game like card abilities, formats, and match structure, but rules also have to be responsible for creating and maintaining a framework to carry out potential in",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/1qqHUJ9cKYenQosEqhXIPD/968f0dfadd6c9b3841beb7a93058e210/en_articles_archive_magic-digital_mtg-arena-announcements-september-14-2022-meta-image.jpeg",
-    "url": "https://magic.wizards.com/en/news/mtg-arena/announcements-september-28-2026",
-    "published": "2026-09-28T00:00:00+00:00",
-    "date": "28.09.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "Secret Lair Commander Deck: Odds and Ends Decklist",
-    "title_original": "Secret Lair Commander Deck: Odds and Ends Decklist",
-    "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
-    "summary_original": "A new Commander deck is headed to Secret Lair , and it looks ... odd? The cards are strange but synergistic. The art is unworldly but beautiful. The commander is cryptic—but free spells ? It all comes together to make something truly, deeply, and numerically odd. That oddity is coming to the Secret Lair storefront with Secret Lair Commander Deck: Odds and Ends . This ready-to-play and ready-to-befuddle Commander deck features the artwork of Ricardo Cavolo, complete with a strategy that's as fun to play as it is mystifying. Embrace the enigma when it comes to Secret Lair , with something special in the Chaos Vault releasing alongside it ( more on that here ), on September 28, 2026. For this release, Secret Lair will be opening a 24-hour order window to help more fans get the deck. Orders placed between Monday, September 28, 2026, 9 a.m. PT and Tuesday, September 29, 2026, 8:59 a.m. PT will be fulfilled. A limited quantity will be available to ship right away, while additional orders placed during the window are expected to ship in July 2027 in North America and August 2027 in the EU and the UK. Secret Lair Commander Deck: Odds and Ends was designed by Studio X's Megan Smith. Meet Ye",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/2cvfJgtyhyj1e0l8e0UDRF/fe7b3fae98327771bd45736eab5bc1ec/SLD_Odds_and_Ends_960x540.jpg",
-    "url": "https://magic.wizards.com/en/news/announcements/secret-lair-commander-deck-odds-and-ends-decklist",
-    "published": "2026-09-27T00:00:00+00:00",
-    "date": "27.09.2026",
     "source_type": "official",
     "pipeline_version": 6
   }

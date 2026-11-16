@@ -126,6 +126,20 @@
     "pipeline_version": 6
   },
   {
+    "game": "Pokémon",
+    "category": "pokemon",
+    "title": "Discover the Perfect Present in the 2026 Pokémon Holiday Gift Guide",
+    "title_original": "Discover the Perfect Present in the 2026 Pokémon Holiday Gift Guide",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "The holiday season is just around the corner, and it’s never too early to start gift shopping! To help you in your search—and to continue celebrating 30 years of Pokémon—we’ve compiled 30 great gift ideas from the Pokémon Center for all the Pokémon fans in your life. Whether they’re a pet parent or a festive fashionista, you’re sure to find the perfect present in this selection. You can’t go wrong with gifting LEGO, and Pokémon Center has sets for every type of builder. The detailed LEGO® Pokémon™ display sets, like LEGO® Pokémon™ Eevee , are ideal for adult collectors who want to put their love for Pokémon on full display. With its posable limbs and its charming expression, this Eevee would look especially darling on a shelf! For the kids in your life—or the kids at heart—LEGO® Pokémon™ SMART Play™ sets are the perfect pick. The LEGO SMART Play™ system is interactive and reactive, responding to how kids move and play. Trainers who want to help their Pokémon grow stronger will love the Training House with Pikachu ! And for wannabe pop stars, the Jigglypuff Concert set is a great way to put on a showstopping performance. The Pokémon Center has a range of puzzles with varying difficu",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/merchandise/tiles/pokemon-center/2026/11/12/a/pokemon-center-169.png",
+    "url": "https://www.pokemon.com/us/news/discover-the-perfect-present-in-the-2026-pokemon-holiday-gift-guide",
+    "published": "2026-11-13T00:00:00+00:00",
+    "date": "13.11.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "Yu-Gi-Oh!",
     "category": "yugioh",
     "title": "Your First Lesson Starts Now: Tune Into the Debut Gameplay Trailer for Yu‑Gi‑Oh! TAG FORCE GX",
@@ -822,20 +836,6 @@
     "url": "https://magic.wizards.com/en/news/mtg-arena/announcements-october-26-2026",
     "published": "2026-10-26T00:00:00+00:00",
     "date": "26.10.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Get Kyogre, Groudon, and Giratina Pokémon TCG Promo Cards at Participating Retailers",
-    "title_original": "Get Kyogre, Groudon, and Giratina Pokémon TCG Promo Cards at Participating Retailers",
-    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
-    "summary_original": "The latest Pokémon Trading Card Game expansion, Mega Evolution—Delta Reign , is almost here, and you’ll be able to commemorate its release with some cool promo cards featuring Kyogre, Groudon, and Giratina. Starting November 6, 2026 —the day of the expansion’s release—spend $15 or more on Pokémon TCG products at the following retailers, and you’ll receive one of these promo cards as a gift with purchase. All three promo cards will feature the Pokémon 30 / What’s Your Favorite logo, making them unique additions to your Pokémon TCG collection. These offers are valid both in-store and online, but they’re only good while supplies last! Visit these locations during the release of the Mega Evolution—Delta Reign expansion to receive a gift with purchase.",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/trading-card-game/tiles/me/me06/promo/me06-promo-169-en.png",
-    "url": "https://www.pokemon.com/us/news/get-kyogre-groudon-and-giratina-pokemon-tcg-promo-cards-at-participating-retailers",
-    "published": "2026-10-23T00:00:00+00:00",
-    "date": "23.10.2026",
     "source_type": "official",
     "pipeline_version": 6
   }

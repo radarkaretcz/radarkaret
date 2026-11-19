@@ -1,5 +1,19 @@
 [
   {
+    "game": "Pokémon",
+    "category": "pokemon",
+    "title": "The Pokémon TCG: Mega Evolution—Flowing Fists Expansion Arrives February 6, 2027",
+    "title_original": "The Pokémon TCG: Mega Evolution—Flowing Fists Expansion Arrives February 6, 2027",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "New powers and unlocked potential give Mega Lucario Z ex the cool confidence to go with the flow! Mega Lucario Z ex is coming to the Pokémon Trading Card Game in the upcoming expansion, Mega Evolution—Flowing Fists , which releases on February 6, 2027. This expansion includes over 110 cards and a variety of dazzling artwork inspired by the excitement of a tournament atmosphere. The powerful Mega Lucario Z ex—as well as Mega Absol Z ex, Mega Garchomp Z ex, and Mega Glimmora ex—are all featured. More details about this expansion are coming soon, so keep an eye on Pokemon.com! Mega Lucario Z is just one of several Mega-Evolved Pokémon bringing the fight.",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/trading-card-game/tiles/me/me07/announce/me07-169-en.png",
+    "url": "https://www.pokemon.com/us/news/the-pokemon-tcg-mega-evolution-flowing-fists-expansion-arrives-february-6-2027",
+    "published": "2027-02-06T00:00:00+00:00",
+    "date": "06.02.2027",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "One Piece",
     "category": "onepiece",
     "title": "Heroines Battle Vol.2",
@@ -38,6 +52,34 @@
     "url": "https://en.onepiece-cardgame.com/products/op18.html",
     "published": "2026-11-20T00:00:00+00:00",
     "date": "20.11.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
+    "game": "Pokémon",
+    "category": "pokemon",
+    "title": "Pokémon Champions Balance Patch Update: December 2026",
+    "title_original": "Pokémon Champions Balance Patch Update: December 2026",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "Are you ready for new changes to Pokémon Champions ? A variety of adjustments to battle balance will be implemented during the upcoming maintenance scheduled for Wednesday, December 2, 2026. Certain Pokémon will be able to learn specific moves in Pokémon Champions for the first time, and a few moves and Abilities will be updated. The following Pokémon will be able to use the moves listed below. Trainers can expect these adjustments to the following moves. Trainers can expect these adjustments to the following Abilities. Fire-type moves do not work on the Pokémon. Instead, they give the Pokémon the Flash Fire status. Fire-type moves do not work on the Pokémon. Instead, they give the Pokémon the Fire Boost status. The Fire Boost status persists even after the Pokémon Mega Evolves. The Pokémon ignores the effects of Abilities and moves that draw in moves. The Pokémon ignores the effects of Abilities and moves that draw in moves. When using its moves, the Pokémon ignores the effects of targets’ substitutes. Please note that all the above changes will be applied to battles in all regulations. We look forward to seeing you in battle, Trainers!",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/video-games/tiles/pokemon-champions/2026/03/24/pokemon-champions-169.jpg",
+    "url": "https://www.pokemon.com/us/news/pokemon-champions-balance-patch-update-december-2026",
+    "published": "2026-11-18T00:00:00+00:00",
+    "date": "18.11.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
+    "game": "Magic",
+    "category": "magic",
+    "title": "Secret Lair: My Arrakis, My Superdrop",
+    "title_original": "Secret Lair: My Arrakis, My Superdrop",
+    "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
+    "summary_original": "A war for the fate of Arrakis is erupting across the battlefield of Magic . Paul Atreides, heir to his house and warrior of Fremen prophecy, has levied his blade against the Harkonnens. You've watched this tale of hubris, intertwined fates, and vengeance that spans generations unfold across the story of Dune . Now, this foundational piece of science-fiction storytelling has come to Magic: The Gathering in My Arrakis, My Superdrop. This Superdrop launches on November 30, 2026, only on MagicSecretLair.com , just in time for the next installment of the Dune trilogy. Headlining this Superdrop is Secret Lair x Dune: Balance of Power , featuring eight new-to- Magic legendary creatures that depict Dune 's leading cast. Secret Lair x Dune: Deserts of Arrakis also features a new-to- Magic card: Shai-Hulud, who captures the devastation of Arrakis's sandworms. These new-to- Magic cards were designed by Studio X's Arya Karamchandani and Benjamin Weitz and will be legal in Commander, Legacy, and Vintage. In our third drop, Secret Lair x Dune: Spice , every card sparkles in halo foil, because power over spice is power over all. Walk without rhythm to your local WPN game store, and you can bring",
+    "image": "https://images.ctfassets.net/s5n2t79q9icq/4UbO54ps7NXyDso4Ra3gIy/245ae3658453e3500c16c28468e7e03a/My_Arrakis_My_Superdrop_1920x1080.webp",
+    "url": "https://magic.wizards.com/en/news/announcements/secret-lair-my-arrakis-my-superdrop",
+    "published": "2026-11-18T00:00:00+00:00",
+    "date": "18.11.2026",
     "source_type": "official",
     "pipeline_version": 6
   },
@@ -794,48 +836,6 @@
     "url": "https://www.pokemon.com/us/news/pokemon-legends-z-a-nintendo-switch-2-edition-mega-dimension-now-available",
     "published": "2026-10-29T00:00:00+00:00",
     "date": "29.10.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Receive a Spewpa That Can Evolve into a Random Vivillon Pattern in Pokémon Legends: Z‑A",
-    "title_original": "Receive a Spewpa That Can Evolve into a Random Vivillon Pattern in Pokémon Legends: Z‑A",
-    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
-    "summary_original": "Starting today, you can receive Spewpa as a Mystery Gift in Pokémon Legends: Z-A to celebrate the release of Pokémon Legends: Z-A – Nintendo Switch 2 Edition + Mega Dimension . Spewpa is known for evolving into Vivillon with a variety of different patterns depending on the climate and topography of the environment it was born in, but this Spewpa can evolve into one of 16 different patterns at random. Try seeing which pattern your Spewpa will take on after evolving into Vivillon—it will be available via Mystery Gift until Wednesday, November 18, 2026, at 5:59 p.m. PST . You can add it to your team now by following these steps: As Trainers around the world evolve Spewpa into Vivillon, Vivillon Points are tallied on the official Vivillon Challenge! website . If the goal of 660,000 points is reached, players will be able to receive a rare Poké Ball Pattern Vivillon to celebrate. There is no end date to this challenge, and Vivillon Points will also be earned when evolving Spewpa caught in the wild or obtained through side missions, so keep on evolving! If the Vivillon Point goal is reached, the timing of the Poké Ball Pattern Vivillon distribution will be announced separately.Want to ta",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/video-games/tiles/pokemon-legends-z-a/distributions/2026/spewpa/pokemon-legends-z-a-169-en.png",
-    "url": "https://www.pokemon.com/us/news/receive-a-spewpa-that-can-evolve-into-a-random-vivillon-pattern-in-pokemon-legends-z-a",
-    "published": "2026-10-29T00:00:00+00:00",
-    "date": "29.10.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Miltank Stars in the Moomoo Milk Kitchen Collection at Pokémon Center",
-    "title_original": "Miltank Stars in the Moomoo Milk Kitchen Collection at Pokémon Center",
-    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
-    "summary_original": "Add country charm to your home with Pokémon Center ’s new collection of kitchenware and dining essentials featuring that nutritious and rejuvenating drink, Moomoo Milk. This beverage has been a staple for Pokémon partners that need a quick HP boost, and you can now sport its style when prepping your own meals. The stylized Miltank face of the Moomoo Milk logo is featured prominently in this collection, including on the four-bottle Moomoo Milk caddy. Fill the bottles up with your favorite milk—you’ll feel like you’ve taken a trip to the Johto region’s Moomoo Farm with every swig you take! Don the fun and functional Moomoo Milk apron, grab a utensil from the Moomoo Milk ceramic crock, and prepare a delicious meal for your family or friends. When you serve your creation at a table decked out with matching ceramic plates and mugs, placemats, and coasters, everyone will get in the Moomoo mindset. Even Miltank is on hand as an outstanding ceramic creamer and an adorable metal sign. Roll out to Pokémon Center now to check out this udderly adorable collection. Simply moo -velous gear inspired by Moomoo Farm’s premier beverage.",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/merchandise/tiles/pokemon-center/2026/10/28/pokemon-center-169.png",
-    "url": "https://www.pokemon.com/us/news/miltank-stars-in-the-moomoo-milk-kitchen-collection-at-pokemon-center",
-    "published": "2026-10-28T00:00:00+00:00",
-    "date": "28.10.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Pokémon",
-    "category": "pokemon",
-    "title": "Burning Battles Await During Pokémon GO’s Chandelure Super Mega Raid Day",
-    "title_original": "Burning Battles Await During Pokémon GO’s Chandelure Super Mega Raid Day",
-    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
-    "summary_original": "Think you have enough spirit to take down Mega Chandelure? Put it to the test during Pokémon GO ’s Chandelure Super Mega Raid Day, taking place Saturday, October 31, 2026, from 2:00 p.m. to 5:00 p.m. local time . Mega Chandelure is making a dazzling Pokémon GO debut in Super Mega Raids! If you’re lucky, you may even encounter a Shiny one. During Super Mega Raids, the opposing Mega-Evolved Pokémon can become enraged and put up shields. You and your teammates will need to use your own Mega-Evolved Pokémon to take down those shields and emerge victorious. Check out the map to see where Super Mega Raids might appear during the event period. You can also filter the map or check out nearby events to see community meetups days in advance. If you’ve never attended a meetup before, Super Mega Raids are a great opportunity to go meet your local community of Trainers and increase your chance of success in battle! And what better way to celebrate Halloween than taking down this seriously spooky Pokémon with some new friends? For the first time, you’ll be able to increase Mega Chandelure’s Mega Level all the way up to Super Max Level! This new level was first discovered during Mega Finale , and",
-    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/video-games/tiles/pokemon-go/2026/10/28/pokemon-go-169.png",
-    "url": "https://www.pokemon.com/us/news/burning-battles-await-during-pokemon-gos-chandelure-super-mega-raid-day",
-    "published": "2026-10-28T00:00:00+00:00",
-    "date": "28.10.2026",
     "source_type": "official",
     "pipeline_version": 6
   }

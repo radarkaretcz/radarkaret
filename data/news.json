@@ -56,6 +56,20 @@
     "pipeline_version": 6
   },
   {
+    "game": "Pokémon",
+    "category": "pokemon",
+    "title": "Pokémon Center and Fender® Collaboration Guitars Available for Preorder",
+    "title_original": "Pokémon Center and Fender® Collaboration Guitars Available for Preorder",
+    "summary": "Nová informace z oficiálního webu Pokémon. Podrobnosti najdete v původním článku.",
+    "summary_original": "Thirty years ago, the Pokémon Red and Pokémon Green video games debuted in Japan, and fans can celebrate the decades-long journey with two Pokémon Center and Fender® Collaboration guitars, now available for preorder. The Made in Japan Pokémon Red Version Stratocaster® Electric Guitar and Made in Japan Pokémon Green Version Telecaster® Electric Guitar will be delivered in 2027, but you can secure your place in Pokémon rock history with a preorder at the Pokémon Center now. The guitars’ design riffs on the pixelated graphics from the original games. And if you’re feeling nostalgic for the old-school audio of those OG games, the guitars include a toggle that triggers 8-bit audio. The 30th anniversary pixel logo highlights the historic nature of the collaboration, making the guitars a fun piece of Pokémon lore. Each guitar comes with an originally designed pick set, a certificate of authenticity featuring newly drawn artwork, and a hard case to protect your guitar. These guitars, inspired by the very first Pokémon video games, should strike a chord with fans.",
+    "image": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_1920/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/merchandise/tiles/pokemon-center/2026/10/30/pokemon-center-169.png",
+    "url": "https://www.pokemon.com/us/news/pokemon-center-and-fender-collaboration-guitars-available-for-preorder",
+    "published": "2026-11-20T00:00:00+00:00",
+    "date": "20.11.2026",
+    "source_type": "official",
+    "pipeline_version": 6
+  },
+  {
     "game": "Yu-Gi-Oh!",
     "category": "yugioh",
     "title": "OTS BONUS Promotion!",
@@ -820,20 +834,6 @@
     "summary_original": "We never like to cancel products, but we certainly don't enjoy canceling products and leaving excellent art on the cutting-room floor. When we had to cancel the Magic: The Gathering ® | Star Trek ™ Beginner Box, we wondered what to do with the fantastic art that artists had created for the cards that would not see print. While we ruminate on future possibilities, we figured we'd share these 27 pieces here so you can appreciate them as much as we do. Enjoy!",
     "image": "https://images.ctfassets.net/s5n2t79q9icq/51A90TMq65hsj9LsarLrrJ/3f7da47a5970c164c1496cb236a63f70/0Tgyu3tIup.webp",
     "url": "https://magic.wizards.com/en/news/feature/unused-star-trek-art",
-    "published": "2026-10-30T00:00:00+00:00",
-    "date": "30.10.2026",
-    "source_type": "official",
-    "pipeline_version": 6
-  },
-  {
-    "game": "Magic",
-    "category": "magic",
-    "title": "MTG Arena Ranked Season Details",
-    "title_original": "MTG Arena Ranked Season Details",
-    "summary": "Nová informace z oficiálního webu Magic. Podrobnosti najdete v původním článku.",
-    "summary_original": "The November 2026 ranked season begins October 31, 2026, at 12:05 p.m. PT (19:05 UTC) and ends on November 30, 2026, at 12:00 p.m. PT (20:00 UTC). Top 250 Mythic-ranked players in Constructed or Limited at the end of a season will be eligible to compete in the next month's Qualifier Weekend . Check out our hub for decklists from recent Premier Play events ! Players will receive their rewards for the November 2026 season at the start of the December 2026 ranked season (12:05 p.m. PT on November 30). You must have played at least one ranked game in the respective format to receive seasonal rewards. Card styles are cosmetic options only; they do not add any cards to a player's collection. There is no benefit to acquiring a card style more than once. If you achieve Gold Tier or higher in both Limited and Constructed, you will only receive one copy of the card style. Players who finish in the Top 250 of Mythic Tier competitors will qualify to participate in the Qualifier Weekend . Matches that are finished prior to 12 p.m. PT on the final day of the current season will count toward final season ranking for that month, which determines invitations to the next month's Qualifier Weekend. P",
-    "image": "https://images.ctfassets.net/s5n2t79q9icq/1zpLSUs3lRATxpi7PKtzS0/0bcd47bbd810f4801106358669122a5b/1920x1080-Ranked-Play-Logo-Blue.jpg",
-    "url": "https://magic.wizards.com/en/news/mtg-arena/ranked-season",
     "published": "2026-10-30T00:00:00+00:00",
     "date": "30.10.2026",
     "source_type": "official",
